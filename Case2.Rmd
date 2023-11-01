@@ -1,0 +1,25 @@
+---
+title: "Case2"
+output: html_document
+date: "2023-11-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+```{r read-in}
+gym_data = read.csv("data_2022_2023.csv")
+head(gym_data)
+```
+## Beginning Exploratory Data Analysis
+
+```{r}
+#Looking at distribution of score across different events
+ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
+  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
+
+#Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
+```
+
