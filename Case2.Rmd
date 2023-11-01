@@ -16,6 +16,12 @@ head(gym_data)
 ## Beginning Exploratory Data Analysis
 
 ```{r}
+#Cleaning hb issue
+gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
+```
+
+
+```{r}
 #Looking at distribution of score across different events
 ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
   geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
