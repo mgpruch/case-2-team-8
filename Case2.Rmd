@@ -20,11 +20,19 @@ head(gym_data)
 gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
 ```
 
+```{r Highest-Vault}
+#Gymnasts vault two times, which is in the data as VT1 and VT2 (or if just once VT)
+#Renaming these to all just be VT, because they're all data on vaults
+gym_data$Apparatus[gym_data$Apparatus == "VT1"] <- "VT"
+gym_data$Apparatus[gym_data$Apparatus == "VT2"] <- "VT"
+```
 
 ```{r}
 #Looking at distribution of score across different events
-ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
-  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
+p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
+  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") 
+
+p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
 #Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
 ```
