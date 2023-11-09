@@ -7,12 +7,24 @@ date: "2023-11-01"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
+library(dplyr)
 ```
 
 ```{r read-in}
 gym_data = read.csv("data_2022_2023.csv")
 head(gym_data)
 ```
+
+## Introduction
+
+As the Paris 2024 Olympic Games draw closer, the United States gymnastics program get ready to continue their dominance. The US women's artistic gymnastics team is one of the most decorated nations in the sport. The program has won three team gold medals at the 1996, 2012, and 2016 Olympics seven team gold medals at the World Championships. The program also trained the most decorated female gymnast - Simone Biles - who holds 37 world and Olympic medals. Beyond just their success in the gym, the program has created an international hype around them with their Olympic gold medal teams receiving the nicknames of the Magnificent Seven, the Fierce Five, and the Final Five. At their last Olympic showing, they attracted an average of 17.4 million total viewers for their appearance in the finals. While receiving less of a media frenzy than the women's team, the US men's artistic gymnastics team are still strong competitors. Although they received no medals in Tokyo, the program has achieved 6 medals in their history and look to make a strong appearance in Paris.
+
+In order to make a strong showing from both teams and continue the legacy of the women's program, choosing the best possible team is essential. USA Gymnastics has nearly 200,000 members from their beginning training to their elite levels, but few can be taken to the international stage to represent their country. Both teams will only be allowed to bring five members to the Paris 2024 Olympics. The women's team will compete on four apparatuses: vault, uneven bars, balance beam, and floor exercise. The men's team will compete on six apparatuses: floor exercise, pommel horse, still rings, vault, parallel bars, and high bar. Both teams will also compete in the team and individual all-around, allowing for 6 opportunities to medal for the women and 8 for the men. Out of these 5 member teams, competition will follow a 5-4-3 format (4 members out of the 5 compete on each apparatus, and the top 3 scores count). In the team all-around this changes to a 5-3-3 format, so every score counts for the 3 members chosen to compete. For the individual competitions, only 2 gymnasts max per country can qualify to move on to the finals.
+
+With all of these considerations in terms of format and competition stages, selecting a team is very challenging. Selection takes into consideration not only scores from previous competitions, but also protecting the ability to defend a medal or title. It is more than just looking at who has the highest score, since a team has to be selected that can compete across all of these events and do their best at each apparatus. This selection is normally done by USA Gymnastics (for the women it was done by the Karolyis before the recent scandal), but we will create a more analytical way to select the team. Our analysis is centered around the goal of selecting 5-member men and women's gymnastics teams that will maximize medal counts at the Paris 2024 Olympic Games. 
+
+To do this, we are assessing data from past performances at recent competitions. Each of these competitions have scores for a gymnast's performance at a competition on one apparatus. These scores are a combination of an execution score (E Score) and a difficulty score (D Score). There also is a possible penalty that can be applied to a gymnasts score. 
+
 ## Beginning Exploratory Data Analysis
 
 ```{r}
@@ -25,6 +37,11 @@ gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
 #Renaming these to all just be VT, because they're all data on vaults
 gym_data$Apparatus[gym_data$Apparatus == "VT1"] <- "VT"
 gym_data$Apparatus[gym_data$Apparatus == "VT2"] <- "VT"
+
+#Making a US Binary variable
+gym_data <- gym_data %>%
+  mutate(Nation = case_when(Country == "USA" ~ "USA",
+                              Country != "USA" ~ "Other"))
 ```
 
 ```{r}
@@ -35,5 +52,23 @@ p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gend
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
 #Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
+```
+```{r MenWomen}
+women_gym_data <- gym_data %>%
+  filter(Gender == "w")
+
+men_gym_data <- gym_data %>%
+  filter(Gender == "m")
+```
+
+
+
+```{r}
+library(dplyr)
+ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") 
+
+ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") 
 ```
 
