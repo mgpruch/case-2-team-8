@@ -1,0 +1,76 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r read-in}
+gym_data = read.csv("data_2022_2023.csv")
+head(gym_data)
+```
+
+```{r}
+#Cleaning hb issue
+gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
+```
+
+```{r Highest-Vault}
+#Gymnasts vault two times, which is in the data as VT1 and VT2 (or if just once VT)
+#Renaming these to all just be VT, because they're all data on vaults
+gym_data$Apparatus[gym_data$Apparatus == "VT1"] <- "VT"
+gym_data$Apparatus[gym_data$Apparatus == "VT2"] <- "VT"
+
+#Making a US Binary variable
+gym_data <- gym_data %>%
+  mutate(Nation = case_when(Country == "USA" ~ "USA",
+                              Country != "USA" ~ "Other"))
+```
+
+```{r}
+men_gym_data %>%
+  group_by(Apparatus)%>%
+  summarize(max(Score))
+
+women_gym_data %>%
+  group_by(Apparatus)%>%
+  summarize(max(Score))
+```
+
+```{r}
+men_gym_data %>%
+  group_by(LastName, Competition)%>%
+  filter(Apparatus == "PB")%>%
+  summarize(max(Score))
+```
+```{r}
+gym_data %>%
+  group_by(Competition, Round)%>%
+  summarize(max(Score))
+```
+```{r}
+women_gym_data %>%
+  filter(Apparatus == "UB")%>%
+  group_by(LastName, Rank, Competition)%>%
+  summarize(min(Rank))%>%
+  arrange(Rank)
+
+women_gym_data %>%
+  group_by(LastName)%>%
+  filter(Rank == 1) %>%
+  count(Rank == 1)%>%
+  arrange(desc(n))
+  
+men_gym_data %>%
+  group_by(LastName)%>%
+  filter(Rank == 1) %>%
+  count(Rank == 1)%>%
+  arrange(desc(n))
+```
+```{r}
+ggplot(data = gym_data, aes(x = Apparatus, y = E_Score))+
+  geom_violin()
+```
+
+
