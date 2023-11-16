@@ -68,9 +68,26 @@ men_gym_data %>%
   count(Rank == 1)%>%
   arrange(desc(n))
 ```
+
 ```{r}
 ggplot(data = gym_data, aes(x = Apparatus, y = E_Score))+
   geom_violin()
 ```
 
+```{r}
+men_gym_data %>%
+  group_by(Apparatus, FirstName, LastName)%>%
+  mutate(avg_score = mean(Score))%>%
+  select(FirstName, LastName, avg_score)
+
+avg_rank_men <- men_gym_data %>%
+  group_by(FirstName, LastName)%>%
+  mutate(avg_rank = mean(Rank))%>%
+  select(FirstName, LastName, avg_rank)%>%
+  distinct(FirstName, LastName, avg_rank)%>%
+  arrange(avg_rank)
+
+avg_rank_men_na <- na.omit(avg_rank_men)
+avg_rank_men_na
+```
 
