@@ -4,6 +4,9 @@
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 library(dplyr)
+library(MASS)
+library(purrr)
+library(tidyr)
 ```
 
 ```{r read-in}
@@ -89,5 +92,107 @@ avg_rank_men <- men_gym_data %>%
 
 avg_rank_men_na <- na.omit(avg_rank_men)
 avg_rank_men_na
+```
+
+```{r}
+hist(men_gym_data$Score)
+hist(women_gym_data$Score)
+hist(men_gym_data$Rank)
+hist(women_gym_data$Rank)
+
+```
+
+```{r}
+alpha <- 9
+beta <- 2
+x <- seq(0,1, length = 24434)
+y <-dbeta(gym_data$Score, shape1 = alpha, shape2 = beta)
+
+plot(x, y, type = "l", col = "blue", lwd = 2, xlab = "x", ylab = "Density",
+     main = "Beta Distribution")
+
+# Add labels and legend
+legend("topright", legend = paste("Beta(", alpha, ",", beta, ")", sep = ""), col = "blue", lwd = 2)
+
+
+curve(dbeta(x, shape1 = alpha, shape2 = beta), from = 0, to = 1, n = 22842,
+      col = "blue", lwd = 2, xlab = "x", ylab = "Density",
+      main = "Beta Distribution", type = "l")
+```
+```{r}
+hist(uniques$Score)
+x <- seq(0,1, length = 24434)
+y <- dgamma(uniques$Score, shape = 2, rate = 1)
+fit_gam <- fitdistr(uniques$Score, "gamma", start = list(shape = 2, rate = 1))
+```
+
+
+```{r}
+problematic_groups <- gym_data %>%
+  filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
+  distinct()
+
+# Filter out problematic groups from the original data
+uniques <- gym_data %>%
+  anti_join(problematic_groups, by = c("FirstName", "LastName"))
+
+uniques <- uniques %>%
+  distinct(FirstName, LastName, Score, Country, Gender)
+
+fit_norm <- fitdistr(uniques$Score, "normal")
+print(fit_norm$estimate)
+print(fit_gam$estimate)
+
+mu <- fit_norm$estimate[1]
+sd <- fit_norm$estimate[2]
+
+likelihood_vector <- dnorm(uniques$Score, mean = mu, sd = sd)
+uniques$Likelihood <- likelihood_vector
+print(uniques[, c("Score", "Likelihood")])
+
+quantile_95 <- qnorm(0.95, mean = mu, sd = sd)
+
+usa <- subset(uniques, Country == "USA")
+
+topUSA <- usa%>%
+  filter(usa$Score >= quantile_95)
+
+topUSA %>%
+  group_by(FirstName, LastName, Gender)%>%
+  mutate(mean_score = mean(Score))%>%
+  arrange(desc(mean_score))%>%
+  distinct(FirstName, LastName, mean_score)
+```
+
+
+```{r}
+problematic_groups <- gym_data %>%
+  filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
+  distinct()
+
+# Filter out problematic groups from the original data
+uniques <- gym_data %>%
+  anti_join(problematic_groups, by = c("FirstName", "LastName"))
+
+mu_fits <- list()
+sd_fits <- list()
+name_store <- list()
+for(i in 1:nrow(uniques)){
+  first_name <- uniques$FirstName[i]
+  last_name <- uniques$LastName[i]
+  name_store[[i]] <- paste(first_name, last_name, i , sep = "-")
+  sub <- uniques%>%
+    subset(LastName == last_name)%>%
+    subset(FirstName == first_name)
+  sub_na <- na.omit(sub$Score)
+  fits <- fitdistr(sub$Score, "normal")
+  mu_fits[[i]] <- paste(fits$estimate[1], i)
+  sd_fits[[i]] <- paste(fits$estimate[2], i)
+}
+my_tib <- tibble(Names = name_store, Mu = mu_fits, SD = sd_fits)
+#ind_dists <- cleaned_gym_data %>%
+#  group_by(FirstName, LastName)%>%
+#  nest()%>%
+#  mutate(fit = map(data, ~fitdistr(cleaned_gym_data$Score, "beta", start = list(shape1 = alpha, #shape2 = beta))))
 ```
 
