@@ -166,12 +166,12 @@ topUSA %>%
 
 
 ```{r}
-problematic_groups <- gym_data %>%
+problematic_groups <- cleaned_gym_data %>%
   filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
   distinct()
 
 # Filter out problematic groups from the original data
-uniques <- gym_data %>%
+uniques <- cleaned_gym_data %>%
   anti_join(problematic_groups, by = c("FirstName", "LastName"))
 
 mu <- list()
@@ -186,9 +186,18 @@ for(i in 1:nrow(uniques)){
     subset(FirstName == first_name)
   sub_na <- na.omit(sub$Score)
   fits <- fitdistr(sub$Score, "normal")
-  mu[[i]] <- fits$estimate[1]
-  sd[[i]] <- fits$estimate[2]
+  mu[[i]] <- as.numeric(fits$estimate[1])
+  sd[[i]] <- as.numeric(fits$estimate[2])
 }
+
+my_tib <- tibble(Names = name_store, Mu = mu, SD = sd)
+my_tib$Names <- sub("^(.*?-.*?)-.*", "\\1", my_tib$Names)
+
+unique_final <- my_tib %>%
+  distinct(Names, Mu, SD)
+```
+
+```{r}
 num_samples <- 1000
 
 run_sim <- function(mu, sd, num_samples) {
@@ -203,17 +212,6 @@ for(i in 1:nrow(uniques)){
   data <- run_sim(name, mu, sd, num_samples)
   simulated_scores <- bind_rows(simulated_scores, tibble(Score = simulated_data, Name = name))
 }
-
-#my_tib <- tibble(Names = name_store, Mu = mu, SD = sd)
-#print(my_tib)
-#ind_dists <- cleaned_gym_data %>%
-#  group_by(FirstName, LastName)%>%
-#  nest()%>%
-#  mutate(fit = map(data, ~fitdistr(cleaned_gym_data$Score, "beta", start = list(shape1 = alpha, #shape2 = beta))))
 ```
 
-```{r}
-ggplot(data = mu, aes(x = mu))+
-  geom_point()
-```
 
