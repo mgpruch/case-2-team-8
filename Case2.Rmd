@@ -1,6 +1,8 @@
 ---
 title: "Case2"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 date: "2023-11-01"
 ---
 
@@ -11,7 +13,7 @@ library(dplyr)
 ```
 
 ```{r read-in}
-gym_data = read.csv("data_2022_2023.csv")
+gym_data = read.csv("cleanedfinalgymnastdata.csv")
 head(gym_data)
 ```
 
@@ -70,5 +72,79 @@ ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nat
 
 ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
   geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") 
+```
+
+```{r}
+men_gym_data <- men_gym_data %>%
+  mutate(name = paste(FirstName, LastName)) 
+
+men_gym_data %>% filter(Country == "USA") %>% group_by(name) %>% count()
+
+women_gym_data <- women_gym_data %>%
+  mutate(name = paste(FirstName, LastName)) 
+
+women_gym_data %>% filter(Country == "USA") %>% group_by(name) %>% count()
+```
+
+```{r}
+us_men_gym_data <- men_gym_data %>% filter(Country == "USA")
+us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
+```
+
+
+# Determining Constraint Level
+
+In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women. 
+
+```{r}
+#Get rid of all gymnasts that did not compete in 2023
+library(stringr)
+us_womens_gym_data$Year <- str_sub(us_womens_gym_data$Date, -4)
+us_men_gym_data$Year <- str_sub(us_men_gym_data$Date, -4)
+
+length(unique(us_men_gym_data$name))
+length(unique(us_womens_gym_data$name))
+
+us_womens_gym_data <- us_womens_gym_data %>%
+  group_by(name) %>%
+  filter(max(Year) == 2023)
+
+us_men_gym_data <- us_men_gym_data %>%
+  group_by(name) %>%
+  filter(max(Year) == 2023)
+
+length(unique(us_men_gym_data$name))
+length(unique(us_womens_gym_data$name))
+```
+
+We also filtered out gymnasts that had too low of an average score to warrant further consideration and even further reduce our selection pool. To do this, we calculated the average score across all competitions and apparatuses for each US gymnast (both male and female). We then found the first quartile value for each gender's average score. This means the average score that 25% of the average scores for male and female gymnasts respectively fell below this value. The 25th percentile score for US women gymnasts was 12.15156 and 12.15000 for men. After filtering out any competitors who had average scores below that, we were left with 106 men and 35 women. 
+
+```{r}
+
+length(unique(us_men_gym_data$name))
+length(unique(us_womens_gym_data$name))
+w_avs <- us_womens_gym_data %>%
+  group_by(name) %>%
+  summarise(mean(Score))
+names(w_avs) <- c("name", "avgScore")
+
+quantile(w_avs$avgScore)
+
+m_avs <- us_men_gym_data %>%
+  group_by(name) %>%
+  summarise(mean(Score))
+names(m_avs) <- c("name", "avgScore")
+
+quantile(m_avs$avgScore)
+
+us_womens_gym_data <- us_womens_gym_data %>%
+  group_by(name) %>%
+  filter(mean(Score) > 12.15156)
+us_men_gym_data <- us_men_gym_data %>%
+  group_by(name) %>%
+  filter(mean(Score) > 12.15000)
+
+length(unique(us_men_gym_data$name))
+length(unique(us_womens_gym_data$name))
 ```
 
