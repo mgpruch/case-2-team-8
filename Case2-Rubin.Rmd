@@ -189,11 +189,21 @@ for(i in 1:nrow(uniques)){
   mu[[i]] <- fits$estimate[1]
   sd[[i]] <- fits$estimate[2]
 }
-df <- data.frame(
-  Names = name_store, 
-  Mu = mu, 
-  SD = sd, row.names = NULL, stringsAsFactors = FALSE)
-print(df)
+num_samples <- 1000
+
+run_sim <- function(mu, sd, num_samples) {
+  rnorm(num_samples, mean = mu, sd = sd)
+}
+
+for(i in 1:nrow(uniques)){
+  name <- name_store[i]
+  mu <- mu[[i]]
+  sd <- sd[[i]]
+  
+  data <- run_sim(name, mu, sd, num_samples)
+  simulated_scores <- bind_rows(simulated_scores, tibble(Score = simulated_data, Name = name))
+}
+
 #my_tib <- tibble(Names = name_store, Mu = mu, SD = sd)
 #print(my_tib)
 #ind_dists <- cleaned_gym_data %>%
