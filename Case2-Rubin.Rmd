@@ -128,12 +128,12 @@ fit_gam <- fitdistr(uniques$Score, "gamma", start = list(shape = 2, rate = 1))
 
 
 ```{r}
-problematic_groups <- gym_data %>%
+problematic_groups <- cleaned_gym_data %>%
   filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
   distinct()
 
 # Filter out problematic groups from the original data
-uniques <- gym_data %>%
+uniques <- cleaned_gym_data %>%
   anti_join(problematic_groups, by = c("FirstName", "LastName"))
 
 uniques <- uniques %>%
@@ -174,14 +174,16 @@ problematic_groups <- cleaned_gym_data %>%
 uniques <- cleaned_gym_data %>%
   anti_join(problematic_groups, by = c("FirstName", "LastName"))
 
+usa <- subset(uniques, Country == "USA")
+
 mu <- list()
 sd <- list()
 name_store <- list()
-for(i in 1:nrow(uniques)){
-  first_name <- uniques$FirstName[i]
-  last_name <- uniques$LastName[i]
+for(i in 1:nrow(usa)){
+  first_name <- usa$FirstName[i]
+  last_name <- usa$LastName[i]
   name_store[[i]] <- paste(first_name, last_name, i , sep = "-")
-  sub <- uniques%>%
+  sub <- usa %>%
     subset(LastName == last_name)%>%
     subset(FirstName == first_name)
   sub_na <- na.omit(sub$Score)
@@ -193,8 +195,51 @@ for(i in 1:nrow(uniques)){
 my_tib <- tibble(Names = name_store, Mu = mu, SD = sd)
 my_tib$Names <- sub("^(.*?-.*?)-.*", "\\1", my_tib$Names)
 
-unique_final <- my_tib %>%
+usa_unique_final <- my_tib %>%
   distinct(Names, Mu, SD)
+```
+
+```{r check-no-lost-info}
+filtered_data <- cleaned_gym_data %>%
+  filter(Country == "USA")%>%
+  distinct(FirstName, LastName)%>%
+  count(FirstName)%>%
+  mutate(total = sum(n))
+
+```
+
+```{r}
+n <- 1000
+gymnasts <- 6
+top_combos <- 10
+usa_unique_final <- na.omit(usa_unique_final)
+#simulate_composite_score <- function(selected_gymnasts) {
+#  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
+#  composite_score <- rowSums(do.call(cbind, simulated_scores))
+#  return(sum(composite_score))
+#}
+
+simulate_composite_score <- function(selected_gymnasts) {
+  simulated_scores <- list()
+  composite_score <- 0
+  for (i in 1: nrow(selected_gymnasts)) {
+    mu <- as.numeric(selected_gymnasts$Mu[i])
+    dev <- as.numeric(selected_gymnasts$SD[i])
+    simulated_scores[[i]] <- rnorm(1, mean = mu, sd = dev)
+    composite_score <- composite_score + as.numeric(simulated_scores[[i]])
+    print(composite_score)
+  }
+  
+  return(composite_score)
+}
+
+results <- replicate(n, {
+  sampled_gymnasts <- usa_unique_final[sample(nrow(usa_unique_final), gymnasts, replace = FALSE),]
+  composite_score <- simulate_composite_score(sampled_gymnasts)
+  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
+  results_entry
+})
+results
 ```
 
 ```{r}
