@@ -153,10 +153,25 @@ length(unique(us_womens_gym_data$name))
 ```
 
 
+# 3. Simulating Composite Scores
 
-# Simulating Composite Scores
+The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores. 
 
 ```{r}
+hist(us_men_gym_data$Score)
+hist(us_womens_gym_data$Score)
+```
+
+Despite the fact that our data is bounded (scores are between 0-16), the concentration of scores in our histogram revealed symmetry around approximately the 13 score range. We therefore elected to fit the scores of each gymnast to a normal distribution, as opposed to a beta distribution or a truncated normal. 
+
+To fit these distributions, we will start by iterating through the rows of our US Mens and USA Womens data separately. For each name in the data, we will take the corresponding subset of the data containing all qualifying scores. Using these scores, we will fit a distribution to the associated gymnast, and store the mean and standard deviation, as well as the name of the gymnast into a data frame. 
+
+To eliminate redundant information in our final datatable, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame. 
+We will repeat this process so that we will have two separate data frames containing the names, mean scores, and standard deviation of scores for both men and women USA gymnasts. We can now use these data frames to run our composite score simulation. 
+
+```{r}
+set.seed(1212)
+
 problematic_groups <- cleaned_gym_data %>%
   filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
   distinct()
@@ -214,8 +229,9 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations. For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of 0. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score. 
+
 ```{r}
-set.seed(1212)
 n <- 50000
 gymnasts <- 6
 top_combos <- 10
