@@ -1,0 +1,304 @@
+---
+title: "part4"
+output: pdf_document
+date: "2023-11-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(dplyr)
+library(tidyverse)
+```
+
+4. A simulation method to test other teams lineups against ours. This might be hard to actually do, and might require some simplification. For example, it might be tricky to choose every team's best set of athletes for them - so maybe we could find a way to compare the US team vs the best non-US team? And assign gold, silver, bronze in some weighted way based on if we beat them/if we lose, by how much? Probably need to get a little creative here. use an arbitrary lineup set for now and we can just run that on whatever our output from 2 is.
+
+```{r}
+# select gymnast team for other countries (assuming the gymnasts from other countries are randomly selected because it's impossible that all countries use identical method as US to select gymnasts to participate in the Olympic)
+men_other_countries <- data.frame()
+women_other_countries <- data.frame()
+country_list <- unique(men_gym_data$Country)
+country_list <- country_list[country_list != 'USA']
+for (i in 1:length(country_list)) {
+  data <- men_gym_data %>% 
+    filter(Country == country_list[i])
+  gymnasts <- unique(data$name)
+  data = data.frame(country = country_list[i], gymnast = sample(gymnasts, min(5, length(gymnasts)))) # 5 gymnasts for each country
+  men_other_countries <- bind_rows(men_other_countries, data)
+}
+for (i in 1:length(country_list)) {
+  data <- women_gym_data %>% 
+    filter(Country == country_list[i])
+  gymnasts <- unique(data$name)
+  data = data.frame(country = country_list[i], gymnast = sample(gymnasts, min(5, length(gymnasts)))) # 5 gymnasts for each country
+  women_other_countries <- bind_rows(women_other_countries, data)
+}
+```
+
+```{r}
+# function that simulates a random score for a gymnast in an apparatus
+simulate_score_men <- function(gymnast, apparatus) {
+  data = men_gym_data %>% filter(name == gymnast, Apparatus == apparatus)
+  if (nrow(data) == 0) { # if the gymnast has no historical data in this apparatus then return a score of 0
+    return(0)
+  }
+  # else return simulated score
+  data <- data%>% 
+    group_by(name) %>% 
+    summarise(mean = mean(Score, na.rm = T),
+              var = var(Score, na.rm = T))
+  mu <- data$mean
+  var <- data$var
+  score <- rnorm(1, mu, var)
+  return(score)
+}
+simulate_score_women <- function(gymnast, apparatus) {
+  data = women_gym_data %>% filter(name == gymnast, Apparatus == apparatus)
+  if (nrow(data) == 0) { # if the gymnast has no historical data in this apparatus then return a score of 0
+    return(0)
+  }
+  # else return simulated score
+  data <- data%>% 
+    group_by(name) %>% 
+    summarise(mean = mean(Score, na.rm = T),
+              var = var(Score, na.rm = T))
+  mu <- data$mean
+  var <- data$var
+  score <- rnorm(1, mu, var)
+  return(score)
+}
+```
+
+```{r}
+# individual competition results for each apparatus
+apparatus_men <- unique(men_gym_data$Apparatus)
+apparatus_women <- unique(women_gym_data$Apparatus)
+
+num_iterations = 1000
+total_medal_score = list() # store possible total medal scores for 1000 iterations
+for (iter in 1:num_iterations) {
+  total_medal = 0
+  # men
+  for (apparatus in apparatus_men) { # for each apparatus
+    apparatus_medal = 0
+    results <- data.frame() # competition results
+    for (country in men_other_countries$country) { # each country can have 2 men competing in each final apparatus
+      # other countries
+      data = men_other_countries %>% filter(country == country)
+      scores <- list()
+      for (gymnast in data$gymnast) {
+        score <- simulate_score_men(gymnast, apparatus)
+        scores = append(scores, score)
+      }
+      if (length(scores) > 2) {
+        scores <- lapply(scores, sort, decreasing=TRUE)
+        scores <- scores[1:2]
+      }
+      data = data.frame(country = country, score = scores)
+      results = bind_rows(results, data)
+    }
+    # us team
+    us_scores <- list()
+    for (gymnast in us_team_men) { # selected team members from part2
+      score <- simulate_score_men(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    if (length(us_scores) > 2) {
+      us_scores <- lapply(us_scores, sort, decreasing=TRUE)
+      us_scores <- us_scores[1:2]
+    }
+    data = data.frame(country = 'USA', score = us_scores)
+    results = bind_rows(results, data)
+    
+    # sort scores for all countries
+    results = results %>% 
+      arrange(desc(score))
+    # medals
+    if (results[1,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 3 # 3 for gold
+    }
+    else if (results[2,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 2 # 2 for silver
+    }
+    else if (results[3,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 1 # 1 for bronze
+    }
+  }
+  total_medal = total_medal + apparatus_medal
+  
+  # women
+  for (apparatus in apparatus_women) { # for each apparatus
+    apparatus_medal = 0
+    results <- data.frame() # competition results for each apparatus
+    for (country in women_other_countries$country) { # each country can have 2 women competing in each final apparatus
+      # other countries
+      data = women_other_countries %>% filter(country == country)
+      scores <- list()
+      for (gymnast in data$gymnast) {
+        score <- simulate_score_men(gymnast, apparatus)
+        scores = append(scores, score)
+      }
+      if (length(scores) > 2) {
+        scores <- lapply(scores, sort, decreasing=TRUE)
+        scores <- scores[1:2]
+      }
+      data = data.frame(country = country, score = scores)
+      results = bind_rows(results, data)
+    }
+    # us team
+    us_scores <- list()
+    for (gymnast in us_team_women) { # selected team members from part2
+      score <- simulate_score_women(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    if (length(us_scores) > 2) {
+      us_scores <- lapply(us_scores, sort, decreasing=TRUE)
+      us_scores <- us_scores[1:2]
+    }
+    data = data.frame(country = 'USA', score = us_scores)
+    results = bind_rows(results, data)
+    
+    # sort scores for all countries
+    results = results %>% 
+      arrange(desc(score))
+    # medals
+    if (results[1,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 3 # 3 for gold
+    }
+    else if (results[2,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 2 # 2 for silver
+    }
+    else if (results[3,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 1 # 1 for bronze
+    }
+  }
+  total_medal = total_medal + apparatus_medal
+  total_medal_score = c(total_medal_score, total_medal)
+}
+```
+
+```{r}
+# team all-around competition results
+
+num_iterations = 1000
+total_medal_score = list() # store total medal score for 1000 iterations
+for (iter in 1:num_iterations) {
+  total_medal = 0
+  # men
+  results <- data.frame() # competition results for all apparatus
+  for (apparatus in apparatus_men) { # for each apparatus
+     # competition results
+    for (country in men_other_countries$country) { # each country 
+      # other countries
+      data = men_other_countries %>% filter(country == country)
+      scores <- list()
+      
+      gymnasts <- data$gymnast
+      if (length(gymnasts) > 4) {
+        gymnasts <- sample(gymnasts, 4) # each country can select 4 gymnasts
+      }
+      for (gymnast in gymnasts) {
+        score <- simulate_score_men(gymnast, apparatus)
+        scores = append(scores, score)
+      }
+      if (legnth(scores) > 3) {
+        scores <- lapply(scores, sort, decreasing=TRUE)
+        scores <- scores[1:3] # 3 top scores out of 4 gymnasts
+      }
+      data = data.frame(country = country, score = sum(scores))
+      results = bind_rows(results, data)
+    }
+    # us team
+    us_scores <- list()
+    for (gymnast in us_team_women) { # selected team members from part2
+      score <- simulate_score_men(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    gymnasts <- sample(gymnasts, 4) # each country can select 4 gymnasts
+    for (gymnast in gymnasts) {
+      score <- simulate_score_men(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    us_scores <- lapply(us_scores, sort, decreasing=TRUE)
+    us_score <- us_scores[1:3] # 3 top scores out of 4 gymnasts
+    
+    data = data.frame(country = 'USA', score = sum(us_scores))
+    results = bind_rows(results, data)
+  }
+  
+  results = results %>% 
+    group_by(country) %>% 
+    summarise(team_score = sum(score)) %>% # add up score for each apparatus
+    arrange(desc(team_score))
+  # medals
+  if (results[1,]$country == 'USA') {
+    total_medal = total_medal + 3 # 3 for gold
+  }
+  else if (results[2,]$country == 'USA') {
+    total_medal = total_medal + 2 # 2 for silver
+  }
+  else if (results[3,]$country == 'USA') {
+    total_medal = total_medal + 1 # 1 for bronze
+  }
+  
+  # women
+  results <- data.frame() # competition results for all apparatus
+  for (apparatus in apparatus_men) { # for each apparatus
+     # competition results
+    for (country in men_other_countries$country) { # each country 
+      # other countries
+      data = men_other_countries %>% filter(country == country)
+      scores <- list()
+      
+      gymnasts <- data$gymnast
+      if (length(gymnasts) > 4) {
+        gymnasts <- sample(gymnasts, 4) # each country can select 4 gymnasts
+      }
+      for (gymnast in gymnasts) {
+        score <- simulate_score_men(gymnast, apparatus)
+        scores = append(scores, score)
+      }
+      if (legnth(scores) > 3) {
+        scores <- lapply(scores, sort, decreasing=TRUE)
+        scores <- scores[1:3] # 3 top scores out of 4 gymnasts
+      }
+      data = data.frame(country = country, score = sum(scores))
+      results = bind_rows(results, data)
+    }
+    # us team
+    us_scores <- list()
+    for (gymnast in us_team_women) { # selected team members from part2
+      score <- simulate_score_men(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    gymnasts <- sample(gymnasts, 4) # each country can select 4 gymnasts
+    for (gymnast in gymnasts) {
+      score <- simulate_score_men(gymnast, apparatus)
+      us_scores = append(us_scores, score)
+    }
+    us_scores <- lapply(us_scores, sort, decreasing=TRUE)
+    us_score <- us_scores[1:3] # 3 top scores out of 4 gymnasts
+    
+    data = data.frame(country = 'USA', score = sum(us_scores))
+    results = bind_rows(results, data)
+  }
+  
+  results = results %>% 
+    group_by(country) %>% 
+    summarise(team_score = sum(score)) %>% # add up score for each apparatus
+    arrange(desc(team_score))
+    # medals
+  if (results[1,]$country == 'USA') {
+    total_medal = total_medal + 3 # 3 for gold
+  }
+  else if (results[2,]$country == 'USA') {
+    total_medal = total_medal + 2 # 2 for silver
+  }
+  else if (results[3,]$country == 'USA') {
+    total_medal = total_medal + 1 # 1 for bronze
+  }
+  total_medal_score = c(total_medal_score, total_medal)
+}
+```
+
