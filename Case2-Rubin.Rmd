@@ -233,7 +233,7 @@ filtered_data <- cleaned_gym_data %>%
 ```
 
 ```{r}
-n <- 1000
+n <- 10000
 gymnasts <- 6
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
@@ -248,9 +248,12 @@ simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
   composite_score <- 0
   for (i in 1: nrow(selected_gymnasts)) {
+    if(!is.na(selected_gymnasts$SD[i])){
+      dev <- as.numeric(selected_gymnasts$SD[i])
+    } else{
+      dev = 0
+    }
     mu <- as.numeric(selected_gymnasts$Mu[i])
-    dev <- as.numeric(selected_gymnasts$SD[i])
-    
     if (!is.na(dev) && abs(dev) < 1e-10) {
       simulated_scores[[i]] <- mu
     } else {
@@ -260,45 +263,6 @@ simulate_composite_score <- function(selected_gymnasts) {
 #    cat("Iteration:", i, "mu:", mu, "dev:", dev, "Simulated Score:", simulated_scores[[i]], "Composite Score:", composite_score, "\n")
   }  
 #  print(composite_score)
-  return(composite_score)
-}
-
-results <- replicate(n, {
-  sampled_gymnasts <- usa_unique_final[sample(nrow(usa_unique_final), gymnasts, replace = TRUE),]
-  composite_score <- simulate_composite_score(sampled_gymnasts)
-  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
-  results_entry
-})
-results_tibble <- as_tibble(t(results))
-
-top_combinations_df <- results_tibble %>%
-  arrange(desc(Composite_Score)) %>%
-  slice_head(n = 10)
-
-print(top_combinations_df)
-```
-```{r}
-n <- 1000
-gymnasts <- 6
-top_combos <- 10
-usa_unique_final <- na.omit(usa_unique_final1)
-#simulate_composite_score <- function(selected_gymnasts) {
-#  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
-#  composite_score <- rowSums(do.call(cbind, simulated_scores))
-#  return(sum(composite_score))
-#}
-
-simulate_composite_score <- function(selected_gymnasts) {
-  simulated_scores <- list()
-  composite_score <- 0
-  for (i in 1: nrow(selected_gymnasts)) {
-    mu <- as.numeric(selected_gymnasts$Mu[i])
-    dev <- as.numeric(selected_gymnasts$SD[i])
-    simulated_scores[[i]] <- rnorm(1, mean = mu, sd = dev)
-    composite_score <- composite_score + as.numeric(simulated_scores[[i]])
-    print(composite_score)
-  }
-  
   return(composite_score)
 }
 
@@ -316,21 +280,52 @@ top_combinations_df <- results_tibble %>%
 
 print(top_combinations_df)
 ```
+
 ```{r}
-num_samples <- 1000
-
-run_sim <- function(mu, sd, num_samples) {
-  rnorm(num_samples, mean = mu, sd = sd)
-}
-
-for(i in 1:nrow(uniques)){
-  name <- name_store[i]
-  mu <- mu[[i]]
-  sd <- sd[[i]]
+n <- 10000
+gymnasts <- 6
+top_combos <- 10
+usa_unique_final <- na.omit(women_usa)
   
-  data <- run_sim(name, mu, sd, num_samples)
-  simulated_scores <- bind_rows(simulated_scores, tibble(Score = simulated_data, Name = name))
+#simulate_composite_score <- function(selected_gymnasts) {
+#  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
+#  composite_score <- rowSums(do.call(cbind, simulated_scores))
+#  return(sum(composite_score))
+#}
+
+simulate_composite_score <- function(selected_gymnasts) {
+  simulated_scores <- list()
+  composite_score <- 0
+  for (i in 1: nrow(selected_gymnasts)) {
+    if(!is.na(selected_gymnasts$SD[i])){
+      dev <- as.numeric(selected_gymnasts$SD[i])
+    } else{
+      dev = 0
+    }
+    mu <- as.numeric(selected_gymnasts$Mu[i])
+    if (!is.na(dev) && abs(dev) < 1e-10) {
+      simulated_scores[[i]] <- mu
+    } else {
+      simulated_scores[[i]] <- rnorm(1, mean = mu, sd = dev)
+    }
+    composite_score <- composite_score + as.numeric(simulated_scores[[i]])
+#    cat("Iteration:", i, "mu:", mu, "dev:", dev, "Simulated Score:", simulated_scores[[i]], "Composite Score:", composite_score, "\n")
+  }  
+#  print(composite_score)
+  return(composite_score)
 }
+
+results <- replicate(n, {
+  sampled_gymnasts <- usa_unique_final[sample(nrow(usa_unique_final), gymnasts, replace = FALSE),]
+  composite_score <- simulate_composite_score(sampled_gymnasts)
+  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
+  results_entry
+})
+results_tibble <- as_tibble(t(results))
+
+top_combinations_df <- results_tibble %>%
+  arrange(desc(Composite_Score)) %>%
+  slice_head(n = 10)
+
+print(top_combinations_df)
 ```
-
-
