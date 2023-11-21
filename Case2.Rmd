@@ -94,8 +94,9 @@ us_men_gym_data <- men_gym_data %>% filter(Country == "USA")
 us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
 ```
 
+## Methodology
 
-# Determining Constraint Level
+# 1. Determining Constraint Level
 
 In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women. 
 
