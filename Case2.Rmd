@@ -13,6 +13,7 @@ library(dplyr)
 library(MASS)
 library(purrr)
 library(tidyr)
+library(knitr)
 ```
 
 ```{r read-in, include=FALSE}
@@ -69,7 +70,7 @@ p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
 #Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
 ```
-```{r MenWomen, include=FALSE}
+```{r MenWomen2, include=FALSE}
 women_gym_data <- gym_data %>%
   filter(Gender == "w")
 
@@ -112,7 +113,7 @@ us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
 
 ## Methodology
 
-# 1. Determining Constraint Level
+### 1. Determining Constraint Level
 
 In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women.
 
@@ -167,7 +168,7 @@ us_men_gym_data <- us_men_gym_data %>%
 length(unique(us_men_gym_data$name))
 length(unique(us_womens_gym_data$name))
 ```
-# 2. Heuristically Analyzing Top Performers
+### 2. Heuristically Analyzing Top Performers
 
 Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the mens and womens team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that should, in expectation, be on the final 5.
 
@@ -185,7 +186,7 @@ With these adjusted metrics, we produce an adjusted score for each event & appar
 
 We aimed to use the 2nd and 3rd metrics to determine individuals that would be very likely to excel in a few apparatuses, alongside the two best all-around performers.
 
-# 3. Simulating Composite Scores
+### 3. Simulating Composite Scores
 
 The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores.
 
@@ -319,10 +320,12 @@ results <- replicate(n, {
 results_tibble <- as_tibble(t(results))
 
 top_combinations_df <- results_tibble %>%
+  mutate(Composite_Score = as.numeric(Composite_Score)) %>%
   arrange(desc(Composite_Score)) %>%
-  slice_head(n = 10)
+  slice_head(n = 10) %>%
+  mutate(Composite_Score = round(Composite_Score, 2))
 
-print(top_combinations_df)
+kable(top_combinations_df, digits = 2, caption = "Top 10 Male Groups of 5")
 ```
 
 
@@ -374,19 +377,33 @@ results <- replicate(n, {
 results_tibble <- as_tibble(t(results))
 
 top_combinations_df <- results_tibble %>%
+  mutate(Composite_Score = as.numeric(Composite_Score)) %>%
   arrange(desc(Composite_Score)) %>%
-  slice_head(n = 10)
+  slice_head(n = 10) %>%
+  mutate(Composite_Score = round(Composite_Score, 2))
 
-print(top_combinations_df)
+kable(top_combinations_df, digits = 2, caption = "Top 10 Female Groups of 5")
 ```
 
-4. Simulating Competitions in the Olympic with All Other Countries
+### 4. Simulating Competitions in the Olympic with All Other Countries
 
 After narrowing down the set of potential 5-member teams for men and women, we ran simulations to see how each candidate US team would perform if placed in the pool with all other teams from the world. To do this, we need to create participating teams for other countries. Here we assumed all countries had a team consisting of 5 members for men and women respectively. If the number of distinct gymnasts for a gender from a country is less than 5, we selected all the gymnasts from that country in the data set to be in the Olympic team. The men/women teams for other countries were randomly selected, so the teams may not be their "best" teams. We used random selections here because 1) it is very unlikely that all countries use identical method as the US to select the "best" team to participate in the Olympic and 2) our aim in this part is to compare the performance of narrowed-down US teams, so randomization in teams from other countries serves as a control. 
 
 We then placed each potential US team and all teams from other countries into simulated competitions. The simulated score of a gymnast in an apparatus was generated based on the mean and standard deviations of their historical scores using the rnorm() function. With each individual score, we then used the same rules as the Olympic gymnastic competitions to get the final rankings of US team in each of the 8 events for men and 6 events for women: 5-4-3 format for the qualifying round, 5-3-3 format for the team all-round, maximum of two gymnasts per country for the individual all-round, and maximum of 2 gymnasts per country for each apparatus final, except that we integrated the 5-4-3 and 5-3-3 format together, removing the need of taking the precedence of the qualifying rounds over finals into consideration. 
 
 For each simulated competition result, we used a weighted metrics to calculate a "total medal score" for the US team - a score of 3 for gold, 2 for silver, and 1 for bronze. We then computed the mean of this total medal score from all iterations of simulation for each potential US team and compared their scores.
+
+```{r MenWomen, include=FALSE}
+allcountries <- allcountries %>%
+  mutate(name = paste(FirstName, LastName))
+
+women_gym_data <- allcountries %>%
+  filter(Gender == "w")
+
+men_gym_data <- allcountries %>%
+  filter(Gender == "m")
+
+```
 
 ```{r include=FALSE}
 # function that simulates a random score for a gymnast in an apparatus
@@ -425,10 +442,15 @@ simulate_score_women <- function(gymnast, apparatus) {
 
 ```{r selected us team, include=FALSE}
 # replace the righthand part with each us team selected from part 2 (here I use a random sample)
+men_name_list <- c("Asher-HONG", "Taylor-BURKHART", "Khoi-YOUNG", "Brody-MALONE", "Stephen-NEDOROSCIK")
+subset_picker_m <- subset(us_men_gym_data, name %in% men_name_list)
+
+women_name_list <- c("Simone-BILES", "Jordan-CHILES", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER")
+subset_picker_f <- subset(us_womens_gym_data, name %in% women_name_list)
+
 us_team_men <- sample(unique(us_men_gym_data$name), 5)
 us_team_women <- sample(unique(us_womens_gym_data$name), 5)
 ```
-
 
 ```{r total medal score, warning=FALSE, message=FALSE, include=FALSE}
 # score 3 for gold, 2 for silver, 1 for bronze
@@ -436,15 +458,12 @@ apparatus_men <- unique(men_gym_data$Apparatus)
 apparatus_women <- unique(women_gym_data$Apparatus)
 country_list <- unique(men_gym_data$Country)
 country_list <- country_list[country_list != 'USA']
-num_iterations = 100
-total_medal_score = list() # store possible total medal scores for 1000 iterations
+num_iterations = 1
+men_total_medal_score = list() # store possible total medal scores for 1000 iterations
 for (iter in 1:num_iterations) {
   total_medal = 0
   
-  # select gymnast team for other countries (assuming the gymnasts from other countries are randomly selected because it's impossible that all countries use identical method as US to select gymnasts to participate in the Olympic)
   men_other_countries <- data.frame()
-  women_other_countries <- data.frame()
-  
   for (i in 1:length(country_list)) {
     data <- men_gym_data %>% 
       filter(Country == country_list[i])
@@ -453,18 +472,8 @@ for (iter in 1:num_iterations) {
       data = data.frame(country = country_list[i], gymnast = sample(gymnasts, min(5, length(gymnasts)))) # at most 5 gymnasts for each country
       men_other_countries <- bind_rows(men_other_countries, data)
     }
-    
   }
-  for (i in 1:length(country_list)) {
-    data <- women_gym_data %>% 
-      filter(Country == country_list[i])
-    gymnasts <- unique(data$name)
-    if (length(gymnasts) > 0) {
-      data = data.frame(country = country_list[i], gymnast = sample(gymnasts, min(5, length(gymnasts)))) # 5 gymnasts for each country
-      women_other_countries <- bind_rows(women_other_countries, data)
-    }
-  }
-
+  
   # men
   for (apparatus in apparatus_men) { # for each apparatus
     apparatus_medal = 0
@@ -520,60 +529,6 @@ for (iter in 1:num_iterations) {
       apparatus_medal = apparatus_medal + 2 # 2 for silver
     }
     else if (results[3,]$country == 'USA') {
-      apparatus_medal = apparatus_medal + 1 # 1 for bronze
-    }
-  }
-  total_medal = total_medal + apparatus_medal
-  
-  # women
-  for (apparatus in apparatus_women) { # for each apparatus
-    apparatus_medal = 0
-    results <- data.frame() # competition results for each apparatus
-    for (c in unique(women_other_countries$country)) { # each country can have 2 women competing in each final apparatus
-      # other countries
-      data = women_other_countries %>% filter(country == c)
-      scores <- list()
-      for (gymnast in data$gymnast) {
-        score <- simulate_score_men(gymnast, apparatus)
-        scores = append(scores, score)
-      }
-      if (length(scores) > 2) {
-        scores <- lapply(scores, sort, decreasing=TRUE)
-        scores <- scores[1:2]
-      }
-      scores <- unlist(scores)
-      if (length(scores != 0)) {
-        data = data.frame(country = c, score = scores)
-        results = bind_rows(results, data)
-      }
-    }
-    # us team
-    us_scores <- list()
-    for (gymnast in us_team_women) { # selected team members from part2
-      score <- simulate_score_women(gymnast, apparatus)
-      if (!is.na(score)) {
-        us_scores = append(us_scores, score)
-      }
-    }
-    if (length(us_scores) > 2) {
-      us_scores <- lapply(us_scores, sort, decreasing=TRUE)
-      us_scores <- us_scores[1:2]
-    }
-    us_scores <- unlist(us_scores)
-    data = data.frame(country = 'USA', score = us_scores)
-    results = bind_rows(results, data)
-    
-    # sort scores for all countries
-    results = results %>% 
-      arrange(desc(score))
-    # medals
-    if (results[1,]$country == 'USA') {
-      apparatus_medal = apparatus_medal + 3 # 3 for gold
-    }
-    if (results[2,]$country == 'USA') {
-      apparatus_medal = apparatus_medal + 2 # 2 for silver
-    }
-    if (results[3,]$country == 'USA') {
       apparatus_medal = apparatus_medal + 1 # 1 for bronze
     }
   }
@@ -642,6 +597,132 @@ for (iter in 1:num_iterations) {
     total_medal = total_medal + 1 # 1 for bronze
   }
   
+  # individual all-round
+  results_indi <- data.frame() # competition results for all apparatus
+  # men
+  for (apparatus in apparatus_men) { # for each apparatus
+     # competition results
+    for (country in unique(men_other_countries$country)) { # each country 
+      # other countries
+      data = men_other_countries %>% filter(country == country)
+      
+      gymnasts <- data$gymnast
+      if (length(gymnasts) > 2) {
+        gymnasts <- sample(gymnasts, 2) # each country randomly select 2 gymnasts for individual all-round
+      }
+      for (gymnast in gymnasts) {
+        score <- simulate_score_men(gymnast, apparatus)
+        if (!is.na(score)) {
+          data = data.frame(country = country, gymnast = gymnast, score = scores)
+          results_indi = bind_rows(results_indi, data)
+        }
+      }
+    }
+    # us 
+    gymnasts <- sample(us_team_men, 2) # randomly select 2 gymnasts from team selected in part2
+    for (gymnast in gymnasts) {
+      score <- simulate_score_men(gymnast, apparatus)
+      data = data.frame(country = 'USA', gymnast = gymnast, score = us_scores)
+      results_indi = bind_rows(results_indi, data)
+    }
+    
+  }
+  
+  results_indi = results_indi %>% 
+    group_by(country, gymnast) %>% 
+    summarise(all_round_score = sum(score)) %>% # add up score for each apparatus
+    arrange(desc(all_round_score))
+  # medals
+  if (results_indi[1,]$country == 'USA') {
+    total_medal = total_medal + 3 # 3 for gold
+  }
+  if (results_indi[2,]$country == 'USA') {
+    total_medal = total_medal + 2 # 2 for silver
+  }
+  if (results_indi[3,]$country == 'USA') {
+    total_medal = total_medal + 1 # 1 for bronze
+  }
+}
+```
+
+```{r total medal score2, warning=FALSE, message=FALSE, include=FALSE}
+# score 3 for gold, 2 for silver, 1 for bronze
+apparatus_men <- unique(men_gym_data$Apparatus)
+apparatus_women <- unique(women_gym_data$Apparatus)
+country_list <- unique(men_gym_data$Country)
+country_list <- country_list[country_list != 'USA']
+num_iterations = 1
+total_medal_score = list() # store possible total medal scores for 1000 iterations
+for (iter in 1:num_iterations) {
+  total_medal = 0
+  
+  # select gymnast team for other countries (assuming the gymnasts from other countries are randomly selected because it's impossible that all countries use identical method as US to select gymnasts to participate in the Olympics
+  
+  women_other_countries <- data.frame()
+  for (i in 1:length(country_list)) {
+    data <- women_gym_data %>% 
+      filter(Country == country_list[i])
+    gymnasts <- unique(data$name)
+    if (length(gymnasts) > 0) {
+      data = data.frame(country = country_list[i], gymnast = sample(gymnasts, min(5, length(gymnasts)))) # 5 gymnasts for each country
+      women_other_countries <- bind_rows(women_other_countries, data)
+    }
+  }
+  
+  # women
+  for (apparatus in apparatus_women) { # for each apparatus
+    apparatus_medal = 0
+    results <- data.frame() # competition results for each apparatus
+    for (c in unique(women_other_countries$country)) { # each country can have 2 women competing in each final apparatus
+      # other countries
+      data = women_other_countries %>% filter(country == c)
+      scores <- list()
+      for (gymnast in data$gymnast) {
+        score <- simulate_score_men(gymnast, apparatus)
+        scores = append(scores, score)
+      }
+      if (length(scores) > 2) {
+        scores <- lapply(scores, sort, decreasing=TRUE)
+        scores <- scores[1:2]
+      }
+      scores <- unlist(scores)
+      if (length(scores != 0)) {
+        data = data.frame(country = c, score = scores)
+        results = bind_rows(results, data)
+      }
+    }
+    # us team
+    us_scores <- list()
+    for (gymnast in us_team_women) { # selected team members from part2
+      score <- simulate_score_women(gymnast, apparatus)
+      if (!is.na(score)) {
+        us_scores = append(us_scores, score)
+      }
+    }
+    if (length(us_scores) > 2) {
+      us_scores <- lapply(us_scores, sort, decreasing=TRUE)
+      us_scores <- us_scores[1:2]
+    }
+    us_scores <- unlist(us_scores)
+    data = data.frame(country = 'USA', score = us_scores)
+    results = bind_rows(results, data)
+    
+    # sort scores for all countries
+    results = results %>% 
+      arrange(desc(score))
+    # medals
+    if (results[1,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 3 # 3 for gold
+    }
+    if (results[2,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 2 # 2 for silver
+    }
+    if (results[3,]$country == 'USA') {
+      apparatus_medal = apparatus_medal + 1 # 1 for bronze
+    }
+  }
+  total_medal = total_medal + apparatus_medal
+  
   # women team all-round
   results_team <- data.frame() # competition results for all apparatus
   for (apparatus in apparatus_women) { # for each apparatus
@@ -707,52 +788,6 @@ for (iter in 1:num_iterations) {
   
   # individual all-round
   results_indi <- data.frame() # competition results for all apparatus
-  # men
-  for (apparatus in apparatus_men) { # for each apparatus
-     # competition results
-    for (country in unique(men_other_countries$country)) { # each country 
-      # other countries
-      data = men_other_countries %>% filter(country == country)
-      
-      gymnasts <- data$gymnast
-      if (length(gymnasts) > 2) {
-        gymnasts <- sample(gymnasts, 2) # each country randomly select 2 gymnasts for individual all-round
-      }
-      for (gymnast in gymnasts) {
-        score <- simulate_score_men(gymnast, apparatus)
-        if (!is.na(score)) {
-          data = data.frame(country = country, gymnast = gymnast, score = scores)
-          results_indi = bind_rows(results_indi, data)
-        }
-      }
-    }
-    # us 
-    gymnasts <- sample(us_team_men, 2) # randomly select 2 gymnasts from team selected in part2
-    for (gymnast in gymnasts) {
-      score <- simulate_score_men(gymnast, apparatus)
-      data = data.frame(country = 'USA', gymnast = gymnast, score = us_scores)
-      results_indi = bind_rows(results_indi, data)
-    }
-    
-  }
-  
-  results_indi = results_indi %>% 
-    group_by(country, gymnast) %>% 
-    summarise(all_round_score = sum(score)) %>% # add up score for each apparatus
-    arrange(desc(all_round_score))
-  # medals
-  if (results_indi[1,]$country == 'USA') {
-    total_medal = total_medal + 3 # 3 for gold
-  }
-  if (results_indi[2,]$country == 'USA') {
-    total_medal = total_medal + 2 # 2 for silver
-  }
-  if (results_indi[3,]$country == 'USA') {
-    total_medal = total_medal + 1 # 1 for bronze
-  }
-  
-  # women
-  results_indi <- data.frame() # competition results for all apparatus
   for (apparatus in apparatus_women) { # for each apparatus
      # competition results
     for (country in unique(women_other_countries$country)) { # each country 
@@ -795,23 +830,148 @@ for (iter in 1:num_iterations) {
   if (results_indi[3,]$country == 'USA') {
     total_medal = total_medal + 1 # 1 for bronze
   }
-  total_medal_score = c(total_medal_score, total_medal)
+  print(total_medal)
+
 }
 ```
+
 ```{r compare selected us teams, include=FALSE}
 # mean total medal score for the 100 simulations for one us team
-mean(total_medal_score)
+# mean(total_medal_score)
 ```
 
 ## Results
 
-# Simulating Composite Scores
+### Subsetting 
+
+After our initial filtering removed participants that were well outside of a top 5 range, we used our heuristics described in the methodology to further subset a top 10 sample of mens participants and womens participants using a new weighted composite score. We used 3 different metrics to understand this data: the sum of composite scores across each apparatus, the maximum individual apparatus score, and the average top 2 apparatus score for each individual.
+
+Starting with men's results, we were able to pinpoint Brody Malone as being the clear top overall performer in the men's division, without an obvious number 2 all-around performer (and opted to use our simulations to fill in the rest of the team). 
+
+Below, is the overall composite score top 10.
+
+```{r echo=FALSE}
+# Define the data
+data <- list(
+  c("Brody MALONE", 249.80154659560017),
+  c("Donnell WHITTENBURG", 195.52011560555243),
+  c("Frederick Nathaniel RICHARD", 190.83141796337506),
+  c("Asher HONG", 189.26565927742791),
+  c("Paul JUDA", 178.88345434011973),
+  c("Taylor BURKHART", 174.98751609709757),
+  c("Joshua Andrew KARNES", 171.18041336681475),
+  c("Khoi YOUNG", 169.02882167446435),
+  c("Colt WALKER", 165.77200819602803),
+  c("Cameron BOCK", 158.15374820576932)
+)
+
+# Convert the list to a data frame
+df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
+
+# Round the Score column to two decimal places
+df$Score <- round(df$Score, 2)
+
+# Print the formatted data frame
+rounded_df <- df %>% 
+  mutate(across(where(is.numeric), round, 2))
+
+# Print the rounded tibble
+kable(rounded_df, caption = "Overall Top 10")
+```
+Followed by the individual apparatus max score top 10.
+
+```{r echo=FALSE}
+# Define the data
+data <- list(
+  c("Brody MALONE", 84.75796178343948),
+  c("Curran PHILLIPS", 77.2883295194508),
+  c("Donnell WHITTENBURG", 67.7936507936508),
+  c("Stephen NEDOROSCIK", 60.963276836158194),
+  c("Frederick Nathaniel RICHARD", 49.170731707317074),
+  c("Ian SKIRKEY", 48.38659793814433),
+  c("Khoi YOUNG", 47.75471698113208),
+  c("Taylor BURKHART", 47.43283582089552),
+  c("Paul JUDA", 47.26315789473684),
+  c("Colt WALKER", 47.09493670886076)
+)
+
+# Convert the list to a data frame
+df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
+
+# Round the Score column to two decimal places
+df$Score <- round(df$Score, 2)
+
+# Print the formatted data frame
+rounded_df <- df %>% 
+  mutate(across(where(is.numeric), round, 2))
+
+# Print the rounded tibble
+kable(rounded_df, caption = "Single Apparatus Top 10")
+
+```
+
+And finally the best two apparatus max score top 10.
+
+```{r echo=FALSE}
+# Define the new data
+data <- list(
+  c("Brody MALONE", 70.17941948821097),
+  c("Curran PHILLIPS", 58.97936029045165),
+  c("Donnell WHITTENBURG", 52.345674501684734),
+  c("Khoi YOUNG", 46.47486886401002),
+  c("Taylor BURKHART", 45.373932361314814),
+  c("Paul JUDA", 44.39546783625731),
+  c("Frederick Nathaniel RICHARD", 44.30745887691435),
+  c("Asher HONG", 43.302864420729975),
+  c("Riley LOOS", 39.993769470404985),
+  c("Joshua Andrew KARNES", 38.70359281437126)
+)
+
+# Convert the list to a data frame
+df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
+
+# Round the Score column to two decimal places
+df$Score <- round(df$Score, 2)
+
+# Print the formatted data frame
+rounded_df <- df %>% 
+  mutate(across(where(is.numeric), round, 2))
+
+# Print the rounded tibble
+kable(rounded_df, caption = "Two Apparatus Avg Top 10")
+
+```
+
+From these results, we are able to get insight into how each athlete would fit on a team. Brody Malone and Donnell Whittenberg seem to consistently perform well across multiple events and score very highly, which means that we could expect at least one of them to anchor a team as an all-around performer. Certain athletes like Curran Phillips, Khoi Young, and Taylor Purkhart excel at specific apparatuses, which may make them valuable to earn a medal in a single event.
+
+Next, moving onto the women's results. We were able to pinpoint Simone Biles as the clear top performer as an all-around athlete, but following was Jordan Chiles with a high composite score that also secures a spot as an all-around athlete.
+
+
+### Simulating Composite Scores
 
 Combining our analysis in parts two and three, we were able to calculate the combination of mens and womens USA teams that elicited the highest composite scores in our simulation. After setting a random seed and running a simulation on the men’s data 10,000 times, our results yielded that the highest composite scoring men's team includes Taylor Burkhart, Asher Hong, Khoi Young, Brody Malone, and Stephen Nedoroscik. This team combination generated a composite score of approximately 76.925. In other words, the average score for each member of this team is 15.385. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. This holds true for the next closest team (as well as in our women’s data set), consisting of Stephen Nedoroscik, Khoi Young, Joshua Karnes, Curran Phillips, and Frederick Richard, with a score of 76.486 (A score of 15.297 per gymnast on average). 
 
 Our USA women’s output from our simulation yielded that the highest composite scoring team has a roster of Zoe Miller, Jade Carey, Simone Biles, Shilese Jones, and Jordan Chiles. The composite score for this roster was 74.240. Under this total score assumption, each gymnast would score a 14.848 on average. The second closest team features three of the same gymnasts in its overall lineup of Shilese Jones, Ashlee Sullivan, Jordan Chiles, Kaliya Lincoln, and Zoe Miller, with a total score of approximately 74.128 (about 14.826 on average). The overlap between gymnasts in top-composite-scoring teams for both men and women is a source of confidence in our model. 
 
 While average scores are ultimately high, and our number of simulations may occasionally favor gymnasts with high variances, our outputs give us a reasonable estimate of a starting combination for both the men’s and women’s 2024 Olympics lineup. 
+
+### Simulating Medals
+
+Our preliminary simulation for medaling provides us a way to simulate how our team would perform against other countries. Using the methodology proposed to create an international team to test the US team against, we are able to see how our 2 lineups would score against other teams. 
+
+Using a scoring system of 3 points for Gold, 2 points for Silver, and 1 point for Bronze, our men's team most frequently earned 9 points, with little variance (a minimum of 6 points and a maxiumum of 13 points). Our women's team performed stronger and averaged closer to 14 points in the simulation with higher variance (from 11 points to 22 points). 
+
+### Discussion
+
+In our analysis we aimed to address the goal of determining both a mens and womens artistic gymnastics team for the United States of America to send to the Paris 2024 Olympics. We wanted this team to be the optimal selection, maximizing the medal count at the games. We were able to achieve this through our four-step methodology. First, we set a constraint criteria that limited our selection pool. We then heuristically analyzed our top performs mirroring the selection process used for past games. After that, we simulated composite scores for our US Olympics teams and finally compared those against simulated scores for other nations' Olympic teams.
+
+There were a few limitations with the data. One was that the dataset itself did not include information on defending champions - something that is common for Olympic selection committees to weigh highly in their decision making. Although we were able to take this into account by making sure to include defending champions such as Simone Biles (and the men's team had no defending champions to address), it would be an interesting addition to our work to have data on this. Another limitation is that this data just included scores in competition. There was no additional information about the athletes’ performances, such as if they are currently healthy or injured or even if they plan to or want to compete in the Paris 2024 Olympics. While we mitigated this by selecting only gymnasts with recent performances, this additional information would have improved our analysis.
+
+We were able to address our ultimate goal by forming two teams that stand a strong chance in Paris. The men’s team that we selected consisted of Taylor Burkhart, Asher Hong, Khoi Young, Brody Malone, and Stephen Nedoroscik. Our results showed that this team had an average score of 15.385 per member and a composite score of 76.925. These scores were much higher than average, and after simulating scores for other nations show that this team has the strongest chance of bringing home the most medals.
+
+Our womens’ team selection further addressed our ultimate goal of Paris 2024 dominance. Our team of Zoe Miller, Jade Carey, Simone Biles, Shilese Jones, and Jordan Chiles features two defending medalists. Their simulated average score of 14.848 per member gives them a competitive advantage which is supported by their composite score of 74.240.
+
+Our analysis has produced teams with the highest simulated average and composite scores. Compared against simulated scores for teams from other nations, our selected US teams stand to perform better than scores from those teams. Our selection process has created the strongest chances for Team USA in the 2024 Olympics, and provides an exciting new way that statistical analysis can be applied to this previously subjective process of team selection.
 
 
 ## Sources
