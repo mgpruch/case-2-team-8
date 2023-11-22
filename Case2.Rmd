@@ -267,7 +267,7 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of 10 male gymnasts and 10 female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. We start our simulation by randomly sampling five different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 5000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of 10 male gymnasts and 10 female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. We start our simulation by randomly sampling five different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 10,000 times for the men's data set, as well as 5,000 for the women's data set (as it is much smaller), storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
 
 ```{r, echo=FALSE}
@@ -802,6 +802,17 @@ for (iter in 1:num_iterations) {
 # mean total medal score for the 100 simulations for one us team
 mean(total_medal_score)
 ```
+
+## Results
+
+# Simulating Composite Scores
+
+Combining our analysis in parts two and three, we were able to calculate the combination of mens and womens USA teams that elicited the highest composite scores in our simulation. After setting a random seed and running a simulation on the men’s data 10,000 times, our results yielded that the highest composite scoring men's team includes Taylor Burkhart, Asher Hong, Khoi Young, Brody Malone, and Stephen Nedoroscik. This team combination generated a composite score of approximately 76.925. In other words, the average score for each member of this team is 15.385. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. This holds true for the next closest team (as well as in our women’s data set), consisting of Stephen Nedoroscik, Khoi Young, Joshua Karnes, Curran Phillips, and Frederick Richard, with a score of 76.486 (A score of 15.297 per gymnast on average). 
+
+Our USA women’s output from our simulation yielded that the highest composite scoring team has a roster of Zoe Miller, Jade Carey, Simone Biles, Shilese Jones, and Jordan Chiles. The composite score for this roster was 74.240. Under this total score assumption, each gymnast would score a 14.848 on average. The second closest team features three of the same gymnasts in its overall lineup of Shilese Jones, Ashlee Sullivan, Jordan Chiles, Kaliya Lincoln, and Zoe Miller, with a total score of approximately 74.128 (about 14.826 on average). The overlap between gymnasts in top-composite-scoring teams for both men and women is a source of confidence in our model. 
+
+While average scores are ultimately high, and our number of simulations may occasionally favor gymnasts with high variances, our outputs give us a reasonable estimate of a starting combination for both the men’s and women’s 2024 Olympics lineup. 
+
 
 ## Sources
 Artistic Gymnastics. Paris 2024. (2023, June 1). https://www.paris2024.org/en/sport/artistic-gymnastics/ 
