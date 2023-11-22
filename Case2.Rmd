@@ -229,10 +229,10 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations. For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of 0. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score. 
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score. 
 
 ```{r}
-n <- 50000
+n <- 100
 gymnasts <- 6
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
@@ -281,7 +281,7 @@ print(top_combinations_df)
 ```
 
 ```{r}
-n <- 50000
+n <- 25000
 gymnasts <- 6
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
@@ -328,4 +328,5 @@ top_combinations_df <- results_tibble %>%
 
 print(top_combinations_df)
 ```
+
 
