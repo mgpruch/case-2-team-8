@@ -17,11 +17,12 @@ library(tidyr)
 
 ```{r read-in, include=FALSE}
 gym_data = read.csv("filtered_3.csv")
+allcountries = read.csv("cleanedfinalgymnastdata.csv")
 ```
 
 ## Introduction
 
-As the Paris 2024 Olympic Games draw closer, the United States gymnastics program get ready to continue their dominance. The US women's artistic gymnastics team is one of the most decorated nations in the sport. The program has won three team gold medals at the 1996, 2012, and 2016 Olympics seven team gold medals at the World Championships. The program also trained the most decorated female gymnast - Simone Biles - who holds 37 world and Olympic medals. Beyond just their success in the gym, the program has created an international hype around them with their Olympic gold medal teams receiving the nicknames of the Magnificent Seven, the Fierce Five, and the Final Five. At their last Olympic showing, they attracted an average of 17.4 million total viewers for their appearance in the finals. While receiving less of a media frenzy than the women's team, the US men's artistic gymnastics team are still strong competitors. Although they received no medals in Tokyo, the program has achieved 6 medals in their history and look to make a strong appearance in Paris.
+As the Paris 2024 Olympic Games draw closer, the United States gymnastics program is getting ready to continue their dominance. The US women's artistic gymnastics team is one of the most decorated nations in the sport. The program has won three team gold medals at the 1996, 2012, and 2016 Olympics seven team gold medals at the World Championships. The program also trained the most decorated female gymnast - Simone Biles - who holds 37 world and Olympic medals. Beyond just their success in the gym, the program has created an international hype around them with their Olympic gold medal teams receiving the nicknames of the Magnificent Seven, the Fierce Five, and the Final Five. At their last Olympic showing, they attracted an average of 17.4 million total viewers for their appearance in the finals. While receiving less of a media frenzy than the women's team, the US men's artistic gymnastics team are still strong competitors. Although they received no medals in Tokyo, the program has achieved 6 medals in their history and look to make a strong appearance in Paris.
 
 In order to make a strong showing from both teams and continue the legacy of the women's program, choosing the best possible team is essential. USA Gymnastics has nearly 200,000 members from their beginning training to their elite levels, but few can be taken to the international stage to represent their country. Both teams will only be allowed to bring five members to the Paris 2024 Olympics. The women's team will compete on four apparatuses: vault, uneven bars, balance beam, and floor exercise. The men's team will compete on six apparatuses: floor exercise, pommel horse, still rings, vault, parallel bars, and high bar. Both teams will also compete in the team and individual all-around, allowing for 6 opportunities to medal for the women and 8 for the men. Out of these 5 member teams, competition will follow a 5-4-3 format (4 members out of the 5 compete on each apparatus, and the top 3 scores count). In the team all-around this changes to a 5-3-3 format, so every score counts for the 3 members chosen to compete. For the individual competitions, only 2 gymnasts max per country can qualify to move on to the finals.
 
@@ -34,6 +35,7 @@ To do this, we are assessing data from past performances at recent competitions.
 ```{r, include=FALSE}
 #Cleaning hb issue
 gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
+allcountries$Apparatus[allcountries$Apparatus == "hb"] <- "HB"
 ```
 
 ```{r Highest-Vault, include=FALSE}
@@ -41,21 +43,27 @@ gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
 #Renaming these to all just be VT, because they're all data on vaults
 gym_data$Apparatus[gym_data$Apparatus == "VT1"] <- "VT"
 gym_data$Apparatus[gym_data$Apparatus == "VT2"] <- "VT"
+allcountries$Apparatus[allcountries$Apparatus == "VT1"] <- "VT"
+allcountries$Apparatus[allcountries$Apparatus == "VT2"] <- "VT"
 
 #Making a US Binary variable
 gym_data <- gym_data %>%
   mutate(Nation = case_when(Country == "USA" ~ "USA",
                               Country != "USA" ~ "Other"))
+allcountries <- allcountries %>%
+  mutate(Nation = case_when(Country == "USA" ~ "USA",
+                              Country != "USA" ~ "Other"))
 ```
+
+We started by looking at the distribution of total scores (the combination of both the E and D scores) for all gymnasts of both genders across all appartuses. For most of the appartuses, the distributions had the largest number of outliers towards the lower end of the distribution. This means that there were many gymnasts who had unusually low scores compared to the rest of the score distribution. Scores were more clustered towards the upper end of the distribution, with the average scores for all of the apparatuses being around 13 points. For both genders, the vault and floor events had the smallest range of scores.
 
 ```{r, echo = FALSE}
 #Looking at distribution of score across different events
-p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +
+options(repr.plot.width =4, repr.plot.height =4)
+p <- ggplot(data = allcountries, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +
   geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
 
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
-
-#Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
 ```
 ```{r MenWomen, include=FALSE}
 women_gym_data <- gym_data %>%
@@ -63,16 +71,20 @@ women_gym_data <- gym_data %>%
 
 men_gym_data <- gym_data %>%
   filter(Gender == "m")
+allcountriesw <- allcountries %>%
+  filter(Gender == "w")
+allcountriesm <- allcountries %>%
+  filter(Gender == "m")
 ```
 
-
+We also assessed the distribution of scores for US men and womens gymnasts against the distributions for competitors for other countries. For the women gymnasts, across all apparatuses the average score was higher for US women. This makes sense given their impressive history in the sport. The US mens distributions were on par with the distributions for gymnasts from other countries. The averages for each apparatus were mostly the same. 
 
 ```{r, echo = FALSE}
 library(dplyr)
-ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
+ggplot(data = allcountriesw, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
   geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts")
 
-ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
+ggplot(data = allcountriesm, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
   geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts")
 ```
 
@@ -345,3 +357,10 @@ top_combinations_df <- results_tibble %>%
 
 print(top_combinations_df)
 ```
+
+## Sources
+Artistic Gymnastics. Paris 2024. (2023, June 1). https://www.paris2024.org/en/sport/artistic-gymnastics/ 
+
+Wikimedia Foundation. (2023a, October 8). United States men’s National Artistic Gymnastics Team. Wikipedia. https://en.wikipedia.org/wiki/United_States_men%27s_national_artistic_gymnastics_team 
+
+Wikimedia Foundation. (2023, November 13). United States women’s National Artistic Gymnastics Team. Wikipedia. https://en.wikipedia.org/wiki/United_States_women%27s_national_artistic_gymnastics_team 
