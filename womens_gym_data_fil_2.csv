@@ -1,0 +1,865 @@
+,LastName,FirstName,Gender,Country,Date,Competition,Round,Location,Apparatus,Rank,D_Score,E_Score,Penalty,Score,Nation,name,Year,Month
+0,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",BB,1.0,6.4,8.033,,14.433,USA,Simone BILES,2023,10
+1,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",BB,1.0,6.5,8.3,,14.8,USA,Simone BILES,2023,10
+2,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",BB,1.0,6.3,8.266,,14.566,USA,Simone BILES,2023,10
+3,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",BB,,6.0,8.3,,14.3,USA,Simone BILES,2023,10
+4,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",FX,1.0,6.5,8.033,,14.533,USA,Simone BILES,2023,10
+5,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",FX,1.0,6.7,8.033,0.1,14.633,USA,Simone BILES,2023,10
+6,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",FX,1.0,6.7,7.933,,14.633,USA,Simone BILES,2023,10
+7,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",FX,,6.7,8.466,,15.166,USA,Simone BILES,2023,10
+8,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",UB,6.0,6.0,8.333,,14.333,USA,Simone BILES,2023,10
+9,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",UB,5.0,6.0,8.2,,14.2,USA,Simone BILES,2023,10
+10,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",UB,5.0,6.0,8.4,,14.4,USA,Simone BILES,2023,10
+11,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",UB,,6.0,8.466,,14.466,USA,Simone BILES,2023,10
+12,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",VT,1.0,5.6,9.5,,15.1,USA,Simone BILES,2023,10
+13,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",VT,,5.6,9.2,,14.8,USA,Simone BILES,2023,10
+14,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",VT,2.0,6.4,8.533,0.5,14.433,USA,Simone BILES,2023,10
+15,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,1.0,6.4,9.366,0.5,15.266,USA,Simone BILES,2023,10
+16,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",VT,2.0,5.6,9.066,,14.666,USA,Simone BILES,2023,10
+17,BILES,Simone,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,1.0,5.6,9.033,,14.633,USA,Simone BILES,2023,10
+18,BILES,Simone,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,1.0,6.5,8.3,,14.8,USA,Simone BILES,2023,8
+19,BILES,Simone,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,1.0,6.8,8.1,,14.9,USA,Simone BILES,2023,8
+20,BILES,Simone,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,3.0,6.0,8.0,,14.0,USA,Simone BILES,2023,8
+21,BILES,Simone,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,6.4,9.6,0.6,15.4,USA,Simone BILES,2023,8
+22,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,6.4,8.05,,14.45,USA,Simone BILES,2023,8
+23,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,6.5,8.35,,14.85,USA,Simone BILES,2023,8
+24,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,6.8,8.1,0.1,14.8,USA,Simone BILES,2023,8
+25,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,6.8,8.6,,15.4,USA,Simone BILES,2023,8
+26,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,6.0,8.35,,14.35,USA,Simone BILES,2023,8
+27,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,6.0,8.05,,14.05,USA,Simone BILES,2023,8
+28,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,6.4,9.8,0.5,15.7,USA,Simone BILES,2023,8
+29,BILES,Simone,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.6,9.25,,14.85,USA,Simone BILES,2023,8
+30,BLAKELY,Skye,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",BB,5.0,6.2,7.1,,13.3,USA,Skye BLAKELY,2022,11
+31,BLAKELY,Skye,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",BB,2.0,6.0,7.733,,13.733,USA,Skye BLAKELY,2022,11
+32,BLAKELY,Skye,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",BB,,6.0,7.266,,13.266,USA,Skye BLAKELY,2022,11
+33,BLAKELY,Skye,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",FX,11.0,5.7,7.9,,13.6,USA,Skye BLAKELY,2022,11
+34,BLAKELY,Skye,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",UB,63.0,5.5,7.066,,12.566,USA,Skye BLAKELY,2022,11
+35,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,6.3,7.15,,13.45,USA,Skye BLAKELY,2022,8
+36,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.8,7.15,,12.95,USA,Skye BLAKELY,2022,8
+37,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.4,8.0,0.1,13.3,USA,Skye BLAKELY,2022,8
+38,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.6,7.85,,13.45,USA,Skye BLAKELY,2022,8
+39,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.6,8.25,,13.85,USA,Skye BLAKELY,2022,8
+40,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.5,8.4,,13.9,USA,Skye BLAKELY,2022,8
+41,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,9.1,,14.1,USA,Skye BLAKELY,2022,8
+42,BLAKELY,Skye,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,9.3,,14.3,USA,Skye BLAKELY,2022,8
+43,BLAKELY,Skye,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,3.0,6.0,7.5,,13.5,USA,Skye BLAKELY,2022,2
+44,BLAKELY,Skye,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,2.0,5.4,7.85,,13.25,USA,Skye BLAKELY,2022,2
+45,BLAKELY,Skye,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,7.0,5.0,8.15,,13.15,USA,Skye BLAKELY,2022,2
+46,BLAKELY,Skye,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,8.9,0.1,13.8,USA,Skye BLAKELY,2022,2
+47,BLAKELY,Skye,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",BB,92.0,6.0,5.866,,11.866,USA,Skye BLAKELY,2023,10
+48,BLAKELY,Skye,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",UB,8.0,5.9,8.233,,14.133,USA,Skye BLAKELY,2023,10
+49,BLAKELY,Skye,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",UB,,5.9,8.266,,14.166,USA,Skye BLAKELY,2023,10
+50,BLAKELY,Skye,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,3.0,6.4,7.9,,14.3,USA,Skye BLAKELY,2023,8
+51,BLAKELY,Skye,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,2.0,5.9,8.45,,14.35,USA,Skye BLAKELY,2023,8
+52,BLAKELY,Skye,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,9.1,,14.1,USA,Skye BLAKELY,2023,8
+53,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,6.1,7.95,,14.05,USA,Skye BLAKELY,2023,8
+54,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,6.1,8.1,,14.2,USA,Skye BLAKELY,2023,8
+55,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.6,7.4,0.1,12.9,USA,Skye BLAKELY,2023,8
+56,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.7,6.8,0.3,12.2,USA,Skye BLAKELY,2023,8
+57,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.9,8.5,,14.4,USA,Skye BLAKELY,2023,8
+58,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.9,8.5,,14.4,USA,Skye BLAKELY,2023,8
+59,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.35,,14.35,USA,Skye BLAKELY,2023,8
+60,BLAKELY,Skye,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.25,,14.25,USA,Skye BLAKELY,2023,8
+61,BLAKELY,Skye,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,1.0,5.9,7.6,0.1,13.4,USA,Skye BLAKELY,2023,2
+62,BLAKELY,Skye,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,8.0,5.9,7.25,,13.15,USA,Skye BLAKELY,2023,2
+63,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.2,7.5,,12.7,USA,Charlotte BOOTH,2022,8
+64,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.1,7.25,,12.35,USA,Charlotte BOOTH,2022,8
+65,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.8,7.3,,12.1,USA,Charlotte BOOTH,2022,8
+66,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,4.8,7.55,0.2,12.15,USA,Charlotte BOOTH,2022,8
+67,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.9,6.4,,12.3,USA,Charlotte BOOTH,2022,8
+68,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.7,7.7,,13.4,USA,Charlotte BOOTH,2022,8
+69,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,8.6,0.1,13.5,USA,Charlotte BOOTH,2022,8
+70,BOOTH,Charlotte,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,8.6,,13.6,USA,Charlotte BOOTH,2022,8
+71,BOOTH,Charlotte,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,9.0,5.1,6.6,,11.7,USA,Charlotte BOOTH,2022,7
+72,BOOTH,Charlotte,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,3.0,5.7,7.7,,13.4,USA,Charlotte BOOTH,2022,7
+73,BOOTH,Charlotte,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,24.0,4.9,5.7,,10.6,USA,Charlotte BOOTH,2022,2
+74,BOOTH,Charlotte,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,18.0,4.7,7.4,,12.1,USA,Charlotte BOOTH,2022,2
+75,BOOTH,Charlotte,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,15.0,5.5,7.15,,12.65,USA,Charlotte BOOTH,2022,2
+76,BOOTH,Charlotte,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.6,9.1,,13.7,USA,Charlotte BOOTH,2022,2
+77,BOOTH,Charlotte,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,22.0,4.6,7.2,,11.8,USA,Charlotte BOOTH,2023,8
+78,BOOTH,Charlotte,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,11.0,5.1,7.7,,12.8,USA,Charlotte BOOTH,2023,8
+79,BOOTH,Charlotte,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,9.0,5.5,8.15,,13.65,USA,Charlotte BOOTH,2023,8
+80,BOOTH,Charlotte,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,9.1,,13.7,USA,Charlotte BOOTH,2023,8
+81,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,4.8,7.7,,12.5,USA,Charlotte BOOTH,2023,8
+82,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,4.8,6.5,,11.3,USA,Charlotte BOOTH,2023,8
+83,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.1,7.4,,12.5,USA,Charlotte BOOTH,2023,8
+84,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,4.9,6.4,0.1,11.2,USA,Charlotte BOOTH,2023,8
+85,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.4,7.7,,13.1,USA,Charlotte BOOTH,2023,8
+86,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.4,7.95,,13.35,USA,Charlotte BOOTH,2023,8
+87,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,9.0,,13.6,USA,Charlotte BOOTH,2023,8
+88,BOOTH,Charlotte,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,8.8,,13.4,USA,Charlotte BOOTH,2023,8
+89,BOOTH,Charlotte,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,12.0,4.9,7.15,,12.05,USA,Charlotte BOOTH,2023,2
+90,BOOTH,Charlotte,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,22.0,4.8,7.25,0.3,11.75,USA,Charlotte BOOTH,2023,2
+91,BOOTH,Charlotte,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,2.0,5.7,8.05,,13.75,USA,Charlotte BOOTH,2023,2
+92,BOOTH,Charlotte,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.6,8.95,,13.55,USA,Charlotte BOOTH,2023,2
+93,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",BB,11.0,5.2,7.433,,12.633,USA,Jade CAREY,2022,11
+94,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",BB,11.0,5.4,7.733,,13.133,USA,Jade CAREY,2022,11
+95,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",BB,,5.4,7.5,0.1,12.8,USA,Jade CAREY,2022,11
+96,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",FX,3.0,6.1,8.066,,14.166,USA,Jade CAREY,2022,11
+97,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",FX,3.0,5.9,7.833,,13.733,USA,Jade CAREY,2022,11
+98,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",FX,5.0,6.1,7.966,,14.066,USA,Jade CAREY,2022,11
+99,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",FX,,6.1,8.0,,14.1,USA,Jade CAREY,2022,11
+100,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",UB,15.0,5.4,7.766,,13.166,USA,Jade CAREY,2022,11
+101,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",UB,32.0,5.4,7.933,,13.333,USA,Jade CAREY,2022,11
+102,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",VT,2.0,5.6,9.133,,14.733,USA,Jade CAREY,2022,11
+103,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",VT,,5.6,9.2,,14.8,USA,Jade CAREY,2022,11
+104,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",VT,1.0,5.6,9.133,,14.733,USA,Jade CAREY,2022,11
+105,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,2.0,5.6,9.0,,14.6,USA,Jade CAREY,2022,11
+106,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,1.0,5.6,9.0,,14.6,USA,Jade CAREY,2022,11
+107,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",VT,1.0,5.0,9.3,,14.3,USA,Jade CAREY,2022,11
+108,CAREY,Jade,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,1.0,5.0,9.366,,14.366,USA,Jade CAREY,2022,11
+109,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",BB,2.0,5.8,7.95,,13.75,USA,Jade CAREY,2022,9
+110,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",BB,2.0,5.4,8.0,,13.4,USA,Jade CAREY,2022,9
+111,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",VT,1.0,5.6,9.15,,14.75,USA,Jade CAREY,2022,9
+112,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",VT,1.0,5.6,8.95,,14.55,USA,Jade CAREY,2022,9
+113,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",VT,1.0,5.0,9.1,0.1,14.0,USA,Jade CAREY,2022,9
+114,CAREY,Jade,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",VT,1.0,5.0,9.15,,14.15,USA,Jade CAREY,2022,9
+115,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.6,7.6,,13.2,USA,Jade CAREY,2022,8
+116,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.8,7.5,,13.3,USA,Jade CAREY,2022,8
+117,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.9,8.15,,14.05,USA,Jade CAREY,2022,8
+118,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.9,7.95,,13.85,USA,Jade CAREY,2022,8
+119,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.5,8.1,,13.6,USA,Jade CAREY,2022,8
+120,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.5,7.95,,13.45,USA,Jade CAREY,2022,8
+121,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.6,9.2,,14.8,USA,Jade CAREY,2022,8
+122,CAREY,Jade,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.6,9.05,,14.65,USA,Jade CAREY,2022,8
+123,CAREY,Jade,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,9.0,5.6,7.4,,13.0,USA,Jade CAREY,2023,8
+124,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.7,6.45,,12.15,USA,Jade CAREY,2023,8
+125,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.7,6.35,,12.05,USA,Jade CAREY,2023,8
+126,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.9,7.45,,13.35,USA,Jade CAREY,2023,8
+127,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.8,7.4,0.1,13.1,USA,Jade CAREY,2023,8
+128,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.1,6.95,,12.05,USA,Jade CAREY,2023,8
+129,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.4,7.85,,13.25,USA,Jade CAREY,2023,8
+130,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.6,8.35,,13.95,USA,Jade CAREY,2023,8
+131,CAREY,Jade,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.6,8.95,,14.55,USA,Jade CAREY,2023,8
+132,CAYLOR,Dulcy,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,16.0,5.1,7.6,,12.7,USA,Dulcy CAYLOR,2023,8
+133,CAYLOR,Dulcy,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,12.0,5.4,7.25,,12.65,USA,Dulcy CAYLOR,2023,8
+134,CAYLOR,Dulcy,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,16.0,5.0,7.9,,12.9,USA,Dulcy CAYLOR,2023,8
+135,CAYLOR,Dulcy,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,8.7,,13.7,USA,Dulcy CAYLOR,2023,8
+136,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.2,7.0,,12.2,USA,Dulcy CAYLOR,2023,8
+137,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.2,7.2,,12.4,USA,Dulcy CAYLOR,2023,8
+138,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.4,7.7,0.2,12.9,USA,Dulcy CAYLOR,2023,8
+139,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.3,7.55,0.1,12.75,USA,Dulcy CAYLOR,2023,8
+140,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.0,7.0,,12.0,USA,Dulcy CAYLOR,2023,8
+141,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.0,7.75,,12.75,USA,Dulcy CAYLOR,2023,8
+142,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,8.9,,13.9,USA,Dulcy CAYLOR,2023,8
+143,CAYLOR,Dulcy,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,8.6,,13.6,USA,Dulcy CAYLOR,2023,8
+144,CAYLOR,Dulcy,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,13.0,5.6,6.35,,11.95,USA,Dulcy CAYLOR,2023,2
+145,CAYLOR,Dulcy,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,20.0,5.3,6.85,0.3,11.85,USA,Dulcy CAYLOR,2023,2
+146,CAYLOR,Dulcy,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,7.0,5.3,8.05,,13.35,USA,Dulcy CAYLOR,2023,2
+147,CAYLOR,Dulcy,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.5,0.1,13.4,USA,Dulcy CAYLOR,2023,2
+148,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",BB,83.0,5.2,6.166,,11.366,USA,Jordan CHILES,2022,11
+149,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",BB,,5.4,7.933,,13.333,USA,Jordan CHILES,2022,11
+150,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",FX,2.0,5.8,8.033,,13.833,USA,Jordan CHILES,2022,11
+151,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",FX,4.0,5.8,8.3,,14.1,USA,Jordan CHILES,2022,11
+152,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",FX,,5.8,8.2,,14.0,USA,Jordan CHILES,2022,11
+153,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",UB,18.0,5.9,8.166,,14.066,USA,Jordan CHILES,2022,11
+154,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",UB,,5.9,8.2,,14.1,USA,Jordan CHILES,2022,11
+155,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",VT,,5.0,9.4,,14.4,USA,Jordan CHILES,2022,11
+156,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",VT,2.0,5.0,9.5,,14.5,USA,Jordan CHILES,2022,11
+157,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,3.0,5.0,9.466,,14.466,USA,Jordan CHILES,2022,11
+158,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,2.0,5.0,9.466,,14.466,USA,Jordan CHILES,2022,11
+159,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",VT,2.0,4.8,9.4,,14.2,USA,Jordan CHILES,2022,11
+160,CHILES,Jordan,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,2.0,4.8,9.366,,14.166,USA,Jordan CHILES,2022,11
+161,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",FX,1.0,5.8,8.25,,14.05,USA,Jordan CHILES,2022,9
+162,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",FX,2.0,5.6,7.9,,13.5,USA,Jordan CHILES,2022,9
+163,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",UB,5.0,5.8,7.95,,13.75,USA,Jordan CHILES,2022,9
+164,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",UB,6.0,5.8,7.6,,13.4,USA,Jordan CHILES,2022,9
+165,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",VT,2.0,5.0,9.15,,14.15,USA,Jordan CHILES,2022,9
+166,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",VT,2.0,5.0,9.1,,14.1,USA,Jordan CHILES,2022,9
+167,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",VT,2.0,4.8,9.0,,13.8,USA,Jordan CHILES,2022,9
+168,CHILES,Jordan,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",VT,2.0,4.8,9.1,,13.9,USA,Jordan CHILES,2022,9
+169,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.4,8.2,,13.6,USA,Jordan CHILES,2022,8
+170,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.4,8.05,,13.45,USA,Jordan CHILES,2022,8
+171,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.6,8.35,,13.95,USA,Jordan CHILES,2022,8
+172,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.6,8.3,,13.9,USA,Jordan CHILES,2022,8
+173,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.9,8.35,,14.25,USA,Jordan CHILES,2022,8
+174,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.8,8.3,,14.1,USA,Jordan CHILES,2022,8
+175,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,9.35,,14.35,USA,Jordan CHILES,2022,8
+176,CHILES,Jordan,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,9.3,,14.3,USA,Jordan CHILES,2022,8
+177,CHILES,Jordan,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,13.0,5.6,7.2,,12.8,USA,Jordan CHILES,2023,8
+178,CHILES,Jordan,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,4.0,5.7,8.2,,13.9,USA,Jordan CHILES,2023,8
+179,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.2,7.8,,13.0,USA,Jordan CHILES,2023,8
+180,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.1,7.0,,12.1,USA,Jordan CHILES,2023,8
+181,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.6,7.6,0.1,13.1,USA,Jordan CHILES,2023,8
+182,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.7,8.15,,13.85,USA,Jordan CHILES,2023,8
+183,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.9,8.3,,14.2,USA,Jordan CHILES,2023,8
+184,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.8,7.15,,12.95,USA,Jordan CHILES,2023,8
+185,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.3,,14.3,USA,Jordan CHILES,2023,8
+186,CHILES,Jordan,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.25,,14.25,USA,Jordan CHILES,2023,8
+187,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",BB,2.0,5.4,8.066,,13.466,USA,Jordan CHILES,2023,10
+188,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",BB,7.0,5.2,7.8,,13.0,USA,Jordan CHILES,2023,10
+189,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",FX,2.0,5.9,7.633,,13.533,USA,Jordan CHILES,2023,10
+190,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",FX,6.0,6.0,7.3,0.1,13.2,USA,Jordan CHILES,2023,10
+191,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",UB,6.0,5.6,7.1,,12.7,USA,Jordan CHILES,2023,10
+192,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",UB,7.0,5.2,7.2,,12.4,USA,Jordan CHILES,2023,10
+193,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",UB,3.0,5.9,8.2,,14.1,USA,Jordan CHILES,2023,10
+194,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",VT,1.0,5.0,9.3,,14.3,USA,Jordan CHILES,2023,10
+195,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",VT,2.0,5.0,9.366,,14.366,USA,Jordan CHILES,2023,10
+196,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",VT,2.0,5.0,9.4,,14.4,USA,Jordan CHILES,2023,10
+197,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",VT,2.0,4.8,9.1,,13.9,USA,Jordan CHILES,2023,10
+198,CHILES,Jordan,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",VT,2.0,4.8,9.133,0.1,13.833,USA,Jordan CHILES,2023,10
+199,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.5,8.3,,13.8,USA,Kayla DICELLO,2022,8
+200,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.5,8.05,,13.55,USA,Kayla DICELLO,2022,8
+201,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.5,8.35,,13.85,USA,Kayla DICELLO,2022,8
+202,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.4,8.25,,13.65,USA,Kayla DICELLO,2022,8
+203,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.6,8.5,,14.1,USA,Kayla DICELLO,2022,8
+204,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.5,8.0,,13.5,USA,Kayla DICELLO,2022,8
+205,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,9.2,,14.2,USA,Kayla DICELLO,2022,8
+206,DICELLO,Kayla,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,9.3,,14.3,USA,Kayla DICELLO,2022,8
+207,DICELLO,Kayla,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,7.0,5.8,7.4,,13.2,USA,Kayla DICELLO,2023,8
+208,DICELLO,Kayla,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,7.0,5.2,7.95,,13.15,USA,Kayla DICELLO,2023,8
+209,DICELLO,Kayla,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,25.0,5.3,6.9,,12.2,USA,Kayla DICELLO,2023,8
+210,DICELLO,Kayla,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,9.2,,13.4,USA,Kayla DICELLO,2023,8
+211,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.5,6.2,,11.7,USA,Kayla DICELLO,2023,8
+212,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.7,7.05,,12.75,USA,Kayla DICELLO,2023,8
+213,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.5,8.0,,13.5,USA,Kayla DICELLO,2023,8
+214,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.5,8.25,,13.75,USA,Kayla DICELLO,2023,8
+215,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.2,7.1,,12.3,USA,Kayla DICELLO,2023,8
+216,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.6,8.2,,13.8,USA,Kayla DICELLO,2023,8
+217,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.0,,14.0,USA,Kayla DICELLO,2023,8
+218,DICELLO,Kayla,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.1,,14.1,USA,Kayla DICELLO,2023,8
+219,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",BB,4.0,5.7,7.5,,13.2,USA,Kayla DICELLO,2023,10
+220,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",BB,4.0,5.7,8.1,,13.8,USA,Kayla DICELLO,2023,10
+221,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",BB,5.0,5.7,7.366,,13.066,USA,Kayla DICELLO,2023,10
+222,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",FX,1.0,5.5,8.233,,13.733,USA,Kayla DICELLO,2023,10
+223,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",FX,2.0,5.5,8.233,,13.733,USA,Kayla DICELLO,2023,10
+224,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",FX,2.0,5.5,8.133,,13.633,USA,Kayla DICELLO,2023,10
+225,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",UB,1.0,5.6,8.033,,13.633,USA,Kayla DICELLO,2023,10
+226,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",UB,4.0,5.6,8.2,,13.8,USA,Kayla DICELLO,2023,10
+227,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,AAfinal,"Santiago, Chile",VT,2.0,5.0,9.133,,14.133,USA,Kayla DICELLO,2023,10
+228,DICELLO,Kayla,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",VT,4.0,5.0,9.066,,14.066,USA,Kayla DICELLO,2023,10
+229,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.2,7.45,,12.65,USA,Amelia DISIDORE,2022,8
+230,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.3,7.0,,12.3,USA,Amelia DISIDORE,2022,8
+231,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.2,7.95,,13.15,USA,Amelia DISIDORE,2022,8
+232,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.2,7.95,,13.15,USA,Amelia DISIDORE,2022,8
+233,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,4.9,6.65,,11.55,USA,Amelia DISIDORE,2022,8
+234,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.0,7.3,,12.3,USA,Amelia DISIDORE,2022,8
+235,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,9.3,,14.3,USA,Amelia DISIDORE,2022,8
+236,DISIDORE,Amelia,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,9.3,,14.3,USA,Amelia DISIDORE,2022,8
+237,DISIDORE,Amelia,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,13.0,3.7,7.5,,11.2,USA,Amelia DISIDORE,2022,7
+238,DISIDORE,Amelia,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,5.0,5.0,7.55,,12.55,USA,Amelia DISIDORE,2022,7
+239,DISIDORE,Amelia,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,12.0,5.1,6.45,,11.55,USA,Amelia DISIDORE,2022,7
+240,DISIDORE,Amelia,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,4.2,9.35,,13.55,USA,Amelia DISIDORE,2022,7
+241,DISIDORE,Amelia,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,22.0,4.7,6.45,,11.15,USA,Amelia DISIDORE,2022,2
+242,DISIDORE,Amelia,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,16.0,4.9,7.45,,12.35,USA,Amelia DISIDORE,2022,2
+243,DISIDORE,Amelia,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,23.0,4.4,5.65,,10.05,USA,Amelia DISIDORE,2022,2
+244,DISIDORE,Amelia,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.2,8.95,,13.15,USA,Amelia DISIDORE,2022,2
+245,DISIDORE,Amelia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,14.0,5.5,7.35,0.1,12.75,USA,Amelia DISIDORE,2023,8
+246,DISIDORE,Amelia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,6.0,5.6,7.65,,13.25,USA,Amelia DISIDORE,2023,8
+247,DISIDORE,Amelia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,15.0,5.4,7.55,,12.95,USA,Amelia DISIDORE,2023,8
+248,DISIDORE,Amelia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,8.85,,13.85,USA,Amelia DISIDORE,2023,8
+249,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.8,7.5,,13.3,USA,Amelia DISIDORE,2023,8
+250,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.5,6.8,,12.3,USA,Amelia DISIDORE,2023,8
+251,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.6,7.85,0.1,13.35,USA,Amelia DISIDORE,2023,8
+252,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.5,7.95,,13.45,USA,Amelia DISIDORE,2023,8
+253,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.1,7.45,,12.55,USA,Amelia DISIDORE,2023,8
+254,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.0,7.75,,12.75,USA,Amelia DISIDORE,2023,8
+255,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,8.85,,13.85,USA,Amelia DISIDORE,2023,8
+256,DISIDORE,Amelia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.0,,14.0,USA,Amelia DISIDORE,2023,8
+257,DISIDORE,Amelia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,16.0,5.7,6.2,0.1,11.8,USA,Amelia DISIDORE,2023,2
+258,DISIDORE,Amelia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,4.0,5.7,7.5,,13.2,USA,Amelia DISIDORE,2023,2
+259,DISIDORE,Amelia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,27.0,5.4,5.9,,11.3,USA,Amelia DISIDORE,2023,2
+260,DISIDORE,Amelia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.85,,13.85,USA,Amelia DISIDORE,2023,2
+261,EICHMAN,Jordis,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,5.0,5.4,7.55,,12.95,USA,Jordis EICHMAN,2023,2
+262,EICHMAN,Jordis,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,14.0,5.2,7.4,0.1,12.5,USA,Jordis EICHMAN,2023,2
+263,EICHMAN,Jordis,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,12.0,5.3,7.6,,12.9,USA,Jordis EICHMAN,2023,2
+264,EICHMAN,Jordis,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.85,,13.05,USA,Jordis EICHMAN,2023,2
+265,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",BB,9.0,4.9,7.066,,11.966,USA,Addison FATTA,2022,10
+266,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",UB,1.0,5.4,8.1,,13.5,USA,Addison FATTA,2022,10
+267,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",UB,3.0,5.4,8.2,,13.6,USA,Addison FATTA,2022,10
+268,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",VT,1.0,5.0,8.666,,13.666,USA,Addison FATTA,2022,10
+269,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",VT,4.0,5.0,9.033,,14.033,USA,Addison FATTA,2022,10
+270,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",VT,1.0,4.4,8.666,,13.066,USA,Addison FATTA,2022,10
+271,FATTA,Addison,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",VT,4.0,3.2,8.4,,11.6,USA,Addison FATTA,2022,10
+272,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,4.8,7.65,,12.45,USA,Addison FATTA,2022,8
+273,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.0,7.15,,12.15,USA,Addison FATTA,2022,8
+274,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.3,7.35,,12.65,USA,Addison FATTA,2022,8
+275,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.1,8.05,,13.15,USA,Addison FATTA,2022,8
+276,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.4,8.15,,13.55,USA,Addison FATTA,2022,8
+277,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.4,7.9,,13.3,USA,Addison FATTA,2022,8
+278,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,8.15,0.1,13.05,USA,Addison FATTA,2022,8
+279,FATTA,Addison,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,8.9,,13.9,USA,Addison FATTA,2022,8
+280,FATTA,Addison,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,5.0,5.0,7.35,,12.35,USA,Addison FATTA,2022,7
+281,FATTA,Addison,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,6.0,5.5,7.65,,13.15,USA,Addison FATTA,2022,7
+282,FATTA,Addison,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,13.0,4.9,7.65,,12.55,USA,Addison FATTA,2022,2
+283,FATTA,Addison,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,20.0,4.6,7.2,,11.8,USA,Addison FATTA,2022,2
+284,FATTA,Addison,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,6.0,5.4,7.8,,13.2,USA,Addison FATTA,2022,2
+285,FATTA,Addison,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,8.7,,13.7,USA,Addison FATTA,2022,2
+286,FATTA,Addison,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,21.0,5.1,7.3,,12.4,USA,Addison FATTA,2023,8
+287,FATTA,Addison,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,8.85,,13.85,USA,Addison FATTA,2023,8
+288,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.2,7.8,,13.0,USA,Addison FATTA,2023,8
+289,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,4.8,6.55,,11.35,USA,Addison FATTA,2023,8
+290,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.1,7.1,,12.2,USA,Addison FATTA,2023,8
+291,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.6,7.65,,13.25,USA,Addison FATTA,2023,8
+292,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.5,7.85,,13.35,USA,Addison FATTA,2023,8
+293,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.5,7.8,,13.3,USA,Addison FATTA,2023,8
+294,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,8.85,,13.85,USA,Addison FATTA,2023,8
+295,FATTA,Addison,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,8.9,,13.9,USA,Addison FATTA,2023,8
+296,FATTA,Addison,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,24.0,4.9,6.0,0.1,10.8,USA,Addison FATTA,2023,2
+297,FATTA,Addison,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,7.0,5.2,7.9,,13.1,USA,Addison FATTA,2023,2
+298,FATTA,Addison,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,10.0,5.4,7.55,,12.95,USA,Addison FATTA,2023,2
+299,FATTA,Addison,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.9,,13.9,USA,Addison FATTA,2023,2
+300,FATTA,Addison,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",FX,,5.2,6.967,,12.167,USA,Addison FATTA,2023,5
+301,FATTA,Addison,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",UB,,5.4,8.3,,13.7,USA,Addison FATTA,2023,5
+302,FATTA,Addison,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",UB,,5.4,8.267,,13.667,USA,Addison FATTA,2023,5
+303,FATTA,Addison,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",VT,,5.0,8.5,,13.5,USA,Addison FATTA,2023,5
+304,FATTA,Addison,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",VT,,5.0,8.5,,13.5,USA,Addison FATTA,2023,5
+305,JOHNSON,Madray,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,25.0,5.3,5.8,0.1,11.0,USA,Madray JOHNSON,2023,8
+306,JOHNSON,Madray,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,8.15,0.1,12.65,USA,Madray JOHNSON,2023,8
+307,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.7,7.8,,13.5,USA,Madray JOHNSON,2023,8
+308,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.3,7.5,,12.8,USA,Madray JOHNSON,2023,8
+309,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.1,7.8,,12.9,USA,Madray JOHNSON,2023,8
+310,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.1,7.6,0.1,12.6,USA,Madray JOHNSON,2023,8
+311,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.0,7.9,,12.9,USA,Madray JOHNSON,2023,8
+312,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.0,7.95,,12.95,USA,Madray JOHNSON,2023,8
+313,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,8.95,,13.55,USA,Madray JOHNSON,2023,8
+314,JOHNSON,Madray,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,8.55,0.1,13.05,USA,Madray JOHNSON,2023,8
+315,JOHNSON,Madray,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",BB,,4.8,7.733,,12.533,USA,Madray JOHNSON,2023,5
+316,JOHNSON,Madray,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",BB,,5.2,7.633,,12.833,USA,Madray JOHNSON,2023,5
+317,JOHNSON,Madray,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",UB,,5.1,8.2,,13.3,USA,Madray JOHNSON,2023,5
+318,JOHNSON,Madray,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",UB,,5.0,8.133,,13.133,USA,Madray JOHNSON,2023,5
+319,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",BB,5.0,5.2,7.9,,13.1,USA,Shilese JONES,2022,11
+320,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",BB,10.0,5.2,8.0,,13.2,USA,Shilese JONES,2022,11
+321,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",FX,8.0,5.5,8.2,,13.7,USA,Shilese JONES,2022,11
+322,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",FX,6.0,5.7,8.1,,13.8,USA,Shilese JONES,2022,11
+323,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",FX,,5.7,8.033,,13.733,USA,Shilese JONES,2022,11
+324,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",UB,1.0,6.3,8.066,,14.366,USA,Shilese JONES,2022,11
+325,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,final,"Liverpool, England",UB,2.0,6.4,8.366,,14.766,USA,Shilese JONES,2022,11
+326,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",UB,5.0,6.3,8.266,,14.566,USA,Shilese JONES,2022,11
+327,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",UB,,6.3,8.033,,14.333,USA,Shilese JONES,2022,11
+328,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,AAfinal,"Liverpool, England",VT,3.0,5.0,9.333,0.1,14.233,USA,Shilese JONES,2022,11
+329,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",VT,,5.0,9.033,0.1,13.933,USA,Shilese JONES,2022,11
+330,JONES,Shilese,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,12.0,5.0,9.2,,14.2,USA,Shilese JONES,2022,11
+331,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",BB,1.0,5.4,8.05,,13.45,USA,Shilese JONES,2022,9
+332,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",BB,5.0,5.4,8.0,,13.4,USA,Shilese JONES,2022,9
+333,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",FX,2.0,5.4,8.1,,13.5,USA,Shilese JONES,2022,9
+334,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",FX,8.0,5.4,7.35,0.2,12.55,USA,Shilese JONES,2022,9
+335,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,qual,"Paris, France",UB,7.0,6.1,7.1,,13.2,USA,Shilese JONES,2022,9
+336,JONES,Shilese,w,USA,24-25 Sept 2022,2022 Paris World Challenge Cup,final,"Paris, France",UB,1.0,6.3,8.4,,14.7,USA,Shilese JONES,2022,9
+337,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.5,8.2,,13.7,USA,Shilese JONES,2022,8
+338,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.3,7.15,,12.45,USA,Shilese JONES,2022,8
+339,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.7,8.4,,14.1,USA,Shilese JONES,2022,8
+340,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.7,8.55,,14.25,USA,Shilese JONES,2022,8
+341,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,6.3,8.55,,14.85,USA,Shilese JONES,2022,8
+342,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,6.1,7.5,,13.6,USA,Shilese JONES,2022,8
+343,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,9.55,,14.55,USA,Shilese JONES,2022,8
+344,JONES,Shilese,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,9.5,,14.5,USA,Shilese JONES,2022,8
+345,JONES,Shilese,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,11.0,5.6,5.9,,11.5,USA,Shilese JONES,2022,7
+346,JONES,Shilese,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,2.0,5.5,8.15,,13.65,USA,Shilese JONES,2022,7
+347,JONES,Shilese,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,1.0,6.3,8.2,,14.5,USA,Shilese JONES,2022,7
+348,JONES,Shilese,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,5.0,9.4,,14.4,USA,Shilese JONES,2022,7
+349,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",BB,2.0,5.9,8.166,,14.066,USA,Shilese JONES,2023,10
+350,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",BB,7.0,5.6,7.333,,12.933,USA,Shilese JONES,2023,10
+351,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",BB,6.0,5.9,8.133,,14.033,USA,Shilese JONES,2023,10
+352,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",BB,,5.7,7.9,,13.6,USA,Shilese JONES,2023,10
+353,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",FX,5.0,5.6,7.8,,13.4,USA,Shilese JONES,2023,10
+354,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",FX,5.0,5.5,8.166,,13.666,USA,Shilese JONES,2023,10
+355,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",FX,5.0,5.7,8.1,,13.8,USA,Shilese JONES,2023,10
+356,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",FX,,5.5,8.166,0.1,13.566,USA,Shilese JONES,2023,10
+357,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",UB,4.0,6.3,8.333,,14.633,USA,Shilese JONES,2023,10
+358,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",UB,3.0,6.3,8.466,,14.766,USA,Shilese JONES,2023,10
+359,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",UB,2.0,6.4,8.433,,14.833,USA,Shilese JONES,2023,10
+360,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",UB,,6.3,8.333,,14.633,USA,Shilese JONES,2023,10
+361,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,AAfinal,"Antwerp, Belgium",VT,3.0,5.0,9.233,,14.233,USA,Shilese JONES,2023,10
+362,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",VT,,5.0,9.1,,14.1,USA,Shilese JONES,2023,10
+363,JONES,Shilese,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,10.0,5.0,9.266,,14.266,USA,Shilese JONES,2023,10
+364,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.8,7.65,,13.45,USA,Shilese JONES,2023,8
+365,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,6.0,8.3,,14.3,USA,Shilese JONES,2023,8
+366,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.9,8.25,0.1,14.05,USA,Shilese JONES,2023,8
+367,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.9,8.2,,14.1,USA,Shilese JONES,2023,8
+368,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,6.3,8.6,,14.9,USA,Shilese JONES,2023,8
+369,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,6.3,8.7,,15.0,USA,Shilese JONES,2023,8
+370,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.35,,14.35,USA,Shilese JONES,2023,8
+371,JONES,Shilese,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.4,,14.4,USA,Shilese JONES,2023,8
+372,JONG,Katelyn,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",FX,2.0,5.6,7.866,,13.466,USA,Katelyn JONG,2022,10
+373,JONG,Katelyn,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",FX,1.0,5.6,7.9,,13.5,USA,Katelyn JONG,2022,10
+374,JONG,Katelyn,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",UB,2.0,5.8,7.566,,13.366,USA,Katelyn JONG,2022,10
+375,JONG,Katelyn,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",UB,5.0,5.7,7.433,,13.133,USA,Katelyn JONG,2022,10
+376,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.5,7.7,,13.2,USA,Katelyn JONG,2022,8
+377,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.5,7.85,,13.35,USA,Katelyn JONG,2022,8
+378,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.6,7.5,,13.1,USA,Katelyn JONG,2022,8
+379,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.6,7.4,,13.0,USA,Katelyn JONG,2022,8
+380,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.8,6.4,,12.2,USA,Katelyn JONG,2022,8
+381,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.7,7.0,,12.7,USA,Katelyn JONG,2022,8
+382,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,8.95,,13.95,USA,Katelyn JONG,2022,8
+383,JONG,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,8.85,,13.85,USA,Katelyn JONG,2022,8
+384,JONG,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,7.0,5.2,7.85,,13.05,USA,Katelyn JONG,2022,2
+385,JONG,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,5.0,5.5,7.55,,13.05,USA,Katelyn JONG,2022,2
+386,JONG,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,14.0,5.4,7.35,,12.75,USA,Katelyn JONG,2022,2
+387,JONG,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,8.8,,13.8,USA,Katelyn JONG,2022,2
+388,JONG,Katelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,10.0,5.6,7.35,,12.95,USA,Katelyn JONG,2023,8
+389,JONG,Katelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,8.0,5.5,7.55,,13.05,USA,Katelyn JONG,2023,8
+390,JONG,Katelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,6.0,5.9,7.85,,13.75,USA,Katelyn JONG,2023,8
+391,JONG,Katelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,8.7,,13.7,USA,Katelyn JONG,2023,8
+392,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.5,6.35,,11.85,USA,Katelyn JONG,2023,8
+393,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.6,6.85,,12.45,USA,Katelyn JONG,2023,8
+394,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.6,7.55,,13.15,USA,Katelyn JONG,2023,8
+395,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.6,7.9,,13.5,USA,Katelyn JONG,2023,8
+396,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,6.0,8.05,,14.05,USA,Katelyn JONG,2023,8
+397,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.9,7.6,,13.5,USA,Katelyn JONG,2023,8
+398,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,8.85,,13.85,USA,Katelyn JONG,2023,8
+399,JONG,Katelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,8.8,,13.8,USA,Katelyn JONG,2023,8
+400,JONG,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,26.0,5.4,5.1,,10.5,USA,Katelyn JONG,2023,2
+401,JONG,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,11.0,5.6,7.1,,12.7,USA,Katelyn JONG,2023,2
+402,JONG,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,17.0,5.6,6.6,,12.2,USA,Katelyn JONG,2023,2
+403,JONG,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.5,,13.5,USA,Katelyn JONG,2023,2
+404,JONG,Katelyn,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",UB,6.0,5.9,7.733,,13.633,USA,Katelyn JONG,2023,10
+405,JUNG-RUIVIVAR,Levi,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",BB,10.0,4.8,7.066,,11.866,USA,Levi JUNG-RUIVIVAR,2022,10
+406,JUNG-RUIVIVAR,Levi,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,final,"Szombathely, Hungary",FX,6.0,4.9,8.066,0.3,12.666,USA,Levi JUNG-RUIVIVAR,2022,10
+407,JUNG-RUIVIVAR,Levi,w,USA,30 Sept 2022 - 2 Oct 2022,2022 Szombathely World Challenge Cup,qual,"Szombathely, Hungary",FX,3.0,4.9,8.3,,13.2,USA,Levi JUNG-RUIVIVAR,2022,10
+408,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.1,8.05,,13.15,USA,Levi JUNG-RUIVIVAR,2022,8
+409,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.1,8.0,,13.1,USA,Levi JUNG-RUIVIVAR,2022,8
+410,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.8,7.95,,12.75,USA,Levi JUNG-RUIVIVAR,2022,8
+411,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,4.9,7.4,0.1,12.2,USA,Levi JUNG-RUIVIVAR,2022,8
+412,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.1,6.95,,12.05,USA,Levi JUNG-RUIVIVAR,2022,8
+413,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.4,7.75,,13.15,USA,Levi JUNG-RUIVIVAR,2022,8
+414,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.6,8.5,,13.1,USA,Levi JUNG-RUIVIVAR,2022,8
+415,JUNG-RUIVIVAR,Levi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.2,8.95,,13.15,USA,Levi JUNG-RUIVIVAR,2022,8
+416,JUNG-RUIVIVAR,Levi,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,10.0,5.0,6.6,,11.6,USA,Levi JUNG-RUIVIVAR,2022,7
+417,JUNG-RUIVIVAR,Levi,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,7.0,5.5,7.4,,12.9,USA,Levi JUNG-RUIVIVAR,2022,7
+418,JUNG-RUIVIVAR,Levi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,10.0,5.1,7.6,,12.7,USA,Levi JUNG-RUIVIVAR,2022,2
+419,JUNG-RUIVIVAR,Levi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,14.0,4.8,7.9,0.2,12.5,USA,Levi JUNG-RUIVIVAR,2022,2
+420,JUNG-RUIVIVAR,Levi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,5.0,5.5,7.75,,13.25,USA,Levi JUNG-RUIVIVAR,2022,2
+421,JUNG-RUIVIVAR,Levi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.6,8.85,,13.45,USA,Levi JUNG-RUIVIVAR,2022,2
+422,JUNG-RUIVIVAR,Levi,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,32.0,4.7,5.75,0.1,10.35,USA,Levi JUNG-RUIVIVAR,2023,8
+423,JUNG-RUIVIVAR,Levi,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,16.0,5.4,7.5,,12.9,USA,Levi JUNG-RUIVIVAR,2023,8
+424,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,4.9,7.4,,12.3,USA,Levi JUNG-RUIVIVAR,2023,8
+425,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,4.9,7.55,,12.45,USA,Levi JUNG-RUIVIVAR,2023,8
+426,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.0,6.15,0.6,10.55,USA,Levi JUNG-RUIVIVAR,2023,8
+427,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,4.9,6.85,0.5,11.25,USA,Levi JUNG-RUIVIVAR,2023,8
+428,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.3,6.7,,12.0,USA,Levi JUNG-RUIVIVAR,2023,8
+429,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.5,7.85,,13.35,USA,Levi JUNG-RUIVIVAR,2023,8
+430,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,8.8,,13.4,USA,Levi JUNG-RUIVIVAR,2023,8
+431,JUNG-RUIVIVAR,Levi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,8.7,,13.3,USA,Levi JUNG-RUIVIVAR,2023,8
+432,JUNG-RUIVIVAR,Levi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,23.0,4.7,6.25,0.1,10.85,USA,Levi JUNG-RUIVIVAR,2023,2
+433,JUNG-RUIVIVAR,Levi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,19.0,5.0,7.1,0.1,12.0,USA,Levi JUNG-RUIVIVAR,2023,2
+434,JUNG-RUIVIVAR,Levi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,21.0,4.7,6.95,,11.65,USA,Levi JUNG-RUIVIVAR,2023,2
+435,JUNG-RUIVIVAR,Levi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.6,8.9,,13.5,USA,Levi JUNG-RUIVIVAR,2023,2
+436,LEE,Sunisa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,2.0,6.2,8.3,,14.5,USA,Sunisa LEE,2023,8
+437,LEE,Sunisa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,9.3,,13.5,USA,Sunisa LEE,2023,8
+438,LEE,Sunisa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,6.0,7.65,,13.65,USA,Sunisa LEE,2023,8
+439,LEE,Sunisa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.8,8.4,,14.2,USA,Sunisa LEE,2023,8
+440,LEE,Sunisa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,9.15,,13.35,USA,Sunisa LEE,2023,8
+441,LEE,Sunisa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,9.2,,13.4,USA,Sunisa LEE,2023,8
+442,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,4.9,8.15,,13.05,USA,Myli LEW,2023,8
+443,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.0,7.25,,12.25,USA,Myli LEW,2023,8
+444,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,4.6,7.5,,12.1,USA,Myli LEW,2023,8
+445,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,4.6,7.35,0.1,11.85,USA,Myli LEW,2023,8
+446,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.4,8.5,,13.9,USA,Myli LEW,2023,8
+447,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.7,7.0,0.3,12.4,USA,Myli LEW,2023,8
+448,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,8.95,,13.15,USA,Myli LEW,2023,8
+449,LEW,Myli,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,9.0,,13.2,USA,Myli LEW,2023,8
+450,LEW,Myli,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,3.0,5.9,7.75,,13.65,USA,Myli LEW,2023,2
+451,LEW,Myli,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.75,,12.95,USA,Myli LEW,2023,2
+452,LINCOLN,Kaliya,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,10.0,5.3,7.75,0.1,12.95,USA,Kaliya LINCOLN,2023,8
+453,LINCOLN,Kaliya,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,2.0,5.9,8.1,,14.0,USA,Kaliya LINCOLN,2023,8
+454,LINCOLN,Kaliya,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,9.15,,14.15,USA,Kaliya LINCOLN,2023,8
+455,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.5,7.85,0.1,13.25,USA,Kaliya LINCOLN,2023,8
+456,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.4,7.65,0.1,12.95,USA,Kaliya LINCOLN,2023,8
+457,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,6.1,8.25,,14.35,USA,Kaliya LINCOLN,2023,8
+458,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,6.1,8.05,0.1,14.05,USA,Kaliya LINCOLN,2023,8
+459,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.3,7.5,0.5,12.3,USA,Kaliya LINCOLN,2023,8
+460,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.0,5.9,1.0,9.9,USA,Kaliya LINCOLN,2023,8
+461,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.1,,14.1,USA,Kaliya LINCOLN,2023,8
+462,LINCOLN,Kaliya,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,8.9,,13.9,USA,Kaliya LINCOLN,2023,8
+463,LINCOLN,Kaliya,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,22.0,5.3,5.8,0.1,11.0,USA,Kaliya LINCOLN,2023,2
+464,LINCOLN,Kaliya,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,1.0,5.3,8.3,,13.6,USA,Kaliya LINCOLN,2023,2
+465,LINCOLN,Kaliya,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,10.0,5.3,7.65,,12.95,USA,Kaliya LINCOLN,2023,2
+466,LINCOLN,Kaliya,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,9.3,,13.5,USA,Kaliya LINCOLN,2023,2
+467,LINCOLN,Kaliya,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",BB,6.0,5.4,7.766,,13.166,USA,Kaliya LINCOLN,2023,10
+468,LINCOLN,Kaliya,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",BB,4.0,5.5,7.733,,13.233,USA,Kaliya LINCOLN,2023,10
+469,LINCOLN,Kaliya,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",FX,1.0,6.1,8.133,,14.233,USA,Kaliya LINCOLN,2023,10
+470,LINCOLN,Kaliya,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",FX,1.0,6.1,8.0,0.3,13.8,USA,Kaliya LINCOLN,2023,10
+471,LOWE,Eveylynn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,19.0,5.2,7.25,,12.45,USA,Eveylynn LOWE,2023,8
+472,LOWE,Eveylynn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,14.0,5.3,7.25,,12.55,USA,Eveylynn LOWE,2023,8
+473,LOWE,Eveylynn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,19.0,5.0,7.75,,12.75,USA,Eveylynn LOWE,2023,8
+474,LOWE,Eveylynn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,9.0,,13.6,USA,Eveylynn LOWE,2023,8
+475,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.4,6.95,,12.35,USA,Eveylynn LOWE,2023,8
+476,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.3,7.5,,12.8,USA,Eveylynn LOWE,2023,8
+477,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.4,7.4,0.1,12.7,USA,Eveylynn LOWE,2023,8
+478,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.4,7.65,,13.05,USA,Eveylynn LOWE,2023,8
+479,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.0,7.9,,12.9,USA,Eveylynn LOWE,2023,8
+480,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.0,8.15,,13.15,USA,Eveylynn LOWE,2023,8
+481,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,9.15,,13.75,USA,Eveylynn LOWE,2023,8
+482,LOWE,Eveylynn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,9.2,,13.8,USA,Eveylynn LOWE,2023,8
+483,LOWE,Eveylynn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,13.0,5.3,6.65,,11.95,USA,Eveylynn LOWE,2023,2
+484,LOWE,Eveylynn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,9.0,5.4,7.6,0.1,12.9,USA,Eveylynn LOWE,2023,2
+485,LOWE,Eveylynn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,25.0,4.8,6.6,,11.4,USA,Eveylynn LOWE,2023,2
+486,LOWE,Eveylynn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.9,,13.1,USA,Eveylynn LOWE,2023,2
+487,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.4,6.55,,11.95,USA,Nola MATTHEWS,2022,8
+488,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.4,7.1,,12.5,USA,Nola MATTHEWS,2022,8
+489,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.7,7.65,,12.35,USA,Nola MATTHEWS,2022,8
+490,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.0,7.3,0.1,12.2,USA,Nola MATTHEWS,2022,8
+491,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.9,7.85,,13.75,USA,Nola MATTHEWS,2022,8
+492,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.9,8.15,,14.05,USA,Nola MATTHEWS,2022,8
+493,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.2,8.9,,13.1,USA,Nola MATTHEWS,2022,8
+494,MATTHEWS,Nola,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.2,8.75,,12.95,USA,Nola MATTHEWS,2022,8
+495,MATTHEWS,Nola,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,4.0,4.8,7.7,,12.5,USA,Nola MATTHEWS,2022,7
+496,MATTHEWS,Nola,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,8.0,4.9,7.1,0.3,11.7,USA,Nola MATTHEWS,2022,7
+497,MATTHEWS,Nola,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,2.0,5.9,8.0,,13.9,USA,Nola MATTHEWS,2022,7
+498,MATTHEWS,Nola,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,4.2,8.8,,13.0,USA,Nola MATTHEWS,2022,7
+499,MATTHEWS,Nola,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,7.0,5.3,7.75,,13.05,USA,Nola MATTHEWS,2022,2
+500,MATTHEWS,Nola,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,9.0,5.1,7.7,,12.8,USA,Nola MATTHEWS,2022,2
+501,MATTHEWS,Nola,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,1.0,5.8,8.15,,13.95,USA,Nola MATTHEWS,2022,2
+502,MATTHEWS,Nola,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.2,8.65,,12.85,USA,Nola MATTHEWS,2022,2
+503,MATTHEWS,Nola,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,6.0,5.4,7.9,,13.3,USA,Nola MATTHEWS,2023,8
+504,MATTHEWS,Nola,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,5.0,5.2,8.1,,13.3,USA,Nola MATTHEWS,2023,8
+505,MATTHEWS,Nola,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,4.0,5.6,8.3,,13.9,USA,Nola MATTHEWS,2023,8
+506,MATTHEWS,Nola,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,8.85,,13.05,USA,Nola MATTHEWS,2023,8
+507,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.2,7.8,,13.0,USA,Nola MATTHEWS,2023,8
+508,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.2,7.25,,12.45,USA,Nola MATTHEWS,2023,8
+509,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.2,8.2,,13.4,USA,Nola MATTHEWS,2023,8
+510,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.1,8.2,0.1,13.2,USA,Nola MATTHEWS,2023,8
+511,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.3,7.1,,12.4,USA,Nola MATTHEWS,2023,8
+512,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.6,8.45,,14.05,USA,Nola MATTHEWS,2023,8
+513,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,8.95,,13.15,USA,Nola MATTHEWS,2023,8
+514,MATTHEWS,Nola,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,9.0,,13.2,USA,Nola MATTHEWS,2023,8
+515,MATTHEWS,Nola,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,6.0,5.1,7.6,,12.7,USA,Nola MATTHEWS,2023,2
+516,MATTHEWS,Nola,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,4.0,5.2,8.0,,13.2,USA,Nola MATTHEWS,2023,2
+517,MATTHEWS,Nola,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,5.0,5.7,7.75,,13.45,USA,Nola MATTHEWS,2023,2
+518,MATTHEWS,Nola,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,9.05,,13.25,USA,Nola MATTHEWS,2023,2
+519,MATTHEWS,Nola,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",BB,4.0,5.2,8.0,,13.2,USA,Nola MATTHEWS,2023,3
+520,MATTHEWS,Nola,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",FX,5.0,5.2,7.8,0.1,12.9,USA,Nola MATTHEWS,2023,3
+521,MATTHEWS,Nola,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",UB,7.0,5.6,8.05,,13.65,USA,Nola MATTHEWS,2023,3
+522,MATTHEWS,Nola,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",VT,15.0,4.2,8.9,,13.1,USA,Nola MATTHEWS,2023,3
+523,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",BB,,5.1,7.6,,12.7,USA,Nola MATTHEWS,2023,5
+524,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",FX,,5.1,8.0,,13.1,USA,Nola MATTHEWS,2023,5
+525,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",FX,,5.2,7.767,0.3,12.667,USA,Nola MATTHEWS,2023,5
+526,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",UB,,5.5,8.567,,14.067,USA,Nola MATTHEWS,2023,5
+527,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",UB,,5.5,8.5,,14.0,USA,Nola MATTHEWS,2023,5
+528,MATTHEWS,Nola Rhianne,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",VT,,4.2,8.7,,12.9,USA,Nola MATTHEWS,2023,5
+529,MILLER,Zoe,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,23.0,5.1,5.85,,10.95,USA,Zoe MILLER,2022,2
+530,MILLER,Zoe,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,11.0,5.2,7.45,,12.65,USA,Zoe MILLER,2022,2
+531,MILLER,Zoe,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,8.0,6.1,7.0,,13.1,USA,Zoe MILLER,2022,2
+532,MILLER,Zoe,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.6,9.05,,13.65,USA,Zoe MILLER,2022,2
+533,MILLER,Zoe,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,19.0,5.6,6.95,0.1,12.45,USA,Zoe MILLER,2023,8
+534,MILLER,Zoe,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,20.0,5.1,7.15,0.1,12.15,USA,Zoe MILLER,2023,8
+535,MILLER,Zoe,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,1.0,6.4,8.35,,14.75,USA,Zoe MILLER,2023,8
+536,MILLER,Zoe,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,9.05,,13.65,USA,Zoe MILLER,2023,8
+537,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.5,7.55,,13.05,USA,Zoe MILLER,2023,8
+538,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.2,7.05,,12.25,USA,Zoe MILLER,2023,8
+539,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.0,6.8,,11.8,USA,Zoe MILLER,2023,8
+540,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.2,7.3,0.1,12.4,USA,Zoe MILLER,2023,8
+541,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.3,6.0,0.3,11.0,USA,Zoe MILLER,2023,8
+542,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,6.4,8.0,,14.4,USA,Zoe MILLER,2023,8
+543,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,8.55,,13.15,USA,Zoe MILLER,2023,8
+544,MILLER,Zoe,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,8.9,0.1,13.4,USA,Zoe MILLER,2023,8
+545,MILLER,Zoe,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,8.0,5.2,7.35,,12.55,USA,Zoe MILLER,2023,2
+546,MILLER,Zoe,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,15.0,5.2,7.2,,12.4,USA,Zoe MILLER,2023,2
+547,MILLER,Zoe,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,1.0,6.4,7.5,,13.9,USA,Zoe MILLER,2023,2
+548,MILLER,Zoe,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.6,9.05,,13.65,USA,Zoe MILLER,2023,2
+549,MILLER,Zoe,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",BB,10.0,5.2,7.7,,12.9,USA,Zoe MILLER,2023,3
+550,MILLER,Zoe,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",FX,38.0,5.0,6.25,0.4,10.85,USA,Zoe MILLER,2023,3
+551,MILLER,Zoe,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,final,"Stuttgart, Germany",UB,1.0,6.4,8.233,,14.633,USA,Zoe MILLER,2023,3
+552,MILLER,Zoe,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",UB,1.0,6.4,8.45,,14.85,USA,Zoe MILLER,2023,3
+553,MILLER,Zoe,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",VT,4.0,4.6,9.3,,13.9,USA,Zoe MILLER,2023,3
+554,MILLER,Zoe,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,final,"Santiago, Chile",UB,1.0,6.4,8.266,,14.666,USA,Zoe MILLER,2023,10
+555,MILLER,Zoe,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",UB,1.0,6.4,8.366,,14.766,USA,Zoe MILLER,2023,10
+556,MOLL,Avery,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,23.0,5.0,6.6,,11.6,USA,Avery MOLL,2023,8
+557,MOLL,Avery,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,15.0,4.8,7.65,,12.45,USA,Avery MOLL,2023,8
+558,MOLL,Avery,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,23.0,5.4,6.85,,12.25,USA,Avery MOLL,2023,8
+559,MOLL,Avery,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,8.6,0.3,12.9,USA,Avery MOLL,2023,8
+560,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.6,7.65,,13.25,USA,Elle MUELLER,2022,8
+561,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.5,6.8,,12.3,USA,Elle MUELLER,2022,8
+562,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.8,8.15,,12.95,USA,Elle MUELLER,2022,8
+563,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.0,8.45,,13.45,USA,Elle MUELLER,2022,8
+564,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.8,6.95,,12.75,USA,Elle MUELLER,2022,8
+565,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.8,8.1,,13.9,USA,Elle MUELLER,2022,8
+566,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.6,9.25,,13.85,USA,Elle MUELLER,2022,8
+567,MUELLER,Elle,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.6,8.9,,13.5,USA,Elle MUELLER,2022,8
+568,MUELLER,Elle,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,15.0,5.4,7.05,0.1,12.35,USA,Elle MUELLER,2022,2
+569,MUELLER,Elle,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,10.0,5.0,7.75,,12.75,USA,Elle MUELLER,2022,2
+570,MUELLER,Elle,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,3.0,5.4,8.05,,13.45,USA,Elle MUELLER,2022,2
+571,MUELLER,Elle,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.2,8.8,,13.0,USA,Elle MUELLER,2022,2
+572,MUELLER,Elle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,29.0,5.0,5.65,0.1,10.55,USA,Elle MUELLER,2023,8
+573,MUELLER,Elle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,11.0,5.8,7.5,,13.3,USA,Elle MUELLER,2023,8
+574,MUELLER,Elle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,8.8,,13.4,USA,Elle MUELLER,2023,8
+575,MUELLER,Elle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,9.0,5.4,6.8,,12.2,USA,Elle MUELLER,2023,2
+576,MUELLER,Elle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,8.0,5.0,8.0,,13.0,USA,Elle MUELLER,2023,2
+577,MUELLER,Elle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,6.0,5.8,7.6,,13.4,USA,Elle MUELLER,2023,2
+578,MUELLER,Elle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.6,9.05,,13.65,USA,Elle MUELLER,2023,2
+579,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.1,8.05,,13.15,USA,Marissa NEAL,2022,8
+580,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.1,8.2,,13.3,USA,Marissa NEAL,2022,8
+581,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.9,7.45,,12.35,USA,Marissa NEAL,2022,8
+582,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,4.9,7.55,,12.45,USA,Marissa NEAL,2022,8
+583,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.3,7.05,,12.35,USA,Marissa NEAL,2022,8
+584,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.5,5.25,,10.75,USA,Marissa NEAL,2022,8
+585,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.6,9.05,,13.65,USA,Marissa NEAL,2022,8
+586,NEAL,Marissa,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.6,9.2,,13.8,USA,Marissa NEAL,2022,8
+587,NEAL,Marissa,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,2.0,4.9,8.05,,12.95,USA,Marissa NEAL,2022,7
+588,NEAL,Marissa,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,7.0,5.1,6.9,,12.0,USA,Marissa NEAL,2022,7
+589,NEAL,Marissa,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,8.0,5.4,7.45,,12.85,USA,Marissa NEAL,2022,7
+590,NEAL,Marissa,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,4.6,9.25,,13.85,USA,Marissa NEAL,2022,7
+591,NEAL,Marissa,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,9.0,4.8,8.1,,12.9,USA,Marissa NEAL,2022,2
+592,NEAL,Marissa,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,15.0,5.0,7.4,,12.4,USA,Marissa NEAL,2022,2
+593,NEAL,Marissa,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,21.0,4.1,6.7,,10.8,USA,Marissa NEAL,2022,2
+594,NEAL,Marissa,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.2,8.8,,13.0,USA,Marissa NEAL,2022,2
+595,NEAL,Marissa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,18.0,5.0,7.55,,12.55,USA,Marissa NEAL,2023,8
+596,NEAL,Marissa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,19.0,5.1,7.1,,12.2,USA,Marissa NEAL,2023,8
+597,NEAL,Marissa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,20.0,4.9,7.75,,12.65,USA,Marissa NEAL,2023,8
+598,NEAL,Marissa,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,9.05,,13.65,USA,Marissa NEAL,2023,8
+599,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.0,8.0,,13.0,USA,Marissa NEAL,2023,8
+600,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.0,7.85,,12.85,USA,Marissa NEAL,2023,8
+601,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.4,7.5,,12.9,USA,Marissa NEAL,2023,8
+602,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.4,7.6,,13.0,USA,Marissa NEAL,2023,8
+603,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.4,6.95,,12.35,USA,Marissa NEAL,2023,8
+604,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.3,7.0,,12.3,USA,Marissa NEAL,2023,8
+605,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,9.0,,13.6,USA,Marissa NEAL,2023,8
+606,NEAL,Marissa,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,9.1,,13.7,USA,Marissa NEAL,2023,8
+607,NEAL,Marissa,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,18.0,4.8,6.8,,11.6,USA,Marissa NEAL,2023,2
+608,NEAL,Marissa,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,27.0,5.0,6.65,0.3,11.35,USA,Marissa NEAL,2023,2
+609,NEAL,Marissa,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,29.0,5.5,5.35,,10.85,USA,Marissa NEAL,2023,2
+610,NEAL,Marissa,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,9.15,,13.35,USA,Marissa NEAL,2023,2
+611,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,4.9,7.15,,12.05,USA,Brooke PIERSON,2022,8
+612,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,4.9,6.8,,11.7,USA,Brooke PIERSON,2022,8
+613,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,4.7,7.25,,11.95,USA,Brooke PIERSON,2022,8
+614,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,4.7,6.0,,10.7,USA,Brooke PIERSON,2022,8
+615,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.4,7.65,,13.05,USA,Brooke PIERSON,2022,8
+616,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.4,7.7,,13.1,USA,Brooke PIERSON,2022,8
+617,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.6,9.1,,13.7,USA,Brooke PIERSON,2022,8
+618,PIERSON,Brooke,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.6,8.9,,13.5,USA,Brooke PIERSON,2022,8
+619,PIERSON,Brooke,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,3.0,4.7,7.95,,12.65,USA,Brooke PIERSON,2022,7
+620,PIERSON,Brooke,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,9.0,5.0,6.65,,11.65,USA,Brooke PIERSON,2022,7
+621,PIERSON,Brooke,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,4.0,5.4,7.95,,13.35,USA,Brooke PIERSON,2022,7
+622,PIERSON,Brooke,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,4.6,9.3,0.1,13.8,USA,Brooke PIERSON,2022,7
+623,PIERSON,Brooke,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,19.0,4.6,7.4,,12.0,USA,Brooke PIERSON,2022,2
+624,PIERSON,Brooke,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,17.0,4.9,7.4,,12.3,USA,Brooke PIERSON,2022,2
+625,PIERSON,Brooke,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,9.0,5.4,7.65,,13.05,USA,Brooke PIERSON,2022,2
+626,PIERSON,Brooke,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.6,8.95,,13.55,USA,Brooke PIERSON,2022,2
+627,PIERSON,Brooke,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,27.0,5.0,5.95,0.1,10.85,USA,Brooke PIERSON,2023,8
+628,PIERSON,Brooke,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,23.0,5.0,6.6,,11.6,USA,Brooke PIERSON,2023,8
+629,PIERSON,Brooke,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,13.0,5.0,8.2,,13.2,USA,Brooke PIERSON,2023,8
+630,PIERSON,Brooke,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,8.8,,13.0,USA,Brooke PIERSON,2023,8
+631,PIERSON,Brooke,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,28.0,4.9,5.0,0.1,9.8,USA,Brooke PIERSON,2023,2
+632,PIERSON,Brooke,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,18.0,5.0,7.05,,12.05,USA,Brooke PIERSON,2023,2
+633,PIERSON,Brooke,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,22.0,5.2,6.4,,11.6,USA,Brooke PIERSON,2023,2
+634,PIERSON,Brooke,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.7,,12.9,USA,Brooke PIERSON,2023,2
+635,PINEDA,Michelle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,8.0,5.0,8.1,,13.1,USA,Michelle PINEDA,2023,8
+636,PINEDA,Michelle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,12.0,5.1,7.55,,12.65,USA,Michelle PINEDA,2023,8
+637,PINEDA,Michelle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,13.0,4.8,8.4,,13.2,USA,Michelle PINEDA,2023,8
+638,PINEDA,Michelle,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,8.9,,13.5,USA,Michelle PINEDA,2023,8
+639,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.0,7.7,,12.7,USA,Michelle PINEDA,2023,8
+640,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.0,7.85,,12.85,USA,Michelle PINEDA,2023,8
+641,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,4.9,7.5,,12.4,USA,Michelle PINEDA,2023,8
+642,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,4.9,8.05,,12.95,USA,Michelle PINEDA,2023,8
+643,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,4.8,8.0,,12.8,USA,Michelle PINEDA,2023,8
+644,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,4.8,8.05,,12.85,USA,Michelle PINEDA,2023,8
+645,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,8.95,,13.55,USA,Michelle PINEDA,2023,8
+646,PINEDA,Michelle,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,9.1,,13.7,USA,Michelle PINEDA,2023,8
+647,PINEDA,Michelle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,17.0,4.9,6.75,,11.65,USA,Michelle PINEDA,2023,2
+648,PINEDA,Michelle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,10.0,5.0,7.85,,12.85,USA,Michelle PINEDA,2023,2
+649,PINEDA,Michelle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,23.0,4.8,6.7,,11.5,USA,Michelle PINEDA,2023,2
+650,PINEDA,Michelle,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.85,,13.05,USA,Michelle PINEDA,2023,2
+651,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,6.1,7.15,,13.25,USA,Joscelyn ROBERSON,2022,8
+652,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,6.1,5.85,,11.95,USA,Joscelyn ROBERSON,2022,8
+653,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.5,7.35,,12.85,USA,Joscelyn ROBERSON,2022,8
+654,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.5,7.45,,12.95,USA,Joscelyn ROBERSON,2022,8
+655,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,4.4,6.5,,10.9,USA,Joscelyn ROBERSON,2022,8
+656,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,4.4,6.8,,11.2,USA,Joscelyn ROBERSON,2022,8
+657,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.2,8.55,,13.75,USA,Joscelyn ROBERSON,2022,8
+658,ROBERSON,Joscelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.2,8.7,0.1,13.8,USA,Joscelyn ROBERSON,2022,8
+659,ROBERSON,Joscelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,6.0,6.0,6.3,,12.3,USA,Joscelyn ROBERSON,2022,7
+660,ROBERSON,Joscelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,4.0,5.2,7.5,,12.7,USA,Joscelyn ROBERSON,2022,7
+661,ROBERSON,Joscelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,13.0,4.6,5.95,,10.55,USA,Joscelyn ROBERSON,2022,7
+662,ROBERSON,Joscelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,5.2,8.8,,14.0,USA,Joscelyn ROBERSON,2022,7
+663,ROBERSON,Joscelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,5.0,6.1,7.3,,13.4,USA,Joscelyn ROBERSON,2022,2
+664,ROBERSON,Joscelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,11.0,5.3,7.35,,12.65,USA,Joscelyn ROBERSON,2022,2
+665,ROBERSON,Joscelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,24.0,3.7,6.05,,9.75,USA,Joscelyn ROBERSON,2022,2
+666,ROBERSON,Joscelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,8.2,0.3,12.9,USA,Joscelyn ROBERSON,2022,2
+667,ROBERSON,Joscelyn,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",FX,10.0,6.2,7.433,,13.633,USA,Joscelyn ROBERSON,2023,10
+668,ROBERSON,Joscelyn,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,6.0,5.6,8.866,,14.466,USA,Joscelyn ROBERSON,2023,10
+669,ROBERSON,Joscelyn,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,6.0,5.0,8.733,0.1,13.633,USA,Joscelyn ROBERSON,2023,10
+670,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,final,"Cairo, Egypt",BB,2.0,5.8,7.433,,13.233,USA,Joscelyn ROBERSON,2023,4
+671,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,qual,"Cairo, Egypt",BB,3.0,5.3,7.533,,12.833,USA,Joscelyn ROBERSON,2023,4
+672,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,final,"Cairo, Egypt",FX,1.0,5.9,7.8,,13.7,USA,Joscelyn ROBERSON,2023,4
+673,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,qual,"Cairo, Egypt",FX,1.0,6.1,7.966,,14.066,USA,Joscelyn ROBERSON,2023,4
+674,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,qual,"Cairo, Egypt",UB,20.0,5.1,6.3,,11.4,USA,Joscelyn ROBERSON,2023,4
+675,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,final,"Cairo, Egypt",VT,1.0,5.2,8.833,,14.033,USA,Joscelyn ROBERSON,2023,4
+676,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,qual,"Cairo, Egypt",VT,2.0,5.2,8.866,,14.066,USA,Joscelyn ROBERSON,2023,4
+677,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,final,"Cairo, Egypt",VT,1.0,5.0,8.933,,13.933,USA,Joscelyn ROBERSON,2023,4
+678,ROBERSON,Joscelyn,w,USA,27-30 Apr 2023,2023 Cairo World Cup,qual,"Cairo, Egypt",VT,2.0,5.0,8.966,,13.966,USA,Joscelyn ROBERSON,2023,4
+679,ROBERSON,Joscelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,3.0,6.3,8.0,,14.3,USA,Joscelyn ROBERSON,2023,8
+680,ROBERSON,Joscelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,2.0,6.4,7.6,,14.0,USA,Joscelyn ROBERSON,2023,8
+681,ROBERSON,Joscelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,29.0,4.4,6.7,,11.1,USA,Joscelyn ROBERSON,2023,8
+682,ROBERSON,Joscelyn,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.6,9.05,,14.65,USA,Joscelyn ROBERSON,2023,8
+683,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,6.0,7.2,,13.2,USA,Joscelyn ROBERSON,2023,8
+684,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,6.2,7.0,,13.2,USA,Joscelyn ROBERSON,2023,8
+685,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,6.2,7.3,0.2,13.3,USA,Joscelyn ROBERSON,2023,8
+686,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,6.2,7.4,,13.6,USA,Joscelyn ROBERSON,2023,8
+687,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,4.7,7.1,,11.8,USA,Joscelyn ROBERSON,2023,8
+688,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,4.7,7.1,,11.8,USA,Joscelyn ROBERSON,2023,8
+689,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.6,9.05,,14.65,USA,Joscelyn ROBERSON,2023,8
+690,ROBERSON,Joscelyn,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.6,8.95,,14.55,USA,Joscelyn ROBERSON,2023,8
+691,ROBERSON,Joscelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,2.0,6.0,7.3,,13.3,USA,Joscelyn ROBERSON,2023,2
+692,ROBERSON,Joscelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,2.0,6.0,7.55,,13.55,USA,Joscelyn ROBERSON,2023,2
+693,ROBERSON,Joscelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,29.0,5.1,5.75,,10.85,USA,Joscelyn ROBERSON,2023,2
+694,ROBERSON,Joscelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.2,8.8,,14.0,USA,Joscelyn ROBERSON,2023,2
+695,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",BB,18.0,6.0,6.5,,12.5,USA,Joscelyn ROBERSON,2023,3
+696,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,final,"Stuttgart, Germany",FX,2.0,5.6,7.7,,13.3,USA,Joscelyn ROBERSON,2023,3
+697,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",FX,1.0,6.2,7.95,,14.15,USA,Joscelyn ROBERSON,2023,3
+698,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",UB,14.0,5.3,7.7,,13.0,USA,Joscelyn ROBERSON,2023,3
+699,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,final,"Stuttgart, Germany",VT,1.0,5.2,9.033,,14.233,USA,Joscelyn ROBERSON,2023,3
+700,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",VT,1.0,5.2,9.0,,14.2,USA,Joscelyn ROBERSON,2023,3
+701,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,final,"Stuttgart, Germany",VT,1.0,5.0,8.933,,13.933,USA,Joscelyn ROBERSON,2023,3
+702,ROBERSON,Joscelyn,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",VT,1.0,5.0,9.05,0.1,13.95,USA,Joscelyn ROBERSON,2023,3
+703,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",BB,,5.8,7.933,,13.733,USA,Joscelyn ROBERSON,2023,5
+704,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",BB,,5.8,7.467,,13.267,USA,Joscelyn ROBERSON,2023,5
+705,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",FX,,6.1,7.967,,14.067,USA,Joscelyn ROBERSON,2023,5
+706,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",FX,,6.1,8.0,,14.1,USA,Joscelyn ROBERSON,2023,5
+707,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",VT,,5.2,8.6,,13.8,USA,Joscelyn ROBERSON,2023,5
+708,ROBERSON,Joscelyn Michelle,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",VT,,5.2,8.533,,13.733,USA,Joscelyn ROBERSON,2023,5
+709,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.0,7.65,,12.65,USA,Katelyn ROSEN,2022,8
+710,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,4.8,7.6,,12.4,USA,Katelyn ROSEN,2022,8
+711,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.4,8.15,,13.55,USA,Katelyn ROSEN,2022,8
+712,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,4.7,6.9,,11.6,USA,Katelyn ROSEN,2022,8
+713,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.4,7.65,,13.05,USA,Katelyn ROSEN,2022,8
+714,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.4,7.35,,12.75,USA,Katelyn ROSEN,2022,8
+715,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,4.6,9.05,,13.65,USA,Katelyn ROSEN,2022,8
+716,ROSEN,Katelyn,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,4.6,8.9,0.1,13.4,USA,Katelyn ROSEN,2022,8
+717,ROSEN,Katelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,7.0,4.7,7.45,,12.15,USA,Katelyn ROSEN,2022,7
+718,ROSEN,Katelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,1.0,5.4,8.3,,13.7,USA,Katelyn ROSEN,2022,7
+719,ROSEN,Katelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,10.0,5.4,7.4,,12.8,USA,Katelyn ROSEN,2022,7
+720,ROSEN,Katelyn,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,4.6,9.25,,13.85,USA,Katelyn ROSEN,2022,7
+721,ROSEN,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,16.0,4.7,7.6,,12.3,USA,Katelyn ROSEN,2022,2
+722,ROSEN,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,6.0,5.2,7.8,,13.0,USA,Katelyn ROSEN,2022,2
+723,ROSEN,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,20.0,4.8,6.8,,11.6,USA,Katelyn ROSEN,2022,2
+724,ROSEN,Katelyn,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,4.6,9.0,,13.6,USA,Katelyn ROSEN,2022,2
+725,ROSEN,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,15.0,5.2,6.7,,11.9,USA,Katelyn ROSEN,2023,2
+726,ROSEN,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,11.0,5.4,7.6,0.3,12.7,USA,Katelyn ROSEN,2023,2
+727,ROSEN,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,16.0,5.4,7.15,,12.55,USA,Katelyn ROSEN,2023,2
+728,ROSEN,Katelyn,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.6,9.0,,13.6,USA,Katelyn ROSEN,2023,2
+729,SULLIVAN,Ashlee,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,3.0,5.6,7.9,,13.5,USA,Ashlee SULLIVAN,2022,2
+730,SULLIVAN,Ashlee,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,8.0,5.4,7.45,,12.85,USA,Ashlee SULLIVAN,2022,2
+731,SULLIVAN,Ashlee,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,16.0,5.0,7.6,,12.6,USA,Ashlee SULLIVAN,2022,2
+732,SULLIVAN,Ashlee,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,8.9,,13.9,USA,Ashlee SULLIVAN,2022,2
+733,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.6,6.6,,12.2,USA,Ashlee SULLIVAN,2023,8
+734,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.5,7.35,,12.85,USA,Ashlee SULLIVAN,2023,8
+735,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.5,7.7,0.1,13.1,USA,Ashlee SULLIVAN,2023,8
+736,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.7,7.75,0.1,13.35,USA,Ashlee SULLIVAN,2023,8
+737,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.4,7.55,,12.95,USA,Ashlee SULLIVAN,2023,8
+738,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,4.2,5.75,,9.95,USA,Ashlee SULLIVAN,2023,8
+739,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,9.0,,13.2,USA,Ashlee SULLIVAN,2023,8
+740,SULLIVAN,Ashlee,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,9.2,,13.4,USA,Ashlee SULLIVAN,2023,8
+741,SULLIVAN,Ashlee,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,3.0,5.6,7.7,0.1,13.2,USA,Ashlee SULLIVAN,2023,2
+742,SULLIVAN,Ashlee,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,3.0,5.7,7.65,,13.35,USA,Ashlee SULLIVAN,2023,2
+743,SULLIVAN,Ashlee,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,15.0,5.0,7.6,,12.6,USA,Ashlee SULLIVAN,2023,2
+744,SULLIVAN,Ashlee,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.6,,13.6,USA,Ashlee SULLIVAN,2023,2
+745,SULLIVAN,Ashlee,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,final,"Stuttgart, Germany",BB,6.0,5.5,6.9,,12.4,USA,Ashlee SULLIVAN,2023,3
+746,SULLIVAN,Ashlee,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",BB,1.0,5.8,8.0,,13.8,USA,Ashlee SULLIVAN,2023,3
+747,SULLIVAN,Ashlee,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",FX,13.0,5.7,6.95,,12.65,USA,Ashlee SULLIVAN,2023,3
+748,SULLIVAN,Ashlee,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",UB,19.0,5.3,7.25,,12.55,USA,Ashlee SULLIVAN,2023,3
+749,SULLIVAN,Ashlee,w,USA,17-19 Mar 2023,EnBW DTB Pokal Team Challenge 2023,qual,"Stuttgart, Germany",VT,15.0,5.0,8.4,0.3,13.1,USA,Ashlee SULLIVAN,2023,3
+750,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",BB,,5.7,8.267,,13.967,USA,Tiana SUMANASEKERA,2023,5
+751,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",BB,,5.8,7.967,,13.767,USA,Tiana SUMANASEKERA,2023,5
+752,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",FX,,5.3,8.4,,13.7,USA,Tiana SUMANASEKERA,2023,5
+753,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",FX,,5.3,8.267,,13.567,USA,Tiana SUMANASEKERA,2023,5
+754,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",UB,,5.3,7.333,,12.633,USA,Tiana SUMANASEKERA,2023,5
+755,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamFinal,"Medellin, Colombia",VT,,5.0,9.233,,14.233,USA,Tiana SUMANASEKERA,2023,5
+756,SUMANASEKERA,Tiana,w,USA,26-28 May 2023,2023 Artistic Gymnastics Senior Pan American Championships,TeamQual,"Medellin, Colombia",VT,,5.0,9.033,0.1,13.933,USA,Tiana SUMANASEKERA,2023,5
+757,SUMANASEKERA,Tiana,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,5.0,5.8,7.7,,13.5,USA,Tiana SUMANASEKERA,2023,8
+758,SUMANASEKERA,Tiana,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,10.0,5.7,7.2,,12.9,USA,Tiana SUMANASEKERA,2023,8
+759,SUMANASEKERA,Tiana,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,27.0,5.0,6.55,,11.55,USA,Tiana SUMANASEKERA,2023,8
+760,SUMANASEKERA,Tiana,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,9.15,,14.15,USA,Tiana SUMANASEKERA,2023,8
+761,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.8,8.05,,13.85,USA,Tiana SUMANASEKERA,2023,8
+762,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.5,7.8,,13.3,USA,Tiana SUMANASEKERA,2023,8
+763,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.3,7.85,,13.15,USA,Tiana SUMANASEKERA,2023,8
+764,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.3,7.65,,12.95,USA,Tiana SUMANASEKERA,2023,8
+765,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.4,6.15,,11.55,USA,Tiana SUMANASEKERA,2023,8
+766,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.3,7.5,,12.8,USA,Tiana SUMANASEKERA,2023,8
+767,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.2,,14.2,USA,Tiana SUMANASEKERA,2023,8
+768,SUMANASEKERA,Tiana,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.1,,14.1,USA,Tiana SUMANASEKERA,2023,8
+769,SUMANASEKERA,Tiana,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,7.0,5.2,7.4,,12.6,USA,Tiana SUMANASEKERA,2023,2
+770,SUMANASEKERA,Tiana,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,12.0,5.3,7.6,,12.9,USA,Tiana SUMANASEKERA,2023,2
+771,SUMANASEKERA,Tiana,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",BB,6.0,6.1,7.066,0.1,13.066,USA,Tiana SUMANASEKERA,2023,10
+772,SUMANASEKERA,Tiana,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",FX,7.0,5.7,7.3,,13.0,USA,Tiana SUMANASEKERA,2023,10
+773,SUMANASEKERA,Tiana,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",UB,9.0,5.3,7.6,,12.9,USA,Tiana SUMANASEKERA,2023,10
+774,SUMANASEKERA,Tiana,w,USA,21-25 Oct 2023,SANTIAGO 2023 XIX Pan American Games,qual,"Santiago, Chile",VT,3.0,5.0,9.2,0.1,14.1,USA,Tiana SUMANASEKERA,2023,10
+775,WONG,Leanne,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,TeamFinal,"Liverpool, England",UB,,5.7,8.066,,13.766,USA,Leanne WONG,2022,11
+776,WONG,Leanne,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,21.0,5.0,8.766,,13.766,USA,Leanne WONG,2022,11
+777,WONG,Leanne,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,9.0,5.0,8.766,,13.766,USA,Leanne WONG,2022,11
+778,WONG,Leanne,w,USA,29 Oct 2022 - 6 Nov 2022,2022 51st FIG Artistic Gymnastics World Championships,qual,"Liverpool, England",VT,9.0,4.2,8.9,,13.1,USA,Leanne WONG,2022,11
+779,WONG,Leanne,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.5,7.65,,13.15,USA,Leanne WONG,2022,8
+780,WONG,Leanne,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.6,7.8,,13.4,USA,Leanne WONG,2022,8
+781,WONG,Leanne,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.7,8.5,,14.2,USA,Leanne WONG,2022,8
+782,WONG,Leanne,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.7,8.55,,14.25,USA,Leanne WONG,2022,8
+783,WONG,Leanne,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",BB,1.0,5.4,8.25,0.1,13.55,USA,Leanne WONG,2022,7
+784,WONG,Leanne,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",FX,3.0,5.7,7.9,,13.6,USA,Leanne WONG,2022,7
+785,WONG,Leanne,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",UB,8.0,5.6,7.25,,12.85,USA,Leanne WONG,2022,7
+786,WONG,Leanne,w,USA,28-31 July 2022,2022 U.S. Classic,AAfinal,"West Valley City, Utah",VT,,5.0,9.4,,14.4,USA,Leanne WONG,2022,7
+787,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",BB,20.0,5.4,7.966,,13.366,USA,Leanne WONG,2023,10
+788,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",BB,,5.1,6.6,,11.7,USA,Leanne WONG,2023,10
+789,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",FX,21.0,5.4,7.8,,13.2,USA,Leanne WONG,2023,10
+790,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",FX,,5.4,7.766,,13.166,USA,Leanne WONG,2023,10
+791,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",UB,19.0,5.7,7.966,,13.666,USA,Leanne WONG,2023,10
+792,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,TeamFinal,"Antwerp, Belgium",VT,,5.0,9.066,,14.066,USA,Leanne WONG,2023,10
+793,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",VT,7.0,5.0,9.1,,14.1,USA,Leanne WONG,2023,10
+794,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,11.0,5.0,9.166,,14.166,USA,Leanne WONG,2023,10
+795,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,10.0,5.0,9.166,,14.166,USA,Leanne WONG,2023,10
+796,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,final,"Antwerp, Belgium",VT,7.0,4.2,8.733,0.1,12.833,USA,Leanne WONG,2023,10
+797,WONG,Leanne,w,USA,30 Sep 2023 - 8 Oct 2023,2023 52nd FIG Artistic Gymnastics World Championships,qual,"Antwerp, Belgium",VT,10.0,4.2,8.9,,13.1,USA,Leanne WONG,2023,10
+798,WONG,Leanne,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,16.0,5.2,7.5,,12.7,USA,Leanne WONG,2023,8
+799,WONG,Leanne,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,4.0,5.6,7.9,,13.5,USA,Leanne WONG,2023,8
+800,WONG,Leanne,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,6.0,5.7,8.05,,13.75,USA,Leanne WONG,2023,8
+801,WONG,Leanne,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,5.0,9.15,,14.15,USA,Leanne WONG,2023,8
+802,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.8,7.95,,13.75,USA,Leanne WONG,2023,8
+803,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.5,8.2,,13.7,USA,Leanne WONG,2023,8
+804,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,5.6,7.85,0.1,13.35,USA,Leanne WONG,2023,8
+805,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.6,8.4,,14.0,USA,Leanne WONG,2023,8
+806,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.7,8.3,,14.0,USA,Leanne WONG,2023,8
+807,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.7,8.3,,14.0,USA,Leanne WONG,2023,8
+808,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,5.0,9.25,,14.25,USA,Leanne WONG,2023,8
+809,WONG,Leanne,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,5.0,9.05,,14.05,USA,Leanne WONG,2023,8
+810,WOOLFORD,Kelise,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,14.0,5.1,7.65,,12.75,USA,Kelise WOOLFORD,2023,8
+811,WOOLFORD,Kelise,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,21.0,5.0,7.05,,12.05,USA,Kelise WOOLFORD,2023,8
+812,WOOLFORD,Kelise,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,11.0,5.2,8.1,,13.3,USA,Kelise WOOLFORD,2023,8
+813,WOOLFORD,Kelise,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,8.8,,13.0,USA,Kelise WOOLFORD,2023,8
+814,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.1,6.7,,11.8,USA,Kelise WOOLFORD,2023,8
+815,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,4.8,6.9,,11.7,USA,Kelise WOOLFORD,2023,8
+816,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,4.9,7.25,,12.15,USA,Kelise WOOLFORD,2023,8
+817,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,5.0,7.15,,12.15,USA,Kelise WOOLFORD,2023,8
+818,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,4.5,7.85,,12.35,USA,Kelise WOOLFORD,2023,8
+819,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.2,6.8,,12.0,USA,Kelise WOOLFORD,2023,8
+820,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,8.55,0.3,12.45,USA,Kelise WOOLFORD,2023,8
+821,WOOLFORD,Kelise,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,8.25,0.1,12.35,USA,Kelise WOOLFORD,2023,8
+822,WOOLFORD,Kelise,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,19.0,4.9,6.65,,11.55,USA,Kelise WOOLFORD,2023,2
+823,WOOLFORD,Kelise,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,28.0,4.5,6.45,,10.95,USA,Kelise WOOLFORD,2023,2
+824,WOOLFORD,Kelise,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,23.0,4.1,7.4,,11.5,USA,Kelise WOOLFORD,2023,2
+825,WOOLFORD,Kelise,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.6,,12.8,USA,Kelise WOOLFORD,2023,2
+826,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",BB,,5.2,7.15,,12.35,USA,Lexi ZEISS,2022,8
+827,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",BB,,5.2,7.85,,13.05,USA,Lexi ZEISS,2022,8
+828,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",FX,,5.0,8.1,,13.1,USA,Lexi ZEISS,2022,8
+829,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",FX,,5.0,8.15,,13.15,USA,Lexi ZEISS,2022,8
+830,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",UB,,5.6,8.3,,13.9,USA,Lexi ZEISS,2022,8
+831,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",UB,,5.6,8.2,,13.8,USA,Lexi ZEISS,2022,8
+832,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,qual,"Tampa, FL",VT,,5.0,8.4,,13.4,USA,Lexi ZEISS,2022,8
+833,ZEISS,Lexi,w,USA,19-20 Aug 2022,2022 U.S. Championships,final,"Tampa, FL",VT,,5.0,8.75,,13.75,USA,Lexi ZEISS,2022,8
+834,ZEISS,Lexi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",BB,21.0,5.2,6.15,,11.35,USA,Lexi ZEISS,2022,2
+835,ZEISS,Lexi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",FX,6.0,5.0,8.0,,13.0,USA,Lexi ZEISS,2022,2
+836,ZEISS,Lexi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",UB,19.0,5.4,6.45,,11.85,USA,Lexi ZEISS,2022,2
+837,ZEISS,Lexi,w,USA,25-27 Feb 2022,2022 Winter Cup,AAfinal,"Frisco, Texas",VT,,5.0,9.05,,14.05,USA,Lexi ZEISS,2022,2
+838,ZEISS,Lexi,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,10.0,5.8,7.55,,13.35,USA,Lexi ZEISS,2023,8
+839,ZEISS,Lexi,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.6,8.8,0.1,13.3,USA,Lexi ZEISS,2023,8
+840,ZEISS,Lexi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.9,7.8,,13.7,USA,Lexi ZEISS,2023,8
+841,ZEISS,Lexi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.9,7.85,,13.75,USA,Lexi ZEISS,2023,8
+842,ZEISS,Lexi,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.6,8.85,,13.45,USA,Lexi ZEISS,2023,8
+843,ZEISS,Lexi,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.6,9.1,,13.7,USA,Lexi ZEISS,2023,8
+844,ZEISS,Lexi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,4.0,5.2,7.9,,13.1,USA,Lexi ZEISS,2023,2
+845,ZEISS,Lexi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,6.0,5.2,7.95,,13.15,USA,Lexi ZEISS,2023,2
+846,ZEISS,Lexi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,4.0,5.6,7.9,,13.5,USA,Lexi ZEISS,2023,2
+847,ZEISS,Lexi,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,5.0,8.45,,13.45,USA,Lexi ZEISS,2023,2
+848,ZHOU,Alicia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",BB,12.0,5.1,7.75,,12.85,USA,Alicia ZHOU,2023,8
+849,ZHOU,Alicia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",FX,9.0,5.0,8.0,,13.0,USA,Alicia ZHOU,2023,8
+850,ZHOU,Alicia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",UB,6.0,5.6,8.15,,13.75,USA,Alicia ZHOU,2023,8
+851,ZHOU,Alicia,w,USA,4-6 Aug 2023,2023 Core Hydration Classic,AAfinal,"Hoffman Estates, Illinois",VT,,4.2,8.95,,13.15,USA,Alicia ZHOU,2023,8
+852,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",BB,,5.0,7.6,,12.6,USA,Alicia ZHOU,2023,8
+853,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",BB,,5.2,7.65,,12.85,USA,Alicia ZHOU,2023,8
+854,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",FX,,4.9,7.8,,12.7,USA,Alicia ZHOU,2023,8
+855,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",FX,,4.9,8.0,,12.9,USA,Alicia ZHOU,2023,8
+856,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",UB,,5.6,8.2,,13.8,USA,Alicia ZHOU,2023,8
+857,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",UB,,5.6,8.0,,13.6,USA,Alicia ZHOU,2023,8
+858,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,qual,"San Jose, CA",VT,,4.2,9.0,,13.2,USA,Alicia ZHOU,2023,8
+859,ZHOU,Alicia,w,USA,26-27 Aug 2023,2023 U.S. Championships,final,"San Jose, CA",VT,,4.2,9.2,,13.4,USA,Alicia ZHOU,2023,8
+860,ZHOU,Alicia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",BB,11.0,5.1,7.0,,12.1,USA,Alicia ZHOU,2023,2
+861,ZHOU,Alicia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",FX,13.0,4.9,7.65,,12.55,USA,Alicia ZHOU,2023,2
+862,ZHOU,Alicia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",UB,14.0,5.4,7.45,,12.85,USA,Alicia ZHOU,2023,2
+863,ZHOU,Alicia,w,USA,24-26 Feb 2023,2023 Winter Cup,AAfinal,"Louisville, Kentucky",VT,,4.2,8.7,,12.9,USA,Alicia ZHOU,2023,2

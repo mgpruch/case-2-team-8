@@ -1,5 +1,5 @@
 ---
-title: "Case2"
+title: "Case Study 2: Olympic Team Selection"
 output:
   pdf_document: default
   html_document: default
@@ -15,9 +15,8 @@ library(purrr)
 library(tidyr)
 ```
 
-```{r read-in}
-gym_data = read.csv("cleanedfinalgymnastdata.csv")
-head(gym_data)
+```{r read-in, include=FALSE}
+gym_data = read.csv("filtered_3.csv")
 ```
 
 ## Introduction
@@ -32,12 +31,12 @@ To do this, we are assessing data from past performances at recent competitions.
 
 ## Beginning Exploratory Data Analysis
 
-```{r}
+```{r, include=FALSE}
 #Cleaning hb issue
 gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
 ```
 
-```{r Highest-Vault}
+```{r Highest-Vault, include=FALSE}
 #Gymnasts vault two times, which is in the data as VT1 and VT2 (or if just once VT)
 #Renaming these to all just be VT, because they're all data on vaults
 gym_data$Apparatus[gym_data$Apparatus == "VT1"] <- "VT"
@@ -49,7 +48,7 @@ gym_data <- gym_data %>%
                               Country != "USA" ~ "Other"))
 ```
 
-```{r}
+```{r, echo = FALSE}
 #Looking at distribution of score across different events
 p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
   geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") 
@@ -58,7 +57,7 @@ p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
 #Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
 ```
-```{r MenWomen}
+```{r MenWomen, include=FALSE}
 women_gym_data <- gym_data %>%
   filter(Gender == "w")
 
@@ -68,7 +67,7 @@ men_gym_data <- gym_data %>%
 
 
 
-```{r}
+```{r, echo = FALSE}
 library(dplyr)
 ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
   geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") 
@@ -77,7 +76,7 @@ ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Natio
   geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") 
 ```
 
-```{r}
+```{r, include=FALSE}
 men_gym_data <- men_gym_data %>%
   mutate(name = paste(FirstName, LastName)) 
 
@@ -89,7 +88,7 @@ women_gym_data <- women_gym_data %>%
 women_gym_data %>% filter(Country == "USA") %>% group_by(name) %>% count()
 ```
 
-```{r}
+```{r, include=FALSE}
 us_men_gym_data <- men_gym_data %>% filter(Country == "USA")
 us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
 ```
@@ -100,7 +99,7 @@ us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
 
 In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women. 
 
-```{r}
+```{r, include=FALSE}
 #Get rid of all gymnasts that did not compete in 2023
 library(stringr)
 us_womens_gym_data$Year <- str_sub(us_womens_gym_data$Date, -4)
@@ -123,7 +122,7 @@ length(unique(us_womens_gym_data$name))
 
 We also filtered out gymnasts that had too low of an average score to warrant further consideration and even further reduce our selection pool. To do this, we calculated the average score across all competitions and apparatuses for each US gymnast (both male and female). We then found the first quartile value for each gender's average score. This means the average score that 25% of the average scores for male and female gymnasts respectively fell below this value. The 25th percentile score for US women gymnasts was 12.15156 and 12.15000 for men. After filtering out any competitors who had average scores below that, we were left with 106 men and 35 women. 
 
-```{r}
+```{r, include=FALSE}
 
 length(unique(us_men_gym_data$name))
 length(unique(us_womens_gym_data$name))
@@ -151,13 +150,29 @@ us_men_gym_data <- us_men_gym_data %>%
 length(unique(us_men_gym_data$name))
 length(unique(us_womens_gym_data$name))
 ```
+# 2. Heuristically Analyzing Top Performers
 
+Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the mens and womens team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that should, in expectation, be on the final 5.
+
+First, we designed a formula that would weight certain historic results more/less than others based on it: 1) being in a final round, and 2) being in a more recent performance. Final round performances contribute 1.5x the weight and we defined a linear function where outcomes carry between an additional 1 to 2.5x weighing factor depending on the month and year of the tournament (January of 2022 was set as 1x and December of 2023 was set as 2.5x).
+
+Second, we proposed a new composite score to create a new individual scoring system based on past performances that heavily increase the positive importance of top 5 ranks and also the importance (negatively) of ranking outside the top 10. We believe that consistently scoring within the top 10 is crucial for ensuring Olympic placements as the competition is much higher and even scoring within the 10-20 range will be insufficient for improving Team USA's score. For our adjusted score, gold, silver, and bronze medals contribute 10x, 7.5x, and 5x the weight of a rank outside the top 10, while placement within the 6th-10th range contributes a 2.5 weight.
+
+With these adjusted metrics, we produce an adjusted score for each event & apparatus that a gymnast performed in, and consider three different methods of analyzing these metrics:
+
+1. Total sum of adjusted scores: this metric will provide us with a comprehensive way to determine a ranking of the top all-around performers, based on the sum of their weighted adjusted scores in each apparatus they perform in, that we would like to be staples on any team. 
+
+2. Best individual apparatus score: this metric will provide a ranking of the highest weighted score a competitor has in any individual apparatus.
+
+3. Best two-apparatus score: this metric will provide a ranking of the average of the two highest scores a competitor has in their two top apparatus.
+
+We aimed to use the 2nd and 3rd metrics to determine individuals that would be very likely to excel in a few apparatuses, alongside the two best all-around performers.
 
 # 3. Simulating Composite Scores
 
 The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores. 
 
-```{r}
+```{r, echo = FALSE}
 hist(us_men_gym_data$Score)
 hist(us_womens_gym_data$Score)
 ```
@@ -169,20 +184,22 @@ To fit these distributions, we will start by iterating through the rows of our U
 To eliminate redundant information in our final datatable, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame. 
 We will repeat this process so that we will have two separate data frames containing the names, mean scores, and standard deviation of scores for both men and women USA gymnasts. We can now use these data frames to run our composite score simulation. 
 
-```{r}
+```{r, include=FALSE}
 set.seed(1212)
 
-problematic_groups <- cleaned_gym_data %>%
+problematic_groups <- gym_data %>%
   filter(FirstName == "" | LastName == "" | FirstName == ".")%>%
   distinct()
 
 # Filter out problematic groups from the original data
-uniques <- cleaned_gym_data %>%
+uniques <- gym_data %>%
   anti_join(problematic_groups, by = c("FirstName", "LastName"))%>%
   filter(!is.na(Score))
 usa <- subset(uniques, Country == "USA")
-usa_men <- subset(usa, Gender == "m")
-usa_women <- subset(usa, Gender == "w")
+# usa_men <- subset(usa, Gender == "m")
+usa_men <- us_men_gym_data
+# usa_women <- subset(usa, Gender == "w")
+usa_women <- us_womens_gym_data
 
 mu <- list()
 sd <- list()
@@ -231,9 +248,9 @@ women_usa <- women_tib %>%
 
 The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations. For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of 0. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score. 
 
-```{r}
+```{r, include=FALSE}
 n <- 50000
-gymnasts <- 6
+gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
   
@@ -280,9 +297,9 @@ top_combinations_df <- results_tibble %>%
 print(top_combinations_df)
 ```
 
-```{r}
+```{r, include=FALSE}
 n <- 50000
-gymnasts <- 6
+gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
 
