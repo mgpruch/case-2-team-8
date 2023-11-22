@@ -36,6 +36,7 @@ To do this, we are assessing data from past performances at recent competitions.
 #Cleaning hb issue
 gym_data$Apparatus[gym_data$Apparatus == "hb"] <- "HB"
 allcountries$Apparatus[allcountries$Apparatus == "hb"] <- "HB"
+
 ```
 
 ```{r Highest-Vault, include=FALSE}
@@ -50,6 +51,7 @@ allcountries$Apparatus[allcountries$Apparatus == "VT2"] <- "VT"
 gym_data <- gym_data %>%
   mutate(Nation = case_when(Country == "USA" ~ "USA",
                               Country != "USA" ~ "Other"))
+
 allcountries <- allcountries %>%
   mutate(Nation = case_when(Country == "USA" ~ "USA",
                               Country != "USA" ~ "Other"))
@@ -59,11 +61,13 @@ We started by looking at the distribution of total scores (the combination of bo
 
 ```{r, echo = FALSE}
 #Looking at distribution of score across different events
-options(repr.plot.width =4, repr.plot.height =4)
-p <- ggplot(data = allcountries, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +
+options(repr.plot.width = 4, repr.plot.height =4)
+p <- ggplot(data = allcountries, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +  
   geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
 
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
+
+#Initial issue is that some rows have a lower score hb that is making it seem like there are two categories of high bar
 ```
 ```{r MenWomen, include=FALSE}
 women_gym_data <- gym_data %>%
@@ -71,6 +75,7 @@ women_gym_data <- gym_data %>%
 
 men_gym_data <- gym_data %>%
   filter(Gender == "m")
+
 allcountriesw <- allcountries %>%
   filter(Gender == "w")
 allcountriesm <- allcountries %>%
@@ -262,13 +267,19 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of 10 male gymnasts and 10 female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. We start our simulation by randomly sampling five different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 5000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
-```{r, include=FALSE}
-n <- 50000
+
+```{r, echo=FALSE}
+n <- 5000
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
+
+name_list <- c("Brody-MALONE", "Donnell-WHITTENBURG", "Frederick-RICHARD", "Asher-HONG", "Paul-JUDA", "Taylor-BURKHART", 
+               "Joshua-KARNES", "Khoi-YOUNG", "Curran-PHILLIPS", "Stephen-NEDOROSCIK")
+
+subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
 #simulate_composite_score <- function(selected_gymnasts) {
 #  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
@@ -299,7 +310,7 @@ simulate_composite_score <- function(selected_gymnasts) {
 }
 
 results <- replicate(n, {
-  sampled_gymnasts <- usa_unique_final[sample(nrow(usa_unique_final), gymnasts, replace = FALSE),]
+  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = FALSE),]
   composite_score <- simulate_composite_score(sampled_gymnasts)
   results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
   results_entry
@@ -313,11 +324,16 @@ top_combinations_df <- results_tibble %>%
 print(top_combinations_df)
 ```
 
-```{r, include=FALSE}
-n <- 50000
+
+```{r, echo=FALSE}
+n <- 5000
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
+
+name_list <- c("Simone-BILES", "Jordan-CHILES", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER", "Kaliya-LINCOLN", "Skye-BLAKELY", "Ashlee-SULLIVAN")
+
+subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
 #simulate_composite_score <- function(selected_gymnasts) {
 #  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
@@ -348,7 +364,7 @@ simulate_composite_score <- function(selected_gymnasts) {
 }
 
 results <- replicate(n, {
-  sampled_gymnasts <- usa_unique_final[sample(nrow(usa_unique_final), gymnasts, replace = FALSE),]
+  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = FALSE),]
   composite_score <- simulate_composite_score(sampled_gymnasts)
   results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
   results_entry
