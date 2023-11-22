@@ -202,7 +202,7 @@ Despite the fact that our data is bounded (scores are between 0-16), the concent
 
 To fit these distributions, we will start by iterating through the rows of our US Mens and USA Womens data separately. For each name in the data, we will take the corresponding subset of the data containing all qualifying scores. Using these scores, we will fit a distribution to the associated gymnast, and store the mean and standard deviation, as well as the name of the gymnast into a data frame.
 
-To eliminate redundant information in our final datatable, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame.
+To eliminate redundant information in our final table, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame.
 We will repeat this process so that we will have two separate data frames containing the names, mean scores, and standard deviation of scores for both men and women USA gymnasts. We can now use these data frames to run our composite score simulation.
 
 ```{r, include=FALSE}
@@ -271,7 +271,8 @@ The second step in our methodology is running our simulation to generate composi
 
 
 ```{r, echo=FALSE}
-n <- 5000
+set.seed(2)
+n <- 10000
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
@@ -326,6 +327,7 @@ print(top_combinations_df)
 
 
 ```{r, echo=FALSE}
+set.seed(2)
 n <- 5000
 gymnasts <- 5
 top_combos <- 10
