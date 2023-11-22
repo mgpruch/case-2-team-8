@@ -30,7 +30,7 @@ With all of these considerations in terms of format and competition stages, sele
 
 To do this, we are assessing data from past performances at recent competitions. Each of these competitions have scores for a gymnast's performance at a competition on one apparatus. These scores are a combination of an execution score (E Score) and a difficulty score (D Score). There also is a possible penalty that can be applied to a gymnasts score.
 
-## Beginning Exploratory Data Analysis
+## Exploratory Data Analysis
 
 ```{r, include=FALSE}
 #Cleaning hb issue
@@ -57,7 +57,7 @@ allcountries <- allcountries %>%
                               Country != "USA" ~ "Other"))
 ```
 
-We started by looking at the distribution of total scores (the combination of both the E and D scores) for all gymnasts of both genders across all appartuses. For most of the appartuses, the distributions had the largest number of outliers towards the lower end of the distribution. This means that there were many gymnasts who had unusually low scores compared to the rest of the score distribution. Scores were more clustered towards the upper end of the distribution, with the average scores for all of the apparatuses being around 13 points. For both genders, the vault and floor events had the smallest range of scores.
+We started by looking at the distribution of total scores (the combination of both the E and D scores) for all gymnasts of both genders across all apparatuses. For most of the apparatuses, the distributions had the largest number of outliers towards the lower end of the distribution. This means that there were many gymnasts who had unusually low scores compared to the rest of the score distribution. Scores were more clustered towards the upper end of the distribution, with the average scores for all of the apparatuses being around 13 points. For both genders, the vault and floor events had the smallest range of scores.
 
 ```{r, echo = FALSE}
 #Looking at distribution of score across different events
