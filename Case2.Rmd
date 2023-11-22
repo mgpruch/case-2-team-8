@@ -25,9 +25,9 @@ As the Paris 2024 Olympic Games draw closer, the United States gymnastics progra
 
 In order to make a strong showing from both teams and continue the legacy of the women's program, choosing the best possible team is essential. USA Gymnastics has nearly 200,000 members from their beginning training to their elite levels, but few can be taken to the international stage to represent their country. Both teams will only be allowed to bring five members to the Paris 2024 Olympics. The women's team will compete on four apparatuses: vault, uneven bars, balance beam, and floor exercise. The men's team will compete on six apparatuses: floor exercise, pommel horse, still rings, vault, parallel bars, and high bar. Both teams will also compete in the team and individual all-around, allowing for 6 opportunities to medal for the women and 8 for the men. Out of these 5 member teams, competition will follow a 5-4-3 format (4 members out of the 5 compete on each apparatus, and the top 3 scores count). In the team all-around this changes to a 5-3-3 format, so every score counts for the 3 members chosen to compete. For the individual competitions, only 2 gymnasts max per country can qualify to move on to the finals.
 
-With all of these considerations in terms of format and competition stages, selecting a team is very challenging. Selection takes into consideration not only scores from previous competitions, but also protecting the ability to defend a medal or title. It is more than just looking at who has the highest score, since a team has to be selected that can compete across all of these events and do their best at each apparatus. This selection is normally done by USA Gymnastics (for the women it was done by the Karolyis before the recent scandal), but we will create a more analytical way to select the team. Our analysis is centered around the goal of selecting 5-member men and women's gymnastics teams that will maximize medal counts at the Paris 2024 Olympic Games. 
+With all of these considerations in terms of format and competition stages, selecting a team is very challenging. Selection takes into consideration not only scores from previous competitions, but also protecting the ability to defend a medal or title. It is more than just looking at who has the highest score, since a team has to be selected that can compete across all of these events and do their best at each apparatus. This selection is normally done by USA Gymnastics (for the women it was done by the Karolyis before the recent scandal), but we will create a more analytical way to select the team. Our analysis is centered around the goal of selecting 5-member men and women's gymnastics teams that will maximize medal counts at the Paris 2024 Olympic Games.
 
-To do this, we are assessing data from past performances at recent competitions. Each of these competitions have scores for a gymnast's performance at a competition on one apparatus. These scores are a combination of an execution score (E Score) and a difficulty score (D Score). There also is a possible penalty that can be applied to a gymnasts score. 
+To do this, we are assessing data from past performances at recent competitions. Each of these competitions have scores for a gymnast's performance at a competition on one apparatus. These scores are a combination of an execution score (E Score) and a difficulty score (D Score). There also is a possible penalty that can be applied to a gymnasts score.
 
 ## Beginning Exploratory Data Analysis
 
@@ -50,8 +50,8 @@ gym_data <- gym_data %>%
 
 ```{r, echo = FALSE}
 #Looking at distribution of score across different events
-p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) + 
-  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") 
+p <- ggplot(data = gym_data, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +
+  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
 
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
@@ -69,21 +69,21 @@ men_gym_data <- gym_data %>%
 
 ```{r, echo = FALSE}
 library(dplyr)
-ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") 
+ggplot(data = women_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts")
 
-ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) + 
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") 
+ggplot(data = men_gym_data, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts")
 ```
 
 ```{r, include=FALSE}
 men_gym_data <- men_gym_data %>%
-  mutate(name = paste(FirstName, LastName)) 
+  mutate(name = paste(FirstName, LastName))
 
 men_gym_data %>% filter(Country == "USA") %>% group_by(name) %>% count()
 
 women_gym_data <- women_gym_data %>%
-  mutate(name = paste(FirstName, LastName)) 
+  mutate(name = paste(FirstName, LastName))
 
 women_gym_data %>% filter(Country == "USA") %>% group_by(name) %>% count()
 ```
@@ -97,7 +97,7 @@ us_womens_gym_data <- women_gym_data %>% filter(Country == "USA")
 
 # 1. Determining Constraint Level
 
-In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women. 
+In order to narrow down the field from the 163 men and 59 womens American gymnasts included in our dataset, we aimed to set a constraint level that a gymnast must meet to be considered. To do this, we first filtered out any gymnast that hadn't competed in 2023. This was due to both the need for relevant data to assess what state the gymnast will be in during the 2024 competitions, but also to weed out anyone that has been injured so couldn't recently compete or who has retired after the 2022 competitions. Taking out gymnasts who hadn't competed in the past year reduced the size of our selection pool to 142 men and 47 women.
 
 ```{r, include=FALSE}
 #Get rid of all gymnasts that did not compete in 2023
@@ -120,7 +120,7 @@ length(unique(us_men_gym_data$name))
 length(unique(us_womens_gym_data$name))
 ```
 
-We also filtered out gymnasts that had too low of an average score to warrant further consideration and even further reduce our selection pool. To do this, we calculated the average score across all competitions and apparatuses for each US gymnast (both male and female). We then found the first quartile value for each gender's average score. This means the average score that 25% of the average scores for male and female gymnasts respectively fell below this value. The 25th percentile score for US women gymnasts was 12.15156 and 12.15000 for men. After filtering out any competitors who had average scores below that, we were left with 106 men and 35 women. 
+We also filtered out gymnasts that had too low of an average score to warrant further consideration and even further reduce our selection pool. To do this, we calculated the average score across all competitions and apparatuses for each US gymnast (both male and female). We then found the first quartile value for each gender's average score. This means the average score that 25% of the average scores for male and female gymnasts respectively fell below this value. The 25th percentile score for US women gymnasts was 12.15156 and 12.15000 for men. After filtering out any competitors who had average scores below that, we were left with 106 men and 35 women.
 
 ```{r, include=FALSE}
 
@@ -160,7 +160,7 @@ Second, we proposed a new composite score to create a new individual scoring sys
 
 With these adjusted metrics, we produce an adjusted score for each event & apparatus that a gymnast performed in, and consider three different methods of analyzing these metrics:
 
-1. Total sum of adjusted scores: this metric will provide us with a comprehensive way to determine a ranking of the top all-around performers, based on the sum of their weighted adjusted scores in each apparatus they perform in, that we would like to be staples on any team. 
+1. Total sum of adjusted scores: this metric will provide us with a comprehensive way to determine a ranking of the top all-around performers, based on the sum of their weighted adjusted scores in each apparatus they perform in, that we would like to be staples on any team.
 
 2. Best individual apparatus score: this metric will provide a ranking of the highest weighted score a competitor has in any individual apparatus.
 
@@ -170,19 +170,19 @@ We aimed to use the 2nd and 3rd metrics to determine individuals that would be v
 
 # 3. Simulating Composite Scores
 
-The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores. 
+The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores.
 
 ```{r, echo = FALSE}
 hist(us_men_gym_data$Score)
 hist(us_womens_gym_data$Score)
 ```
 
-Despite the fact that our data is bounded (scores are between 0-16), the concentration of scores in our histogram revealed symmetry around approximately the 13 score range. We therefore elected to fit the scores of each gymnast to a normal distribution, as opposed to a beta distribution or a truncated normal. 
+Despite the fact that our data is bounded (scores are between 0-16), the concentration of scores in our histogram revealed symmetry around approximately the 13 score range. We therefore elected to fit the scores of each gymnast to a normal distribution, as opposed to a beta distribution or a truncated normal.
 
-To fit these distributions, we will start by iterating through the rows of our US Mens and USA Womens data separately. For each name in the data, we will take the corresponding subset of the data containing all qualifying scores. Using these scores, we will fit a distribution to the associated gymnast, and store the mean and standard deviation, as well as the name of the gymnast into a data frame. 
+To fit these distributions, we will start by iterating through the rows of our US Mens and USA Womens data separately. For each name in the data, we will take the corresponding subset of the data containing all qualifying scores. Using these scores, we will fit a distribution to the associated gymnast, and store the mean and standard deviation, as well as the name of the gymnast into a data frame.
 
-To eliminate redundant information in our final datatable, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame. 
-We will repeat this process so that we will have two separate data frames containing the names, mean scores, and standard deviation of scores for both men and women USA gymnasts. We can now use these data frames to run our composite score simulation. 
+To eliminate redundant information in our final datatable, we will first use regular expressions to extract the relevant name information (i.e. Simone-BILES instead of Simone-BILES [1]), and then use the distinct function so that each gymnast has just one row in our data frame.
+We will repeat this process so that we will have two separate data frames containing the names, mean scores, and standard deviation of scores for both men and women USA gymnasts. We can now use these data frames to run our composite score simulation.
 
 ```{r, include=FALSE}
 set.seed(1212)
@@ -246,14 +246,14 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations. For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of 0. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score. 
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. We start our simulation by randomly sampling six different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 50,000 times, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
 ```{r, include=FALSE}
 n <- 50000
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
-  
+
 #simulate_composite_score <- function(selected_gymnasts) {
 #  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
 #  composite_score <- rowSums(do.call(cbind, simulated_scores))
@@ -345,4 +345,3 @@ top_combinations_df <- results_tibble %>%
 
 print(top_combinations_df)
 ```
-
