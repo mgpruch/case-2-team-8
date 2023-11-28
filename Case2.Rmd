@@ -62,11 +62,19 @@ allcountries <- allcountries %>%
 
 We started by looking at the distribution of total scores (the combination of both the E and D scores) for all gymnasts of both genders across all apparatuses. For most of the apparatuses, the distributions had the largest number of outliers towards the lower end of the distribution and a left skew. This means that there were many gymnasts who had unusually low scores compared to the rest of the score distribution. Scores were more clustered towards the upper end of the distribution, with the average scores for all of the apparatuses being around 13 points. For both genders, the vault and floor events had the smallest range of scores.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.height=2.5, fig.width=4, fig.align = 'center'}
 #Looking at distribution of score across different events
-options(repr.plot.width = 4, repr.plot.height =4)
+options(repr.plot.width = 2, repr.plot.height =2)
 p <- ggplot(data = allcountries, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +  
-  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender")
+  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") +
+  theme(axis.title=element_text(size=.5),
+        axis.text=element_text(size=6),
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        legend.key.height = unit(.3, 'cm'), #change legend key height
+        legend.key.width = unit(.3, 'cm'), 
+        legend.title = element_text(size=6), #change legend title font size
+        legend.text = element_text(size=5),
+        title=element_text(size=7))
 
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
@@ -87,13 +95,27 @@ allcountriesm <- allcountries %>%
 
 We also assessed the distribution of scores for US men and womens gymnasts against the distributions for competitors for other countries. For the women gymnasts, across all apparatuses the average score was higher for US women. This makes sense given their impressive history in the sport. The US mens distributions were on par with the distributions for gymnasts from other countries. The averages for each apparatus were mostly the same. 
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.height=2, fig.width=6, fig.align = 'center'}
 library(dplyr)
 ggplot(data = allcountriesw, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts")
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") + theme(axis.title=element_text(size=.5),
+        axis.text=element_text(size=6),
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        legend.key.height = unit(.3, 'cm'), #change legend key height
+        legend.key.width = unit(.3, 'cm'), 
+        legend.title = element_text(size=6), #change legend title font size
+        legend.text = element_text(size=5),
+        title=element_text(size=7))
 
 ggplot(data = allcountriesm, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts")
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") + theme(axis.title=element_text(size=.5),
+        axis.text=element_text(size=6),
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        legend.key.height = unit(.3, 'cm'), #change legend key height
+        legend.key.width = unit(.3, 'cm'), 
+        legend.title = element_text(size=6), #change legend title font size
+        legend.text = element_text(size=5),
+        title=element_text(size=7))
 ```
 
 ```{r, include=FALSE}
