@@ -66,15 +66,8 @@ We started by looking at the distribution of total scores (the combination of bo
 #Looking at distribution of score across different events
 options(repr.plot.width = 2, repr.plot.height =2)
 p <- ggplot(data = allcountries, mapping = aes(x = Apparatus, y = Score, fill = Gender)) +  
-  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") +
-  theme(axis.title=element_text(size=.5),
-        axis.text=element_text(size=6),
-        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
-        legend.key.height = unit(.3, 'cm'), #change legend key height
-        legend.key.width = unit(.3, 'cm'), 
-        legend.title = element_text(size=6), #change legend title font size
-        legend.text = element_text(size=5),
-        title=element_text(size=7))
+  geom_boxplot() + theme_bw() + labs(title = "Distribution of Score of Each Apparatus by Gender") + 
+  xlab("Apparatus") + ylab("Score") + theme(plot.title=element_text(size=9))
 
 p + scale_fill_discrete(name = "Gender", labels = c("Men", "Women"))
 
@@ -98,24 +91,10 @@ We also assessed the distribution of scores for US men and womens gymnasts again
 ```{r, echo = FALSE, fig.height=2, fig.width=6, fig.align = 'center'}
 library(dplyr)
 ggplot(data = allcountriesw, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") + theme(axis.title=element_text(size=.5),
-        axis.text=element_text(size=6),
-        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
-        legend.key.height = unit(.3, 'cm'), #change legend key height
-        legend.key.width = unit(.3, 'cm'), 
-        legend.title = element_text(size=6), #change legend title font size
-        legend.text = element_text(size=5),
-        title=element_text(size=7))
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Women vs. Other Gymnasts") + xlab("Apparatus") + ylab("Score") + theme(plot.title = element_text(size=10))
 
 ggplot(data = allcountriesm, mapping = aes(x = Apparatus, y = Score, fill = Nation)) +
-  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") + theme(axis.title=element_text(size=.5),
-        axis.text=element_text(size=6),
-        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
-        legend.key.height = unit(.3, 'cm'), #change legend key height
-        legend.key.width = unit(.3, 'cm'), 
-        legend.title = element_text(size=6), #change legend title font size
-        legend.text = element_text(size=5),
-        title=element_text(size=7))
+  geom_violin() + theme_bw() + labs(title = "Distribution of Scores Across Appartus for US Men vs. Other Gymnasts") + xlab("Apparatus") + ylab("Score") + theme(plot.title = element_text(size=10))
 ```
 
 ```{r, include=FALSE}
@@ -214,12 +193,13 @@ We aimed to use the 2nd and 3rd metrics to determine individuals that would be v
 
 The simulation of composite team scores our methodology can be broken down into two parts. To prepare the data for our simulation of composite scores, we must fit a distribution to describe the qualifying scores of each gymnast. Because each gymnast in the dataset has varying amounts of qualifying data, we believe these individual distributions will be more descriptive than a summary statistic, such as just a mean score. We anticipate that an understanding of the standard deviation of scores will help optimize the accuracy of our simulation. To assess which distribution class would best fit our score data, we first displayed the histograms for both men’s and women’s qualifier scores.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.height=2.5, fig.width=4, fig.align = 'center'}
 #hist(us_men_gym_data$Score)
 ggplot(data = us_men_gym_data, mapping = aes(x = Score)) + geom_histogram(fill = "light blue",binwidth = .5) + theme_bw() +
-  labs(title = "Distribution of US Men's Gymnastics Scores", x = "Score", y = "Count")
-ggplot(data = us_womens_gym_data, mapping = aes(x = Score)) + geom_histogram(fill = "light blue",binwidth = .4) + theme_bw() +
-  labs(title = "Distribution of US Women's Gymnastics Scores", x = "Score", y = "Count")
+  labs(title = "Distribution of US Men's Gymnastics Scores") + xlab("Score") + ylab("Count") +
+   theme(plot.title=element_text(size=9))
+  
+ggplot(data = us_womens_gym_data, mapping = aes(x = Score)) + geom_histogram(fill = "light blue",binwidth = .4) + theme_bw() + labs(title = "Distribution of US Women's Gymnastics Scores") + xlab("Score") + ylab("Count") + theme(plot.title=element_text(size=9))
 #hist(us_womens_gym_data$Score)
 ```
 
