@@ -287,11 +287,6 @@ name_list <- c("Brody-MALONE", "Donnell-WHITTENBURG", "Frederick-RICHARD", "Ashe
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
-#simulate_composite_score <- function(selected_gymnasts) {
-#  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
-#  composite_score <- rowSums(do.call(cbind, simulated_scores))
-#  return(sum(composite_score))
-#}
 
 simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
@@ -300,7 +295,7 @@ simulate_composite_score <- function(selected_gymnasts) {
     if(!is.na(selected_gymnasts$SD[i])){
       dev <- as.numeric(selected_gymnasts$SD[i])
     } else{
-      dev = 0
+      dev = 1
     }
     mu <- as.numeric(selected_gymnasts$Mu[i])
     if (!is.na(dev) && abs(dev) < 1e-10) {
@@ -441,6 +436,10 @@ simulate_score_women <- function(gymnast, apparatus) {
   score <- rnorm(1, mu, var)
   return(score)
 }
+```
+
+```{r}
+
 ```
 
 
