@@ -174,7 +174,7 @@ length(unique(us_womens_gym_data$name))
 
 ### 2. Heuristically Analyzing Top Performers
 
-Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the mens and womens team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that have a shot of being in the final 5 team. With a narrower set of individuals, we limit our search scope for further simulations that combinatorically test sets of 5 out of this smaller set.
+Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the men's and women's team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that have a shot of being in the final 5 team. With a narrower set of individuals, we limit our search scope for further simulations that combinatorially test sets of 5 out of this smaller set.
 
 First, we designed a formula that would weight certain historic results more/less than others based on it: 1) being in a final round, and 2) being in a more recent performance. Final round performances contribute 1.5x the weight and we defined a linear function where outcomes carry between an additional 1 to 2.5x weighing factor depending on the month and year of the tournament (January of 2022 was set as 1x and December of 2023 was set as 2.5x).
 
@@ -277,7 +277,7 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of five USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of male gymnasts and female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. From our heuristic step, we have identified Brody Malone and Simone Biles as being the top individuals on their respective team, and have put them as a staple on each team of five. Next, we start our simulation by randomly sampling four additional different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process for each unique team of 5 gymnasts, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of five USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of male gymnasts and female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. From our heuristic step, we have identified Brody Malone and Simone Biles as being the top individuals on their respective team, and have put them as a staple on each team of five. Next, we start our simulation by randomly sampling four additional different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one inndex based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We calculated the max score based off 10 trials where scores were penalized for high variance. We will then add this value to our variable for the composite score. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors and already had low variance. We will run this simulation process for each unique team of five gymnasts, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
 ```{r, echo=FALSE}
 set.seed(500)
@@ -324,7 +324,7 @@ simulate_composite_score <- function(selected_gymnasts) {
       dev = 1
     }
     mu <- as.numeric(selected_gymnasts$Mu[i])
-    if (!is.na(dev) && abs(dev) < 1e-10) {
+    if (abs(dev) < 1e-10) {
       simulated_scores[[i]] <- mu
     } else {
 #      simulated_scores[[i]] <- (0.85) * rnorm(1, mean = mu, sd = dev) +  
@@ -401,11 +401,6 @@ name_list <- c(
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
-#simulate_composite_score <- function(selected_gymnasts) {
-#  simulated_scores <- lapply(selected_gymnasts$Mu, function(mu) rnorm(length(mu), mean = mu, sd = #sd))
-#  composite_score <- rowSums(do.call(cbind, simulated_scores))
-#  return(sum(composite_score))
-#}
 usa_unique_final$SD <- as.numeric(usa_unique_final$SD)
 dev_max = max(usa_unique_final$SD, na.rm = TRUE)
 dev_min = min(usa_unique_final$SD, na.rm = TRUE)
@@ -1017,7 +1012,7 @@ From the above table, we were able to pinpoint Simone Biles as the clear top per
 
 ### Simulating Composite Scores
 
-Combining our analysis in parts two and three, we were able to calculate the combination of mens and womens USA teams that elicited the highest composite scores in our simulation. After setting a random seed and running a simulation on the men’s data for each possible combination of 4 athletes post-filtering (Brody Malone was considered a staple on any team), our results yielded that the highest composite scoring men's team includes Brody Malone, Stephen Nedoroscik, Curran Phillips, Ian Skirkey, and Colt Walker. This team combination generated a composite score of approximately 81.31. In other words, the average score for each member of this team is 16.262. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. This holds true for the next closest team (as well as in our women’s data set), consisting of Brody Malone, Yul Moldauer, Curran Phillips, Ian Skirkey, and Shane Wiskus, with a score of 81.30. Curran Phillips seemed to be a staple for many of the top teams, as well as Ian Skirkey.
+Combining our analysis in parts two and three, we were able to calculate the combination of men's and women's USA teams that elicited the highest composite statistics in our simulation. After setting a seed and running a simulation on the men’s data for each possible combination of 4 athletes post-filtering (Brody Malone was considered a staple on any team), our results yielded that the highest composite scoring men's team includes Brody Malone, Stephen Nedoroscik, Curran Phillips, Ian Skirkey, and Colt Walker. This team combination generated a composite score of approximately 81.31. In other words, the average score for each member of this team is 16.262. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation still slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. We expected that penalizing for higher variance values using $(1 - \frac{dev}{dev_\text{max}})^2$ would be more impactful. This holds true for the next closest team (as well as in our women’s data set), consisting of Brody Malone, Yul Moldauer, Curran Phillips, Ian Skirkey, and Shane Wiskus, with a score of 81.30. Curran Phillips seemed to be a staple for many of the top teams, as well as Ian Skirkey.
 
 Our USA women’s output from our simulation - which included Simone Biles as the staple on every team - yielded that the highest composite scoring team has a roster of Simone Biles, Jade Carey, Kayla Dicello, Zoe Miller, and Joscelyn Roberson. The composite score for this roster was 78.88. Under this total score assumption, each gymnast would score a 15.776 on average. The second closest team features two of the same gymnasts in its overall lineup of Simone Biles, Jade Carey, Jordan Chiles, Kaliya Lincoln, and Leanne Wong, with a total score of approximately 78.61. We did see Jade Carey and Zoe Miller on a large portion of the top performing teams, suggesting that our model has high confidence that they should be on the final team. The overlap between gymnasts in top-composite-scoring teams for both men and women is a source of confidence in our model.
 
