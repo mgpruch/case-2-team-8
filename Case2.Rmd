@@ -301,7 +301,7 @@ simulate_composite_score <- function(selected_gymnasts) {
     if (!is.na(dev) && abs(dev) < 1e-10) {
       simulated_scores[[i]] <- mu
     } else {
-      simulated_scores[[i]] <- rnorm(1, mean = mu, sd = dev)
+      simulated_scores[[i]] <- max(rnorm(10, mean = mu, sd = dev) + (1 - (dev/ dev_max))^2)
     }
     composite_score <- composite_score + as.numeric(simulated_scores[[i]])
 #    cat("Iteration:", i, "mu:", mu, "dev:", dev, "Simulated Score:", simulated_scores[[i]], "Composite Score:", composite_score, "\n")
@@ -335,7 +335,8 @@ gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
 
-name_list <- c("Simone-BILES", "Jordan-CHILES", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER", "Kaliya-LINCOLN", "Skye-BLAKELY", "Ashlee-SULLIVAN")
+name_list <- c("Simone-BILES", "Jordan-CHILES", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER", "Kaliya-LINCOLN", "Skye-BLAKELY", "Ashlee-SULLIVAN",
+               "Sunisa-LEE")
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
@@ -344,7 +345,9 @@ subset_picker <- subset(usa_unique_final, Names %in% name_list)
 #  composite_score <- rowSums(do.call(cbind, simulated_scores))
 #  return(sum(composite_score))
 #}
-
+usa_unique_final$SD <- as.numeric(usa_unique_final$SD)
+dev_max = max(usa_unique_final$SD)
+dev_min = min(usa_unique_final$SD)
 simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
   composite_score <- 0
@@ -352,13 +355,16 @@ simulate_composite_score <- function(selected_gymnasts) {
     if(!is.na(selected_gymnasts$SD[i])){
       dev <- as.numeric(selected_gymnasts$SD[i])
     } else{
-      dev = 0
+      dev = 1
     }
     mu <- as.numeric(selected_gymnasts$Mu[i])
     if (!is.na(dev) && abs(dev) < 1e-10) {
       simulated_scores[[i]] <- mu
     } else {
-      simulated_scores[[i]] <- rnorm(1, mean = mu, sd = dev)
+#      simulated_scores[[i]] <- (0.85) * rnorm(1, mean = mu, sd = dev) +  
+#        (0.15) * (1 - ((dev)^2 / dev_max - dev_min))
+#        (rnorm(1, mean = mu, sd = dev) / dev)
+      simulated_scores[[i]] <- max(rnorm(10, mean = mu, sd = dev) + (1 - (dev/ dev_max))^2)
     }
     composite_score <- composite_score + as.numeric(simulated_scores[[i]])
 #    cat("Iteration:", i, "mu:", mu, "dev:", dev, "Simulated Score:", simulated_scores[[i]], "Composite Score:", composite_score, "\n")
@@ -436,10 +442,6 @@ simulate_score_women <- function(gymnast, apparatus) {
   score <- rnorm(1, mu, var)
   return(score)
 }
-```
-
-```{r}
-
 ```
 
 
