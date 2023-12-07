@@ -311,8 +311,10 @@ name_list <- c(
 
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
-
-
+usa_unique_final$SD <- as.numeric(usa_unique_final$SD)
+dev_max = max(usa_unique_final$SD, na.rm = TRUE)
+dev_min = min(usa_unique_final$SD, na.rm = TRUE)
+print(dev_max)
 simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
   composite_score <- 0
@@ -326,27 +328,16 @@ simulate_composite_score <- function(selected_gymnasts) {
     if (!is.na(dev) && abs(dev) < 1e-10) {
       simulated_scores[[i]] <- mu
     } else {
+#      simulated_scores[[i]] <- (0.85) * rnorm(1, mean = mu, sd = dev) +  
+#        (0.15) * (1 - ((dev)^2 / dev_max - dev_min))
+#        (rnorm(1, mean = mu, sd = dev) / dev)
       simulated_scores[[i]] <- max(rnorm(10, mean = mu, sd = dev) + (1 - (dev/ dev_max))^2)
     }
     composite_score <- composite_score + as.numeric(simulated_scores[[i]])
-#    cat("Iteration:", i, "mu:", mu, "dev:", dev, "Simulated Score:", simulated_scores[[i]], "Composite Score:", composite_score, "\n")
+   
   }  
-#  print(composite_score)
   return(composite_score)
 }
-
-#results <- replicate(n, {
-#  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = #FALSE),]
-#  composite_score <- simulate_composite_score(sampled_gymnasts)
-#  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), #Composite_Score = composite_score)
-#  results_entry
-#})
-# results_tibble <- as_tibble(t(results))
-# Assuming subset_picker and the simulate_composite_score function are already defined
-
-# Generate all possible combinations of 5 gymnasts
-
-# Remove "Brody-MALONE" from the list
 gymnasts_without_brody <- subset_picker$Names[subset_picker$Names != "Brody-MALONE"]
 
 # Generate all combinations of 4 other gymnasts
@@ -356,10 +347,6 @@ other_gymnast_combinations <- combn(gymnasts_without_brody, 4)
 gymnast_combinations <- apply(other_gymnast_combinations, 2, function(column) {
   c("Brody-MALONE", column)
 })
-
-# all_combinations_with_brody is now a matrix where each column is a combination including "Brody-MALONE"
-
-# gymnast_combinations <- combn(subset_picker$Names, gymnasts)
 
 # Initialize a vector to store the composite scores for each team
 composite_scores <- numeric(ncol(gymnast_combinations))
@@ -421,8 +408,8 @@ subset_picker <- subset(usa_unique_final, Names %in% name_list)
 #  return(sum(composite_score))
 #}
 usa_unique_final$SD <- as.numeric(usa_unique_final$SD)
-dev_max = max(usa_unique_final$SD)
-dev_min = min(usa_unique_final$SD)
+dev_max = max(usa_unique_final$SD, na.rm = TRUE)
+dev_min = min(usa_unique_final$SD, na.rm = TRUE)
 simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
   composite_score <- 0
