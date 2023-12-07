@@ -277,10 +277,10 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of 10 male gymnasts and 10 female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. We start our simulation by randomly sampling five different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 10,000 times for the men's data set, as well as 5,000 for the women's data set (as it is much smaller), storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of five USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of male gymnasts and female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. From our heuristic step, we have identified Brody Malone and Simone Biles as being the top individuals on their respective team, and have put them as a staple on each team of five. Next, we start our simulation by randomly sampling four additional different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process for each unique team of 5 gymnasts, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
 ```{r, echo=FALSE}
-set.seed(1)
+set.seed(500)
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
@@ -314,7 +314,6 @@ subset_picker <- subset(usa_unique_final, Names %in% name_list)
 usa_unique_final$SD <- as.numeric(usa_unique_final$SD)
 dev_max = max(usa_unique_final$SD, na.rm = TRUE)
 dev_min = min(usa_unique_final$SD, na.rm = TRUE)
-print(dev_max)
 simulate_composite_score <- function(selected_gymnasts) {
   simulated_scores <- list()
   composite_score <- 0
@@ -374,7 +373,7 @@ kable(top_combinations_df, digits = 2, caption = "Top 10 Male Groups of 5")
 
 
 ```{r, echo=FALSE}
-set.seed(1)
+set.seed(500)
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
@@ -531,10 +530,10 @@ simulate_score_women <- function(gymnast, apparatus) {
 
 ```{r selected us team, include=FALSE}
 # replace the righthand part with each us team selected from part 2 (here I use a random sample)
-men_name_list <- c("Asher-HONG", "Taylor-BURKHART", "Khoi-YOUNG", "Brody-MALONE", "Stephen-NEDOROSCIK")
+men_name_list <- c("Curran-PHILLIPS", "Taylor-BURKHART", "Blake-SUN", "Brody-MALONE", "Stephen-NEDOROSCIK")
 subset_picker_m <- subset(us_men_gym_data, name %in% men_name_list)
 
-women_name_list <- c("Simone-BILES", "Jordan-CHILES", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER")
+women_name_list <- c("Simone-BILES", "Jade-CAREY", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Zoe-MILLER")
 subset_picker_f <- subset(us_womens_gym_data, name %in% women_name_list)
 
 us_team_men <- sample(unique(us_men_gym_data$name), 5)
@@ -702,7 +701,7 @@ for (iter in 1:num_iterations) {
       for (gymnast in gymnasts) {
         score <- simulate_score_men(gymnast, apparatus)
         if (!is.na(score)) {
-          data = data.frame(country = country, gymnast = gymnast, score = scores)
+          data = data.frame(country = country, gymnast = gymnast, score = score)
           results_indi = bind_rows(results_indi, data)
         }
       }
@@ -890,7 +889,7 @@ for (iter in 1:num_iterations) {
       for (gymnast in gymnasts) {
         score <- simulate_score_women(gymnast, apparatus)
         if (!is.na(score)) {
-          data = data.frame(country = country, gymnast = gymnast, score = scores)
+          data = data.frame(country = country, gymnast = gymnast, score = score)
           results_indi = bind_rows(results_indi, data)
         }
       }
@@ -919,7 +918,6 @@ for (iter in 1:num_iterations) {
   if (results_indi[3,]$country == 'USA') {
     total_medal = total_medal + 1 # 1 for bronze
   }
-  print(total_medal)
 
 }
 ```
@@ -973,12 +971,12 @@ data_df <- do.call(rbind, lapply(data_list, function(x) {
 data_df <- as.data.frame(data_df, stringsAsFactors = FALSE)
 
 # Use kable to create the table
-kable(data_df)  # Change 'html' to 'latex' or 'markdown' if needed
+kable(data_df, caption = "Four Metric Ranks for Male Gymnasts")  # Change 'html' to 'latex' or 'markdown' if needed
 ```
 
-Brody Malone was clearly the best all around performer for the mens team, so we would recommend that he be considered a lock for the final team of 5. Donnell Whittenburg also performed exceedingly well across all four metrics. There were certain athletes such as Curran Phillips, Stephen Nedoroscik, and Ian Skirkey who seemed to be mainly good at one or two of the apparatuses, but not a great all-around performer - we would be interested in these athletes to fill out our team of 5 in the hopes that they can perform very well in a specialized event. Cutting to fewer, more qualified athletes will assist in ensuring that our simulation is able to fully search for the best pairing of 5.
+Brody Malone was clearly the best all around performer for the men's team, so we would recommend that he be considered a lock for the final team of 5. Donnell Whittenburg also performed exceedingly well across all four metrics. There were certain athletes such as Curran Phillips, Stephen Nedoroscik, and Ian Skirkey who seemed to be mainly good at one or two of the apparatuses, but not a great all-around performer - we would be interested in these athletes to fill out our team of 5 in the hopes that they can perform very well in a specialized event. Cutting to fewer, more qualified athletes will assist in ensuring that our simulation is able to fully search for the best pairing of 5.
 
-Next, moving onto the womens results.
+Next, moving onto the women's results.
 
 Below, we provide a table showing how each of the members on the women's team selected to be included in the simulation perform across all four metrics.
 ```{r, echo = FALSE}
@@ -1019,9 +1017,9 @@ From the above table, we were able to pinpoint Simone Biles as the clear top per
 
 ### Simulating Composite Scores
 
-Combining our analysis in parts two and three, we were able to calculate the combination of mens and womens USA teams that elicited the highest composite scores in our simulation. After setting a random seed and running a simulation on the men’s data 10,000 times, our results yielded that the highest composite scoring men's team includes Taylor Burkhart, Asher Hong, Khoi Young, Brody Malone, and Stephen Nedoroscik. This team combination generated a composite score of approximately 76.925. In other words, the average score for each member of this team is 15.385. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. This holds true for the next closest team (as well as in our women’s data set), consisting of Stephen Nedoroscik, Khoi Young, Joshua Karnes, Curran Phillips, and Frederick Richard, with a score of 76.486 (A score of 15.297 per gymnast on average).
+Combining our analysis in parts two and three, we were able to calculate the combination of mens and womens USA teams that elicited the highest composite scores in our simulation. After setting a random seed and running a simulation on the men’s data for each possible combination of 4 athletes post-filtering (Brody Malone was considered a staple on any team), our results yielded that the highest composite scoring men's team includes Brody Malone, Stephen Nedoroscik, Curran Phillips, Ian Skirkey, and Colt Walker. This team combination generated a composite score of approximately 81.31. In other words, the average score for each member of this team is 16.262. This mean score is much higher than the individual means of the gymnasts. It is possible that the number of samples in our simulation slightly favors gymnasts with higher variances, distorting top scores to be slightly higher than expected. This holds true for the next closest team (as well as in our women’s data set), consisting of Brody Malone, Yul Moldauer, Curran Phillips, Ian Skirkey, and Shane Wiskus, with a score of 81.30. Curran Phillips seemed to be a staple for many of the top teams, as well as Ian Skirkey.
 
-Our USA women’s output from our simulation yielded that the highest composite scoring team has a roster of Zoe Miller, Jade Carey, Simone Biles, Shilese Jones, and Jordan Chiles. The composite score for this roster was 74.240. Under this total score assumption, each gymnast would score a 14.848 on average. The second closest team features three of the same gymnasts in its overall lineup of Shilese Jones, Ashlee Sullivan, Jordan Chiles, Kaliya Lincoln, and Zoe Miller, with a total score of approximately 74.128 (about 14.826 on average). The overlap between gymnasts in top-composite-scoring teams for both men and women is a source of confidence in our model.
+Our USA women’s output from our simulation - which included Simone Biles as the staple on every team - yielded that the highest composite scoring team has a roster of Simone Biles, Jade Carey, Kayla Dicello, Zoe Miller, and Joscelyn Roberson. The composite score for this roster was 78.88. Under this total score assumption, each gymnast would score a 15.776 on average. The second closest team features two of the same gymnasts in its overall lineup of Simone Biles, Jade Carey, Jordan Chiles, Kaliya Lincoln, and Leanne Wong, with a total score of approximately 78.61. We did see Jade Carey and Zoe Miller on a large portion of the top performing teams, suggesting that our model has high confidence that they should be on the final team. The overlap between gymnasts in top-composite-scoring teams for both men and women is a source of confidence in our model.
 
 While average scores are ultimately high, and our number of simulations may occasionally favor gymnasts with high variances, our outputs give us a reasonable estimate of a starting combination for both the men’s and women’s 2024 Olympics lineup.
 
@@ -1037,9 +1035,9 @@ In our analysis we aimed to address the goal of determining both a mens and wome
 
 There were a few limitations with the data. One was that the dataset itself did not include information on defending champions - something that is common for Olympic selection committees to weigh highly in their decision making. Although we were able to take this into account by making sure to include defending champions such as Simone Biles (and the men's team had no defending champions to address), it would be an interesting addition to our work to have data on this. Another limitation is that this data just included scores in competition. There was no additional information about the athletes’ performances, such as if they are currently healthy or injured or even if they plan to or want to compete in the Paris 2024 Olympics. While we mitigated this by selecting only gymnasts with recent performances, this additional information would have improved our analysis.
 
-We were able to address our ultimate goal by forming two teams that stand a strong chance in Paris. The men’s team that we selected consisted of Taylor Burkhart, Asher Hong, Khoi Young, Brody Malone, and Stephen Nedoroscik. Our results showed that this team had an average score of 15.385 per member and a composite score of 76.925. These scores were much higher than average, and after simulating scores for other nations show that this team has the strongest chance of bringing home the most medals.
+We were able to address our ultimate goal by forming two teams that stand a strong chance in Paris. The men’s team that we selected consisted of Brody Malone, Yul Moldauer, Curran Phillips, Ian Skirkey, and Shane Wiskus. Our results showed that this team had an average score of 16.262 per member and a composite score of 81.31. These scores were much higher than average, and after simulating scores for other nations show that this team has the strongest chance of bringing home the most medals.
 
-Our womens’ team selection further addressed our ultimate goal of Paris 2024 dominance. Our team of Zoe Miller, Jade Carey, Simone Biles, Shilese Jones, and Jordan Chiles features two defending medalists. Their simulated average score of 14.848 per member gives them a competitive advantage which is supported by their composite score of 74.240.
+Our womens’ team selection further addressed our ultimate goal of Paris 2024 dominance. Our team of Simone Biles, Jade Carey, Kayla Dicello, Zoe Miller, and Joscelyn Roberson features two defending medalists. Their simulated average score of 15.776 per member gives them a competitive advantage which is supported by their composite score of 78.88.
 
 Our analysis has produced teams with the highest simulated average and composite scores. Compared against simulated scores for teams from other nations, our selected US teams stand to perform better than scores from those teams. Our selection process has created the strongest chances for Team USA in the 2024 Olympics, and provides an exciting new way that statistical analysis can be applied to this previously subjective process of team selection.
 
