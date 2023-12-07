@@ -1,5 +1,7 @@
 ---
 title: "Case Study 2: Olympic Team Selection"
+author: "Allison Li, Ben Rubin, Ishaan Maitra, Morgan Pruchniewski"
+geometry: margin=1.5cm
 output:
   pdf_document: default
   html_document: default
@@ -277,7 +279,7 @@ women_usa <- women_tib %>%
   distinct(Names, Mu, SD)
 ```
 
-The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of five USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of male gymnasts and female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. From our heuristic step, we have identified Brody Malone and Simone Biles as being the top individuals on their respective team, and have put them as a staple on each team of five. Next, we start our simulation by randomly sampling four additional different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process for each unique team of 5 gymnasts, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
+The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of five USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of male gymnasts and female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. From our heuristic step, we have identified Brody Malone and Simone Biles as being the top individuals on their respective team, and have put them as a staple on each team of five. Next, we start our simulation by randomly sampling four additional different gymnast names, means, and standard deviations without replacement (men and women separately). To ensure that all possible teams are considered, we use the rcomb function to enumerate the set of all 4 member teams outside of Brody Malone/Simone Biles and iterate over each (i.e take 21 choose 4 and 17 choose 4). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process for each unique team of 5 gymnasts, storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
 ```{r, echo=FALSE}
 set.seed(500)
@@ -935,7 +937,7 @@ After our initial filtering removed participants that were well outside of a top
 
 Starting with men's results, we were able to pinpoint Brody Malone as being the clear top overall performer in the men's division, without an obvious number 2 all-around performer (and opted to use our simulations to fill in the rest of the team).
 
-Below, we show how each of the members on the men's team selected to be included in the simulation perform across all four metrics.
+In Table 3 below, we show how each of the members on the men's team selected to be included in the simulation perform across all four metrics.
 
 ```{r, echo = FALSE}
 data_list <- list(
@@ -978,7 +980,8 @@ Brody Malone was clearly the best all around performer for the men's team, so we
 
 Next, moving onto the women's results.
 
-Below, we provide a table showing how each of the members on the women's team selected to be included in the simulation perform across all four metrics.
+In Table 4 below, we provide a table showing how each of the members on the women's team selected to be included in the simulation perform across all four metrics.
+
 ```{r, echo = FALSE}
 
 data_list <- list(
@@ -1013,7 +1016,7 @@ data_df <- as.data.frame(data_df, stringsAsFactors = FALSE)
 kable(data_df, caption = "Four Metric Ranks for Female Gymnasts")  # Change 'html' to 'latex' or 'markdown' if needed
 ```
 
-From the above table, we were able to pinpoint Simone Biles as the clear top performer as an all-around athlete, but following was Jordan Chiles with a high composite score that also warrants a spot as an all-around athlete. Zoe Miller and Kaliya Lincoln present more interesting scenarios where they performs highly in few events, which could be valuable if they are projected to medal gold or silver in that single event. On the other hand, outside of Biles and Chiles, Jade Carey, Joscelyn Roberson, and Kayla Dicello perform consistently high - but not highest - on a larger range of events.
+From the table, we were able to pinpoint Simone Biles as the clear top performer as an all-around athlete, but following was Jordan Chiles with a high composite score that also warrants a spot as an all-around athlete. Zoe Miller and Kaliya Lincoln present more interesting scenarios where they performs highly in few events, which could be valuable if they are projected to medal gold or silver in that single event. On the other hand, outside of Biles and Chiles, Jade Carey, Joscelyn Roberson, and Kayla Dicello perform consistently high - but not highest - on a larger range of events.
 
 ### Simulating Composite Scores
 
@@ -1052,3 +1055,4 @@ Nouraie, M., Eslahchi, C. & Baca, A. Intelligent team formation and player selec
 Wikimedia Foundation. (2023a, October 8). United States men’s National Artistic Gymnastics Team. Wikipedia. https://en.wikipedia.org/wiki/United_States_men%27s_national_artistic_gymnastics_team
 
 Wikimedia Foundation. (2023, November 13). United States women’s National Artistic Gymnastics Team. Wikipedia. https://en.wikipedia.org/wiki/United_States_women%27s_national_artistic_gymnastics_team
+
