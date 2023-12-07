@@ -171,15 +171,16 @@ us_men_gym_data <- us_men_gym_data %>%
 length(unique(us_men_gym_data$name))
 length(unique(us_womens_gym_data$name))
 ```
+
 ### 2. Heuristically Analyzing Top Performers
 
-Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the mens and womens team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that should, in expectation, be on the final 5.
+Next, we aimed to heuristically narrow down the teams even more by considering how the process works in real life. The top two all-around finishers are automatically named to the Olympic team, which inspired our current analysis to find two individuals that should be part of a strong lineup for both the mens and womens team. We did this by taking the previous data for each performer and creating a weight metric and adjusted score that created an "adjusted" composite score to help us determine a narrower set of individuals that have a shot of being in the final 5 team. With a narrower set of individuals, we limit our search scope for further simulations that combinatorically test sets of 5 out of this smaller set.
 
 First, we designed a formula that would weight certain historic results more/less than others based on it: 1) being in a final round, and 2) being in a more recent performance. Final round performances contribute 1.5x the weight and we defined a linear function where outcomes carry between an additional 1 to 2.5x weighing factor depending on the month and year of the tournament (January of 2022 was set as 1x and December of 2023 was set as 2.5x).
 
 Second, we proposed a new composite score to create a new individual scoring system based on past performances that heavily increase the positive importance of top 5 ranks and also the importance (negatively) of ranking outside the top 10. We believe that consistently scoring within the top 10 is crucial for ensuring Olympic placements as the competition is much higher and even scoring within the 10-20 range will be insufficient for improving Team USA's score. For our adjusted score, gold, silver, and bronze medals contribute 10x, 7.5x, and 5x the weight of a rank outside the top 10, while placement within the 6th-10th range contributes a 2.5 weight.
 
-With these adjusted metrics, we produce an adjusted score for each event & apparatus that a gymnast performed in, and consider three different methods of analyzing these metrics:
+With these adjusted metrics, we produce an adjusted score for each event & apparatus that a gymnast performed in, and consider four different methods of analyzing these metrics:
 
 1. Total sum of adjusted scores: this metric will provide us with a comprehensive way to determine a ranking of the top all-around performers, based on the sum of their weighted adjusted scores in each apparatus they perform in, that we would like to be staples on any team.
 
@@ -187,7 +188,11 @@ With these adjusted metrics, we produce an adjusted score for each event & appar
 
 3. Best two-apparatus score: this metric will provide a ranking of the average of the two highest scores a competitor has in their two top apparatus.
 
-We aimed to use the 2nd and 3rd metrics to determine individuals that would be very likely to excel in a few apparatuses, alongside the two best all-around performers.
+4. Best three-apparatus score: this metric will provide a ranking of the average of the three highest scores a competitor has in their three top apparatus.
+
+We aimed to use the 2nd and 3rd metrics to determine individuals that would be very likely to excel in a few apparatuses, alongside the two best all-around performers. The 1st and 4th metrics gave a better insight into which performers were well-rounded.
+
+To narrow down the initial set to the reduced set, we considered the top 15 performers in each of the 4 metrics, and considered the union of the 4 sets as the reduced set. We found that many of the top performers per metric overlapped for both the men and women data, and were able to reduce the search set from 97 men to 21 men, and 33 women to 17 women.
 
 ### 3. Simulating Composite Scores
 
@@ -274,16 +279,36 @@ women_usa <- women_tib %>%
 
 The second step in our methodology is running our simulation to generate composite team scores for randomly sampled groups of six USA gymnasts. Using the output of the second step in our methodology, we can specifically sample teams from a smaller subset of 10 male gymnasts and 10 female gymnasts that were selected to either be the best all-around gymnasts, or gymnasts that were highly proficient in a few events. We start our simulation by randomly sampling five different gymnast names, means, and standard deviations without replacement (men and women separately). For each gymnast sampled, we will generate one score based on the gymnasts’ mean and standard deviation of qualifying scores using the rnorm() function. We will then add this value to our variable for the composite score. In cases where our standard deviation was NA, we assigned a generic deviation of zero. When our standard deviation value was less than 1e-10, we simply assigned the mean score for that gymnast as our simulated score, as these scores often resulted in run-time errors. We will run this simulation process 10,000 times for the men's data set, as well as 5,000 for the women's data set (as it is much smaller), storing the composition of gymnasts and the associated composite score. Using this data frame, we can observe the combinations in descending order to reveal which gymnasts contributed to the highest composite score.
 
-
 ```{r, echo=FALSE}
-set.seed(2)
-n <- 10000
+set.seed(1)
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(men_usa)
 
-name_list <- c("Brody-MALONE", "Donnell-WHITTENBURG", "Frederick-RICHARD", "Asher-HONG", "Paul-JUDA", "Taylor-BURKHART", 
-               "Joshua-KARNES", "Khoi-YOUNG", "Curran-PHILLIPS", "Stephen-NEDOROSCIK")
+name_list <- c(
+  "Riley-LOOS",
+  "Ian-LASIC",
+  "Alex-DIAB",
+  "Cameron-BOCK",
+  "Yul-MOLDAUER",
+  "Shane-WISKUS",
+  "Colt-WALKER",
+  "Blake-SUN",
+  "Khoi-YOUNG",
+  "Stephen-NEDOROSCIK",
+  "Taylor-BURKHART",
+  "Brandon-BRIONES",
+  "Connor-MCCOOL",
+  "Donnell-WHITTENBURG",
+  "Asher-HONG",
+  "Joshua-KARNES",
+  "Paul-JUDA",
+  "Frederick-RICHARD",
+  "Brody-MALONE",
+  "Curran-PHILLIPS",
+  "Ian-SKIRKEY"
+)
+
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
@@ -310,13 +335,46 @@ simulate_composite_score <- function(selected_gymnasts) {
   return(composite_score)
 }
 
-results <- replicate(n, {
-  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = FALSE),]
-  composite_score <- simulate_composite_score(sampled_gymnasts)
-  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
-  results_entry
+#results <- replicate(n, {
+#  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = #FALSE),]
+#  composite_score <- simulate_composite_score(sampled_gymnasts)
+#  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), #Composite_Score = composite_score)
+#  results_entry
+#})
+# results_tibble <- as_tibble(t(results))
+# Assuming subset_picker and the simulate_composite_score function are already defined
+
+# Generate all possible combinations of 5 gymnasts
+
+# Remove "Brody-MALONE" from the list
+gymnasts_without_brody <- subset_picker$Names[subset_picker$Names != "Brody-MALONE"]
+
+# Generate all combinations of 4 other gymnasts
+other_gymnast_combinations <- combn(gymnasts_without_brody, 4)
+
+# Add "Brody-MALONE" to each combination
+gymnast_combinations <- apply(other_gymnast_combinations, 2, function(column) {
+  c("Brody-MALONE", column)
 })
-results_tibble <- as_tibble(t(results))
+
+# all_combinations_with_brody is now a matrix where each column is a combination including "Brody-MALONE"
+
+# gymnast_combinations <- combn(subset_picker$Names, gymnasts)
+
+# Initialize a vector to store the composite scores for each team
+composite_scores <- numeric(ncol(gymnast_combinations))
+
+# Iterate over each combination
+for(i in seq_len(ncol(gymnast_combinations))) {
+  selected_gymnasts <- subset_picker[subset_picker$Names %in% gymnast_combinations[, i], ]
+  composite_scores[i] <- simulate_composite_score(selected_gymnasts)
+}
+
+# Create a tibble with the results
+results_tibble <- tibble(
+  Gymnasts = apply(gymnast_combinations, 2, paste, collapse = ", "),
+  Composite_Score = composite_scores
+)
 
 top_combinations_df <- results_tibble %>%
   mutate(Composite_Score = as.numeric(Composite_Score)) %>%
@@ -329,13 +387,31 @@ kable(top_combinations_df, digits = 2, caption = "Top 10 Male Groups of 5")
 
 
 ```{r, echo=FALSE}
-set.seed(2)
-n <- 5000
+set.seed(1)
 gymnasts <- 5
 top_combos <- 10
 usa_unique_final <- na.omit(women_usa)
 
-name_list <- c("Simone-BILES", "Jordan-CHILES", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Jade-CAREY", "Shilese-JONES", "Zoe-MILLER", "Kaliya-LINCOLN", "Skye-BLAKELY", "Ashlee-SULLIVAN")
+name_list <- c(
+  "Zoe-MILLER",
+  "Jordan-CHILES",
+  "Leanne-WONG",
+  "Simone-BILES",
+  "Shilese-JONES",
+  "Joscelyn-ROBERSON",
+  "Skye-BLAKELY",
+  "Nola-MATTHEWS",
+  "Kaliya-LINCOLN",
+  "Katelyn-JONG",
+  "Sunisa-LEE",
+  "Jade-CAREY",
+  "Katelyn-ROSEN",
+  "Jordis-EICHMAN",
+  "Addison-FATTA",
+  "Kayla-DICELLO",
+  "Ashlee-SULLIVAN"
+)
+
 
 subset_picker <- subset(usa_unique_final, Names %in% name_list)
 
@@ -367,13 +443,35 @@ simulate_composite_score <- function(selected_gymnasts) {
   return(composite_score)
 }
 
-results <- replicate(n, {
-  sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = FALSE),]
-  composite_score <- simulate_composite_score(sampled_gymnasts)
-  results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
-  results_entry
+# results <- replicate(n, {
+#   sampled_gymnasts <- subset_picker[sample(nrow(subset_picker), gymnasts, replace = FALSE),]
+#   composite_score <- simulate_composite_score(sampled_gymnasts)
+#   results_entry <- c(Gymnasts = paste(sampled_gymnasts$Names, collapse = ", "), Composite_Score = composite_score)
+#   results_entry
+# })
+
+gymnasts_without_simone <- subset_picker$Names[subset_picker$Names != "Simone-BILES"]
+
+# Generate all combinations of 4 other gymnasts
+other_gymnast_combinations <- combn(gymnasts_without_simone, 4)
+
+gymnast_combinations <- apply(other_gymnast_combinations, 2, function(column) {
+  c("Simone-BILES", column)
 })
-results_tibble <- as_tibble(t(results))
+
+composite_scores <- numeric(ncol(gymnast_combinations))
+
+# Iterate over each combination
+for(i in seq_len(ncol(gymnast_combinations))) {
+  selected_gymnasts <- subset_picker[subset_picker$Names %in% gymnast_combinations[, i], ]
+  composite_scores[i] <- simulate_composite_score(selected_gymnasts)
+}
+
+# Create a tibble with the results
+results_tibble <- tibble(
+  Gymnasts = apply(gymnast_combinations, 2, paste, collapse = ", "),
+  Composite_Score = composite_scores
+)
 
 top_combinations_df <- results_tibble %>%
   mutate(Composite_Score = as.numeric(Composite_Score)) %>%
@@ -436,10 +534,6 @@ simulate_score_women <- function(gymnast, apparatus) {
   score <- rnorm(1, mu, var)
   return(score)
 }
-```
-
-```{r}
-
 ```
 
 
@@ -847,108 +941,89 @@ for (iter in 1:num_iterations) {
 
 ### Subsetting 
 
-After our initial filtering removed participants that were well outside of a top 5 range, we used our heuristics described in the methodology to further subset a top 10 sample of mens participants and womens participants using a new weighted composite score. We used 3 different metrics to understand this data: the sum of composite scores across each apparatus, the maximum individual apparatus score, and the average top 2 apparatus score for each individual.
+After our initial filtering removed participants that were well outside of a top 5 range, we used our heuristics described in the methodology to further subset mens participants and womens participants using a new weighted composite score. We used 4 different metrics to analyze this data: the sum of composite scores across each apparatus, the maximum individual apparatus score, and the average top 2 and top 3 apparatus score for each individual.
 
 Starting with men's results, we were able to pinpoint Brody Malone as being the clear top overall performer in the men's division, without an obvious number 2 all-around performer (and opted to use our simulations to fill in the rest of the team). 
 
-Below, is the overall composite score top 10.
+Below, we show how each of the members on the men's team selected to be included in the simulation perform across all four metrics.
 
-```{r echo=FALSE}
-# Define the data
-data <- list(
-  c("Brody MALONE", 249.80154659560017),
-  c("Donnell WHITTENBURG", 195.52011560555243),
-  c("Frederick Nathaniel RICHARD", 190.83141796337506),
-  c("Asher HONG", 189.26565927742791),
-  c("Paul JUDA", 178.88345434011973),
-  c("Taylor BURKHART", 174.98751609709757),
-  c("Joshua Andrew KARNES", 171.18041336681475),
-  c("Khoi YOUNG", 169.02882167446435),
-  c("Colt WALKER", 165.77200819602803),
-  c("Cameron BOCK", 158.15374820576932)
+```{r, echo = FALSE}
+data_list <- list(
+  c('Riley LOOS', c(10, 16, 10, 11)),
+  c('Ian LASIC-ELLIS', c(14, 20, 18, 16)),
+  c('Alex DIAB', c(56, 12, 17, 19)),
+  c('Cameron BOCK', c(12, 24, 16, 15)),
+  c('Yul MOLDAUER', c(15, 19, 12, 13)),
+  c('Shane WISKUS', c(11, 21, 15, 12)),
+  c('Colt WALKER', c(8, 8, 9, 9)),
+  c('Blake SUN', c(55, 14, 14, 18)),
+  c('Khoi YOUNG', c(7, 7, 4, 4)),
+  c('Stephen NEDOROSCIK', c(64, 4, 89, 80)),
+  c('Taylor BURKHART', c(5, 6, 5, 7)),
+  c('Brandon BRIONES', c(32, 10, 13, 14)),
+  c('Connor MCCOOL', c(75, 13, 21, 80)),
+  c('Donnell WHITTENBURG', c(2, 3, 3, 3)),
+  c('Asher HONG', c(4, 11, 7, 8)),
+  c('Joshua Andrew KARNES', c(9, 15, 11, 10)),
+  c('Paul JUDA', c(6, 17, 8, 6)),
+  c('Frederick Nathaniel RICHARD', c(3, 5, 6, 5)),
+  c('Brody MALONE', c(1, 1, 1, 1)),
+  c('Curran PHILLIPS', c(13, 2, 2, 2)),
+  c('Ian SKIRKEY', c(79, 9, 89, 80))
 )
 
-# Convert the list to a data frame
-df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
 
-# Round the Score column to two decimal places
-df$Score <- round(df$Score, 2)
+# Sort by last name
+# Convert to data frame
+data_df <- do.call(rbind, lapply(data_list, function(x) {
+  c(Name = x[1], `Sum Score Rank` = x[2], `Best 1 App Rank` = x[3], `Best 2 App Rank` = x[4], `Best 3 App Rank` = x[5])
+}))
+data_df <- as.data.frame(data_df, stringsAsFactors = FALSE)
 
-# Print the formatted data frame
-rounded_df <- df %>% 
-  mutate(across(where(is.numeric), round, 2))
-
-# Print the rounded tibble
-kable(rounded_df, caption = "Overall Top 10")
+# Use kable to create the table
+kable(data_df)  # Change 'html' to 'latex' or 'markdown' if needed
 ```
-Followed by the individual apparatus max score top 10.
 
-```{r echo=FALSE}
-# Define the data
-data <- list(
-  c("Brody MALONE", 84.75796178343948),
-  c("Curran PHILLIPS", 77.2883295194508),
-  c("Donnell WHITTENBURG", 67.7936507936508),
-  c("Stephen NEDOROSCIK", 60.963276836158194),
-  c("Frederick Nathaniel RICHARD", 49.170731707317074),
-  c("Ian SKIRKEY", 48.38659793814433),
-  c("Khoi YOUNG", 47.75471698113208),
-  c("Taylor BURKHART", 47.43283582089552),
-  c("Paul JUDA", 47.26315789473684),
-  c("Colt WALKER", 47.09493670886076)
+Brody Malone was clearly the best all around performer for the mens team, so we would recommend that he be considered a lock for the final team of 5. Donnell Whittenburg also performed exceedingly well across all four metrics. There were certain athletes such as Curran Phillips, Stephen Nedoroscik, and Ian Skirkey who seemed to be mainly good at one or two of the apparatuses, but not a great all-around performer - we would be interested in these athletes to fill out our team of 5 in the hopes that they can perform very well in a specialized event. Cutting to fewer, more qualified athletes will assist in ensuring that our simulation is able to fully search for the best pairing of 5.
+
+Next, moving onto the womens results. 
+
+Below, we provide a table showing how each of the members on the women's team selected to be included in the simulation perform across all four metrics.
+```{r, echo = FALSE}
+
+data_list <- list(
+  c('Zoe MILLER', c(7, 1, 5, 5)),
+  c('Jordan CHILES', c(2, 5, 2, 3)),
+  c('Leanne WONG', c(14, 19, 17, 15)),
+  c('Simone BILES', c(1, 4, 1, 1)),
+  c('Shilese JONES', c(6, 8, 8, 8)),
+  c('Joscelyn ROBERSON', c(3, 6, 3, 2)),
+  c('Skye BLAKELY', c(9, 10, 10, 9)),
+  c('Nola MATTHEWS', c(13, 16, 13, 13)),
+  c('Kaliya LINCOLN', c(8, 2, 6, 6)),
+  c('Katelyn JONG', c(12, 14, 11, 12)),
+  c('Sunisa LEE', c(30, 11, 14, 32)),
+  c('Jade CAREY', c(4, 3, 4, 4)),
+  c('Katelyn ROSEN', c(15, 13, 15, 14)),
+  c('Jordis EICHMAN', c(16, 12, 16, 16)),
+  c('Addison FATTA', c(11, 15, 12, 11)),
+  c('Kayla DICELLO', c(5, 7, 7, 7)),
+  c('Ashlee SULLIVAN', c(10, 9, 9, 10))
 )
 
-# Convert the list to a data frame
-df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
 
-# Round the Score column to two decimal places
-df$Score <- round(df$Score, 2)
+# Sort by last name
+# Convert to data frame
+data_df <- do.call(rbind, lapply(data_list, function(x) {
+  c(Name = x[1], `Sum Score Rank` = x[2], `Best 1 App Rank` = x[3], `Best 2 App Rank` = x[4], `Best 3 App Rank` = x[5])
+}))
+data_df <- as.data.frame(data_df, stringsAsFactors = FALSE)
 
-# Print the formatted data frame
-rounded_df <- df %>% 
-  mutate(across(where(is.numeric), round, 2))
-
-# Print the rounded tibble
-kable(rounded_df, caption = "Single Apparatus Top 10")
-
+# Use kable to create the table
+kable(data_df, caption = "Four Metric Ranks for Female Gymnasts")  # Change 'html' to 'latex' or 'markdown' if needed
 ```
 
-And finally the best two apparatus max score top 10.
-
-```{r echo=FALSE}
-# Define the new data
-data <- list(
-  c("Brody MALONE", 70.17941948821097),
-  c("Curran PHILLIPS", 58.97936029045165),
-  c("Donnell WHITTENBURG", 52.345674501684734),
-  c("Khoi YOUNG", 46.47486886401002),
-  c("Taylor BURKHART", 45.373932361314814),
-  c("Paul JUDA", 44.39546783625731),
-  c("Frederick Nathaniel RICHARD", 44.30745887691435),
-  c("Asher HONG", 43.302864420729975),
-  c("Riley LOOS", 39.993769470404985),
-  c("Joshua Andrew KARNES", 38.70359281437126)
-)
-
-# Convert the list to a data frame
-df <- do.call(rbind, lapply(data, function(x) data.frame(Name = x[1], Score = as.numeric(x[2]))))
-
-# Round the Score column to two decimal places
-df$Score <- round(df$Score, 2)
-
-# Print the formatted data frame
-rounded_df <- df %>% 
-  mutate(across(where(is.numeric), round, 2))
-
-# Print the rounded tibble
-kable(rounded_df, caption = "Two Apparatus Avg Top 10")
-
-```
-
-From these results, we are able to get insight into how each athlete would fit on a team. Brody Malone and Donnell Whittenberg seem to consistently perform well across multiple events and score very highly, which means that we could expect at least one of them to anchor a team as an all-around performer. Certain athletes like Curran Phillips, Khoi Young, and Taylor Purkhart excel at specific apparatuses, which may make them valuable to earn a medal in a single event.
-
-Next, moving onto the women's results. We were able to pinpoint Simone Biles as the clear top performer as an all-around athlete, but following was Jordan Chiles with a high composite score that also secures a spot as an all-around athlete.
-
+From the above table, we were able to pinpoint Simone Biles as the clear top performer as an all-around athlete, but following was Jordan Chiles with a high composite score that also warrants a spot as an all-around athlete. Zoe Miller and Kaliya Lincoln present more interesting scenarios where they performs highly in few events, which could be valuable if they are projected to medal gold or silver in that single event. On the other hand, outside of Biles and Chiles, Jade Carey, Joscelyn Roberson, and Kayla Dicello perform consistently high - but not highest - on a larger range of events.
 
 ### Simulating Composite Scores
 
