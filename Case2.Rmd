@@ -472,11 +472,11 @@ kable(top_combinations_df, digits = 2, caption = "Top 10 Female Groups of 5")
 
 ### 4. Simulating Competitions in the Olympic with All Other Countries
 
-After narrowing down the set of potential 5-member teams for men and women, we ran simulations to see how each candidate US team would perform if placed in the pool with all other teams from the world. To do this, we need to create participating teams for other countries. Here we assumed all countries had a team consisting of 5 members for men and women respectively. If the number of distinct gymnasts for a gender from a country is less than 5, we selected all the gymnasts from that country in the data set to be in the Olympic team. The men/women teams for other countries were randomly selected, so the teams may not be their "best" teams. We used random selections here because 1) it is very unlikely that all countries use identical method as the US to select the "best" team to participate in the Olympic and 2) our aim in this part is to compare the performance of narrowed-down US teams, so randomization in teams from other countries serves as a control.
+After selecting the set of potential 5-member US teams for men and women, we ran simulations to see how each candidate US team would perform if placed in the pool with all other teams from the world. To do this, we need to create participating teams for other countries. Here we assumed all countries had a team consisting of 5 members for men and women respectively. If the number of distinct gymnasts for a gender from a country is less than 5, we selected all the gymnasts from that country in the data set to be in the Olympic team. We do not know about the selection methods other countries use, so we selected the men/women teams for other countries by first narrowing down to 7 gymnasts with highest historical mean scores and then randomly sampling 5 out of the 7 gymnasts. This way, we can make sure it's fair enough for all countries in general.
 
-We then placed each potential US team and all teams from other countries into simulated competitions. The simulated score of a gymnast in an apparatus was generated based on the mean and standard deviations of their historical scores using the rnorm() function. With each individual score, we then used the same rules as the Olympic gymnastic competitions to get the final rankings of US team in each of the 8 events for men and 6 events for women: 5-4-3 format for the qualifying round, 5-3-3 format for the team all-round, maximum of two gymnasts per country for the individual all-round, and maximum of 2 gymnasts per country for each apparatus final, except that we integrated the 5-4-3 and 5-3-3 format together, removing the need of taking the precedence of the qualifying rounds over finals into consideration.
+We then placed each potential US team and all teams from other countries into simulated competitions. The simulated score of a gymnast in an apparatus was generated using the rnorm() function. To reduce the effect of outliers in historical scores of each gymnast, we used their median instead of mean scores to do the simulation. With each individual score, we then used the same rules as the Olympic gymnastic competitions to get the final rankings of US team in each of the 8 events for men and 6 events for women: 5-4-3 format for the qualifying round, 5-3-3 format for the team all-round, maximum of two gymnasts per country for the individual all-round, and maximum of 2 gymnasts per country for each apparatus final, except that we integrated the 5-4-3 and 5-3-3 format together, removing the need of taking the precedence of the qualifying rounds over finals into consideration.
 
-For each simulated competition result, we used a weighted metrics to calculate a "total medal score" for the US team - a score of 3 for gold, 2 for silver, and 1 for bronze. We then computed the mean of this total medal score from all iterations of simulation for each potential US team and compared their scores.
+For each simulated competition result, we used a weighted metrics to calculate a "total medal score" for the US team - a score of 3 for gold, 2 for silver, and 1 for bronze. We then computed the median of this total medal score from all iterations of simulation to get a sense of how each US team may end up doing in the Olympics.
 
 ```{r MenWomen, include=FALSE}
 allcountries <- allcountries %>%
@@ -488,6 +488,15 @@ women_gym_data <- allcountries %>%
 men_gym_data <- allcountries %>%
   filter(Gender == "m")
 
+# select up to 7 gymnasts with highest mean scores for each country
+w_avs_all <- women_gym_data %>%
+  group_by(Country, name) %>%
+  summarise(mean = mean(Score)) %>% 
+  top_n(7, mean)
+m_avs_all <- men_gym_data %>%
+  group_by(Country, name) %>%
+  summarise(mean = mean(Score)) %>% 
+  top_n(7, mean)
 ```
 
 ```{r include=FALSE}
@@ -500,11 +509,11 @@ simulate_score_men <- function(gymnast, apparatus) {
   # else return simulated score
   data <- data%>%
     group_by(name) %>%
-    summarise(mean = mean(Score, na.rm = T),
-              var = var(Score, na.rm = T))
-  mu <- data$mean
-  var <- data$var
-  score <- rnorm(1, mu, var)
+    summarise(med = median(Score, na.rm = T),
+              sd = sd(Score, na.rm = T))
+  mu <- data$med
+  sd <- data$sd
+  score <- rnorm(1, mean = mu, sd = sd)
   return(score)
 }
 simulate_score_women <- function(gymnast, apparatus) {
@@ -515,42 +524,41 @@ simulate_score_women <- function(gymnast, apparatus) {
   # else return simulated score
   data <- data%>%
     group_by(name) %>%
-    summarise(mean = mean(Score, na.rm = T),
-              var = var(Score, na.rm = T))
-  mu <- data$mean
-  var <- data$var
-  score <- rnorm(1, mu, var)
+    summarise(med = median(Score, na.rm = T),
+              sd = sd(Score, na.rm = T))
+  mu <- data$med
+  sd <- data$sd
+  score <- rnorm(1, mean = mu, sd = sd)
   return(score)
 }
 ```
 
 
 ```{r selected us team, include=FALSE}
-# replace the righthand part with each us team selected from part 2 (here I use a random sample)
-men_name_list <- c("Curran-PHILLIPS", "Taylor-BURKHART", "Blake-SUN", "Brody-MALONE", "Stephen-NEDOROSCIK")
+men_name_list <- c("Curran PHILLIPS", "Taylor BURKHART", "Blake SUN", "Brody MALONE", "Stephen NEDOROSCIK")
 subset_picker_m <- subset(us_men_gym_data, name %in% men_name_list)
 
-women_name_list <- c("Simone-BILES", "Jade-CAREY", "Joscelyn-ROBERSON", "Kayla-DICELLO", "Zoe-MILLER")
+women_name_list <- c("Simone BILES", "Jade- CAREY", "Joscelyn ROBERSON", "Kayla DICELLO", "Zoe MILLER")
 subset_picker_f <- subset(us_womens_gym_data, name %in% women_name_list)
 
-us_team_men <- sample(unique(us_men_gym_data$name), 5)
-us_team_women <- sample(unique(us_womens_gym_data$name), 5)
+us_team_men <- men_name_list
+us_team_women <- women_name_list
 ```
 
-```{r total medal score, warning=FALSE, message=FALSE, include=FALSE}
+```{r total medal score, warning=FALSE, message=FALSE, include=FALSE, eval=FALSE}
 # score 3 for gold, 2 for silver, 1 for bronze
 apparatus_men <- unique(men_gym_data$Apparatus)
 apparatus_women <- unique(women_gym_data$Apparatus)
 country_list <- unique(men_gym_data$Country)
 country_list <- country_list[country_list != 'USA']
-num_iterations = 1
+num_iterations = 20
 men_total_medal_score = list() # store possible total medal scores for 1000 iterations
 for (iter in 1:num_iterations) {
   total_medal = 0
 
   men_other_countries <- data.frame()
   for (i in 1:length(country_list)) {
-    data <- men_gym_data %>%
+    data <- m_avs_all %>%
       filter(Country == country_list[i])
     gymnasts <- unique(data$name)
     if (length(gymnasts) > 0) {
@@ -727,17 +735,14 @@ for (iter in 1:num_iterations) {
   if (results_indi[3,]$country == 'USA') {
     total_medal = total_medal + 1 # 1 for bronze
   }
+  
+  men_total_medal_score = append(men_total_medal_score, total_medal)
 }
 ```
 
-```{r total medal score2, warning=FALSE, message=FALSE, include=FALSE}
+```{r total medal score2, warning=FALSE, message=FALSE, include=FALSE, eval=FALSE}
 # score 3 for gold, 2 for silver, 1 for bronze
-apparatus_men <- unique(men_gym_data$Apparatus)
-apparatus_women <- unique(women_gym_data$Apparatus)
-country_list <- unique(men_gym_data$Country)
-country_list <- country_list[country_list != 'USA']
-num_iterations = 1
-total_medal_score = list() # store possible total medal scores for 1000 iterations
+women_total_medal_score = list() # store possible total medal scores for 1000 iterations
 for (iter in 1:num_iterations) {
   total_medal = 0
 
@@ -745,7 +750,7 @@ for (iter in 1:num_iterations) {
 
   women_other_countries <- data.frame()
   for (i in 1:length(country_list)) {
-    data <- women_gym_data %>%
+    data <- w_avs_all %>%
       filter(Country == country_list[i])
     gymnasts <- unique(data$name)
     if (length(gymnasts) > 0) {
@@ -915,13 +920,8 @@ for (iter in 1:num_iterations) {
   if (results_indi[3,]$country == 'USA') {
     total_medal = total_medal + 1 # 1 for bronze
   }
-
+  women_total_medal_score = append(women_total_medal_score, total_medal)
 }
-```
-
-```{r compare selected us teams, include=FALSE}
-# mean total medal score for the 100 simulations for one us team
-# mean(total_medal_score)
 ```
 
 ## Results
@@ -1023,9 +1023,16 @@ While average scores are ultimately high, and our number of simulations may occa
 
 ### Simulating Medals
 
-Our preliminary simulation for medaling provides us a way to simulate how our team would perform against other countries. Using the methodology proposed to create an international team to test the US team against, we are able to see how our 2 lineups would score against other teams.
+Our preliminary simulation for medals provides us a way to simulate how our team would perform against other countries. Using the methodology proposed to create an international team to test the US team against, we are able to see how our 2 lineups would score against other teams.
 
-Using a scoring system of 3 points for Gold, 2 points for Silver, and 1 point for Bronze, our men's team most frequently earned 9 points, with little variance (a minimum of 6 points and a maxiumum of 13 points). Our women's team performed stronger and averaged closer to 14 points in the simulation with higher variance (from 11 points to 22 points).
+```{r median medal score, include=FALSE, eval=FALSE}
+median(unlist(men_total_medal_score))
+sd(unlist(men_total_medal_score))
+median(unlist(women_total_medal_score))
+sd(unlist(women_total_medal_score))
+```
+
+Using a scoring system of 3 points for Gold, 2 points for Silver, and 1 point for Bronze, our men's team gets a median medal score of 8 points, a minimum of 6 points, and a maximum of 9 points. It has a standard deviation of 1. Our women's team gets a median medal score of 9 points in the simulation with lower standard deviation of 0.72, a minimum of 8 points, and a maximum of 12 points.
 
 ### Discussion
 
